@@ -52,6 +52,12 @@ filetype plugin indent on     " required!
 " general settings
 " ######################
 
+"backspace working in vim 7.3
+set bs=2
+
+"F3 for paste
+set pt=<F3>
+
 "tell vim you have a dark background
 set bg=dark
 
