@@ -12,26 +12,23 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-"
-" original repos on github
+
 Bundle 'Syntastic'
+
 Bundle 'The-NERD-tree'
 map <F2> :NERDTreeToggle<CR>
+
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 au BufEnter *.tex set autowrite
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_GotoError = 1
-
 "This setting controls whether Latex-Suite automatically creates manual folds for a file when it is opened. You can still use the \rf mapping to refresh/create folds even when this variable is set to zero. 
 let g:Tex_AutoFolding = 0
-
 "let g:Tex_ViewRule_pdf = '/Applications/Preview.app/Contents/MacOS/Preview'
 let g:Tex_ViewRule_pdf = 'open -a Preview' 
-
 let g:tex_flavor='latex'
-
 "Ignore missing references too
 let g:Tex_IgnoredWarnings =
             \'Underfull'."\n".
@@ -42,41 +39,15 @@ let g:Tex_IgnoredWarnings =
             \'There were undefined references'."\n".
             \'Citation %.%# undefined'."\n".
             \'Reference %.%# undefined'
-
 let g:Tex_IgnoreLevel = 8
-
 "use \t to compile an open as pdf
 map <leader>t <leader>ll <leader>lv 
-
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a single file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" " vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" " non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
 
 filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache
-" first) for foo
-" :BundleClean(!)      - confirm(or auto-approve)
-" removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not
-" allowed..
-"
 " ######################
 " general settings
 " ######################
@@ -90,6 +61,7 @@ set t_Co=256
 "make Line Numbers grey
 hi LineNr ctermfg=darkgray
 
+"mouse support
 set mouse=nv
 
 filetype plugin on
@@ -121,8 +93,6 @@ set wildmenu
 
 "filtes not shown in wild menu
 set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out 
-
-set ts=4
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -159,4 +129,3 @@ set ai
 
 "smart indent
 set si 
-
