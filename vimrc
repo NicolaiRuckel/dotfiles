@@ -1,3 +1,13 @@
+" Disable the arrow keys. Use hjkl, bitchez!
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 " ######################
 " vundle settings
 " ######################
@@ -86,7 +96,7 @@ set tabstop=4
 set expandtab
 
 "highlight search matches
-set hlsearch 
+"set hlsearch 
 
 "While typing a search command, show where the pattern, as it was typed
 set incsearch 
