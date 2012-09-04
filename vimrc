@@ -25,8 +25,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Syntastic'
 
-Bundle 'The-NERD-tree'
-map <F2> :NERDTreeToggle<CR>
+map <F2> :e .<CR>
 
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 au BufEnter *.tex set autowrite
