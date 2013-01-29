@@ -1,0 +1,12 @@
+"hg6883
+
+loadplugins '\.(js|penta)$'
+group user
+map -count -modes=n,v h -builtin <count>5h
+map -count -modes=n,v j -builtin <count>5j
+map -count -modes=n,v k -builtin <count>5k
+map -count -modes=n,v l -builtin <count>5l
+set defsearch=g
+set guioptions=brT
+
+" vim: set ft=pentadactyl:

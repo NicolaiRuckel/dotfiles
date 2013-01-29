@@ -12,10 +12,14 @@ noremap   <Right>  <NOP>
 " vundle settings
 " ######################
 set nocompatible               " be iMproved
+filetype on
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+"Pathogen
+call pathogen#infect('pathogen')
 
 " let Vundle manage Vundle
 " required! 
@@ -23,9 +27,9 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 
-Bundle 'Syntastic'
+"Bundle 'Syntastic'
+"this sucks because vundle hasn't an old synstic-version which is stupid
 
-map <F2> :e .<CR>
 
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 au BufEnter *.tex set autowrite
@@ -60,6 +64,11 @@ filetype plugin indent on     " required!
 " ######################
 " general settings
 " ######################
+
+map <F2> :e .<CR>
+
+"colorscheme
+colorscheme jellybeans
 
 "backspace working in vim 7.3
 set bs=2

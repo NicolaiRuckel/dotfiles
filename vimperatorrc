@@ -1,0 +1,6 @@
+set defsearch=g
+noremap h 5h
+noremap j 5j
+noremap k 5k
+noremap l 5l
+map d :bdelete -s lastactive <C-m>
