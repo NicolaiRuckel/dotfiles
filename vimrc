@@ -68,7 +68,8 @@ filetype plugin indent on     " required!
 map <F2> :e .<CR>
 
 "colorscheme
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme molokai
 
 "backspace working in vim 7.3
 set bs=2
