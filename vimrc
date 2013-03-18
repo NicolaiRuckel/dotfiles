@@ -58,7 +58,6 @@ noremap   <Right>  <NOP>
 
 "use space for folding and unfolding
 nnoremap <space> za
-vnoremap <space> zf
 
 "map <F2> :e .<CR>
 nmap <Leader>e :NERDTreeToggle<CR>
@@ -70,7 +69,7 @@ set pt=<F3>
 map <leader>t :! pdflatex %; open %:r.pdf<CR>
 
 " ######################
-" other
+" plugins
 " ######################
 
 call pathogen#infect()
