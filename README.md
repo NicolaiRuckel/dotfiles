@@ -1,2 +1,0 @@
-Nicolai Ruckel's dotfiles
-=========================
