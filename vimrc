@@ -61,7 +61,7 @@ nnoremap <space> za
 vnoremap <space> zf
 
 "map <F2> :e .<CR>
-map <F2> :NERDTreeToggle<CR>
+nmap <Leader>e :NERDTreeToggle<CR>
 
 "F3 for paste
 set pt=<F3>
@@ -70,7 +70,8 @@ set pt=<F3>
 map <leader>t :! pdflatex %; open %:r.pdf<CR>
 
 " ######################
-" Pathogen
+" other
 " ######################
 
 call pathogen#infect()
+let NERDTreeMouseMode=3
