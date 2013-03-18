@@ -66,26 +66,8 @@ map <F2> :NERDTreeToggle<CR>
 "F3 for paste
 set pt=<F3>
 
-" ######################
-" LaTeX-Settings
-" ######################
-
-filetype plugin indent on
-au BufEnter *.tex set autowrite
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
-let g:Tex_GotoError = 1
-"This setting controls whether Latex-Suite automatically creates manual folds for a file when it is opened. You can still use the \rf mapping to refresh/create folds even when this variable is set to zero. 
-let g:Tex_AutoFolding = 0
-"let g:Tex_ViewRule_pdf = '/Applications/Preview.app/Contents/MacOS/Preview'
-let g:Tex_ViewRule_pdf = 'open -a Preview' 
-let g:tex_flavor='latex'
-let g:Tex_IgnoreLevel = 8
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a single file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
+"compile LaTeX-file and open output
+map <leader>t :! pdflatex %; open %:r.pdf<CR>
 
 " ######################
 " Pathogen
