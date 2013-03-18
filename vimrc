@@ -34,7 +34,6 @@ syntax on
 set number 
 set ai 
 set si 
-filetype plugin indent on
 
 " ######################
 " search settings
@@ -71,6 +70,7 @@ set pt=<F3>
 " LaTeX-Settings
 " ######################
 
+filetype plugin indent on
 au BufEnter *.tex set autowrite
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
