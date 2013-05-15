@@ -45,3 +45,4 @@ plugins=(git brew osx archlinux)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+alias l="ls -l"
