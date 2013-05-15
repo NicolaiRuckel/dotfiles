@@ -1,11 +1,11 @@
 #!/bin/bash
-ln -sf ~/dotfiles/vim ~/.vim
-echo 'ln -sf ~/dotfiles/vim ~/.vim'
-ln -sf ~/dotfiles/vimrc ~/.vimrc
-echo 'ln -sf ~/dotfiles/vimrc ~/.vimrc'
-ln -sf ~/dotfiles/vimperatorrc ~/.vimperatorrc
-echo 'ln -sf ~/dotfiles/vimperator ~/.vimperator'
-ln -sf ~/dotfiles/pentadactylrc ~/.pentadactylrc 
-echo 'ln -sf ~/dotfiles/pentadactylrc ~/.pentadactylrc'
-ln -sf ~/dotfiles/zshrc ~/.zshrc
-echo 'ln -sf ~/dotfiles/zshrc ~/.zshrc'
+ln -s ~/dotfiles/vim ~/.vim
+echo 'ln -s ~/dotfiles/vim ~/.vim'
+ln -s ~/dotfiles/vimrc ~/.vimrc
+echo 'ln -s ~/dotfiles/vimrc ~/.vimrc'
+ln -s ~/dotfiles/vimperatorrc ~/.vimperatorrc
+echo 'ln -s ~/dotfiles/vimperator ~/.vimperator'
+ln -s ~/dotfiles/pentadactylrc ~/.pentadactylrc 
+echo 'ln -s ~/dotfiles/pentadactylrc ~/.pentadactylrc'
+ln -s ~/dotfiles/zshrc ~/.zshrc
+echo 'ln -s ~/dotfiles/zshrc ~/.zshrc'
