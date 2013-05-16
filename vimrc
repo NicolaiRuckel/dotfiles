@@ -61,6 +61,7 @@ nnoremap <space> za
 
 "map <F2> :e .<CR>
 nmap <Leader>e :NERDTreeToggle<CR>
+nmap <F2> :TlistToggle<CR>
 
 "F3 for paste
 set pt=<F3>
@@ -74,3 +75,4 @@ map <leader>t :! pdflatex %; open %:r.pdf<CR>
 
 call pathogen#infect()
 let NERDTreeMouseMode=3
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
