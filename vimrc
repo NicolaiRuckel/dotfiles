@@ -70,6 +70,8 @@ set pt=<F3>
 
 "compile LaTeX-file and open output
 map <leader>t :! pdflatex %; open %:r.pdf<CR>
+command W w
+command Q q
 
 " ######################
 " plugins
