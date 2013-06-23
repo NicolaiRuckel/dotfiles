@@ -14,6 +14,10 @@ ln -s ~/dotfiles/Xresources ~/.Xresources
 echo 'ln -s ~/dotfiles/Xresources ~/.Xresources'
 ln -s ~/dotfiles/i3status.conf ~/.i3status.conf
 echo 'ln -s ~/dotfiles/i3status.conf ~/.i3status.conf'
+ln -s ~/dotfiles/i3/config ~/.i3/config
+echo 'ln -s ~/dotfiles/i3/config ~/.i3/config'
+ln -s ~/dotfiles/xinitrc ~/.xinitrc
+echo 'ln -s ~/dotfiles/xinitrc ~/.xinitrc'
 #install vim plugins
 git clone git://github.com/scrooloose/nerdtree.git ./vim/bundle/nerdtree
 git clone git://github.com/scrooloose/syntastic.git ./vim/bundle/syntastic
