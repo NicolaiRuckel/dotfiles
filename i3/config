@@ -233,6 +233,9 @@ for_window [class="Xsane"] floating enable
 for_window [class="^$"] floating enable
 for_window [class="Pidgin"] focus
 
+# Dolphin
+for_window [class="Dolphin" title="Copying"] floating enable
+
 # custom keybindings
 bindsym XF86Launch1 exec xset dpms force off
 bindsym XF86ScreenSaver exec i3lock -c 000000
