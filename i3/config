@@ -233,6 +233,7 @@ for_window [class="Gnuplot"] floating enable
 for_window [class="Xsane"] floating enable
 for_window [class="^$"] floating enable
 for_window [class="Pidgin"] focus
+for_window [class="MediathekView 3.2.1"] floating enable
 
 # Dolphin
 for_window [class="Dolphin" title="Copying"] floating enable
