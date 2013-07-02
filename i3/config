@@ -252,7 +252,7 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_
 bindsym XF86AudioMute exec amixer set Master toggle && killall -SIGUSR1 i3status
 
 # startup applications
-exec [--no-startup-id] i3-sensible-terminal
+exec urxvt
 #exec nm-applet
 #exec dropboxd
 
