@@ -224,6 +224,7 @@ assign [class="Evolution"] → $ws3
 assign [class="Pidgin"] → $ws4
 assign [class="Xchat"] → $ws4
 assign [class="Amarok"] → $ws5
+assign [class="Audacious"] → $ws5
 
 # window rules
 for_window [class="MPlayer"] floating enable
