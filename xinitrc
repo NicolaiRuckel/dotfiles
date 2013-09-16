@@ -1,6 +1,6 @@
 #run systemd as user intsance
 systemd --user &
-xset r rate 250 30
+xset r rate 200 30
 
 setxkbmap us altgr-intl
 
