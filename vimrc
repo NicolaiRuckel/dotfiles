@@ -26,7 +26,7 @@ set wildmenu
 set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out 
 set history=700
 " Turn backup off, since all important stuff is in git anyway...
-set nobackup
+"set nobackup
 set nowb
 set noswapfile
 set noerrorbells
