@@ -36,6 +36,7 @@ syntax on
 set number 
 set ai 
 set si 
+set scrolloff=5
 
 " ######################
 " search settings
