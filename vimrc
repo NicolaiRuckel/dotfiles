@@ -17,7 +17,7 @@ set mouse=nv
 set shiftwidth=4
 set encoding=utf-8
 set tabstop=4
-set expandtab
+"set expandtab
 "Always show current position
 set ruler 
 "Turn on wildmenu
