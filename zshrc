@@ -46,3 +46,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias l="ls -l"
+case `uname` in
+	Darwin)
+		alias gvim="mvim"
+	;;
+esac
