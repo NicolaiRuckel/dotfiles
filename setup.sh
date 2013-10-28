@@ -9,6 +9,9 @@ echo 'ln -s ~/dotfiles/vim ~/.vim'
 ln -s ~/dotfiles/vimrc ~/.vimrc
 echo 'ln -s ~/dotfiles/vimrc ~/.vimrc'
 
+ln -s ~/dotfiles/gvimrc ~/.gvimrc
+echo 'ln -s ~/dotfiles/vimrc ~/.vimrc'
+
 ln -s ~/dotfiles/vimperatorrc ~/.vimperatorrc
 echo 'ln -s ~/dotfiles/vimperator ~/.vimperator'
 
@@ -36,9 +39,9 @@ if [ $OS = "Linux" ]; then
 fi
 
 # install vim plugins
-git clone git://github.com/scrooloose/nerdtree.git ./vim/bundle/nerdtree
 git clone git://github.com/scrooloose/syntastic.git ./vim/bundle/syntastic
 git clone git://github.com/tpope/vim-pathogen.git ./vim/bundle/vim-pathogen
+git clone https://github.com/othree/html5.vim.git ./vim/bundle/html5.vim
 
 # install oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 

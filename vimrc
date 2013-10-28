@@ -17,7 +17,7 @@ set mouse=nv
 set shiftwidth=4
 set encoding=utf-8
 set tabstop=4
-set expandtab
+"set expandtab
 "Always show current position
 set ruler 
 "Turn on wildmenu
@@ -37,6 +37,9 @@ set number
 set ai 
 set si 
 set scrolloff=5
+
+"set list
+"set lcs=tab:▸\
 
 " ######################
 " search settings
@@ -62,8 +65,8 @@ noremap   <Right>  <NOP>
 "use space for folding and unfolding
 nnoremap <space> za
 
-"map <F2> :e .<CR>
-nmap <Leader>e :NERDTreeToggle<CR>
+nmap <Leader>e :e .<CR>
+"nmap <Leader>e :NERDTreeToggle<CR>
 nmap <F2> :TlistToggle<CR>
 
 "F3 for paste
