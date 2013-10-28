@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/nicolairuckel/dotfiles'
-let g:netrw_dirhist_2='/Users/nicolairuckel/Documents/Uni/Semester6/Visualisierung/LabClasses/beleg1/src'
