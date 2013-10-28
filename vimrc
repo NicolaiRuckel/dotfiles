@@ -8,7 +8,7 @@ set cc=80
 colorscheme molokai
 "backspace working in vim 7.3
 set bs=2
-set bg=dark
+"set bg=dark
 "moar colors
 set t_Co=256
 "make Line Numbers grey
