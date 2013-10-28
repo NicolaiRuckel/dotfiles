@@ -5,3 +5,4 @@ else
 	set guioptions-=m "remove menu bar
 	set guioptions-=T "remove toolbar
 endif
+set lines=100
