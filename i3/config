@@ -243,6 +243,9 @@ for_window [class="MediathekView 3.2.1"] floating enable
 for_window [class="Dolphin" title="Copying"] floating enable
 for_window [class="Dolphin" title="Moving"] floating enable
 
+# steam
+for_window [class="Steam" title="Install"] floating enable
+
 # custom keybindings
 bindsym XF86Launch1 exec xset dpms force off
 bindsym XF86ScreenSaver exec i3lock -c 000000
