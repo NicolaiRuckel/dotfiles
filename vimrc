@@ -95,5 +95,5 @@ endif
 
 call pathogen#infect()
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-let g:syntastic_mode_map = { 'mode': 'active',
-                               \ 'passive_filetypes': ['html'] }
+"let g:syntastic_mode_map = { 'mode': 'active',
+"                               \ 'passive_filetypes': ['html'] }
