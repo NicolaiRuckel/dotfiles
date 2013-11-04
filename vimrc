@@ -81,7 +81,7 @@ command Q q
 " ######################
 if has("autocmd")
 	autocmd FileType make setlocal ts=8 sw=8 noet
-	autocmd FileType html setlocal ts=2 sw=2 et
+	autocmd FileType html setlocal ts=2 sw=2 et cc=
 	autocmd FileType css setlocal ts=2 sw=2 et
 	autocmd FileType javascript setlocal ts=4 sw=4 et
 	autocmd FileType c setlocal ts=4 sw=4 noet
