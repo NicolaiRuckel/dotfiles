@@ -4,6 +4,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " general settings
 " ######################
 
+filetype plugin indent on
 set cc=80
 colorscheme molokai
 "backspace working in vim 7.3
@@ -17,7 +18,7 @@ set mouse=nv
 set shiftwidth=4
 set encoding=utf-8
 set tabstop=4
-"set expandtab
+set expandtab
 "Always show current position
 set ruler 
 "Turn on wildmenu
