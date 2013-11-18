@@ -6,6 +6,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 filetype plugin indent on
 set cc=80
+set ff=unix
 colorscheme molokai
 "backspace working in vim 7.3
 set bs=2
@@ -83,7 +84,7 @@ command Q q
 if has("autocmd")
 	autocmd FileType make setlocal ts=8 sw=8 noet
 	autocmd FileType html setlocal ts=2 sw=2 et cc= omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
+	autocmd FileType css setlocal ts=2 sw=2 et cc= omnifunc=csscomplete#CompleteCSS
 	autocmd FileType javascript setlocal ts=4 sw=4 et
 	autocmd FileType c setlocal ts=4 sw=4 noet
 	autocmd FileType ada setlocal ts=3 sw=3 et
