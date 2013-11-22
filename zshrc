@@ -40,12 +40,13 @@ ZSH_THEME="candy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx archlinux)
+plugins=(git brew osx archlinux jump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias l="ls -l"
+alias j="jump"
 case `uname` in
 	Darwin)
 		alias gvim="mvim"
