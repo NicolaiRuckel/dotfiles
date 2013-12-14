@@ -41,7 +41,7 @@ set si
 set scrolloff=5
 
 set list
-set lcs=tab:▸\
+set lcs=tab:▸\ 
 
 " ######################
 " search settings
