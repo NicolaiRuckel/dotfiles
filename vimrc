@@ -1,4 +1,5 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 " ######################
 " general settings
@@ -96,7 +97,9 @@ endif
 " plugins
 " ######################
 
-call pathogen#infect()
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "let g:syntastic_mode_map = { 'mode': 'active',
 "                               \ 'passive_filetypes': ['html'] }
+"
+"airline
+set laststatus=2
