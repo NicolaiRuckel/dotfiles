@@ -22,11 +22,11 @@ set encoding=utf-8
 set tabstop=4
 set expandtab
 "Always show current position
-set ruler 
+set ruler
 "Turn on wildmenu
-set wildmenu 
+set wildmenu
 "filtes not shown in wild menu
-set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out 
+set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out
 set history=700
 " Turn backup off, since all important stuff is in git anyway...
 "set nobackup
@@ -36,9 +36,9 @@ set noerrorbells
 set novisualbell
 set tm=500
 syntax on
-set number 
-set ai 
-set si 
+set number
+set ai
+set si
 set scrolloff=5
 
 set list
@@ -48,9 +48,9 @@ set lcs=tab:▸\
 " search settings
 " ######################
 
-set smartcase 
+set smartcase
 set ignorecase
-set incsearch 
+set incsearch
 
 " ######################
 " keybindings
@@ -104,6 +104,4 @@ set laststatus=2
 set noshowmode
 
 "nerdtree
-"open nerdtree at start
-autocmd vimenter * NERDTree
-nmap <Leader>e :NERDTreeToggle<CR> 
+nmap <Leader>e :NERDTreeToggle<CR>
