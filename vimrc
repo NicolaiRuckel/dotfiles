@@ -41,6 +41,9 @@ set ai
 set si
 set scrolloff=5
 
+set dictionary+=/usr/share/dict/american-english
+set dictionary+=/usr/share/dict/ngerman
+
 set list
 set lcs=tab:▸\ 
 
@@ -51,6 +54,8 @@ set lcs=tab:▸\
 set smartcase
 set ignorecase
 set incsearch
+set hlsearch
+nnoremap <silent> <ESC> :noh<CR><ESC>
 
 " ######################
 " keybindings
