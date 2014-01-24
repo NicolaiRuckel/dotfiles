@@ -68,8 +68,6 @@ noremap   <Right>  <NOP>
 "use space for folding and unfolding
 nnoremap <space> za
 
-nmap <Leader>e :e .<CR>
-nmap <F2> :TlistToggle<CR>
 
 "F3 for paste
 set pt=<F3>
@@ -103,3 +101,9 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "
 "airline
 set laststatus=2
+set noshowmode
+
+"nerdtree
+"open nerdtree at start
+autocmd vimenter * NERDTree
+nmap <Leader>e :NERDTreeToggle<CR> 
