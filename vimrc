@@ -81,14 +81,14 @@ command Q q
 " rules
 " ######################
 if has("autocmd")
-	autocmd FileType make setlocal ts=8 sw=8 noet
-	autocmd FileType html setlocal ts=2 sw=2 et cc= omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType css setlocal ts=2 sw=2 et cc= omnifunc=csscomplete#CompleteCSS
-	autocmd FileType javascript setlocal ts=4 sw=4 et
-	autocmd FileType c setlocal ts=4 sw=4 noet
-	autocmd FileType ada setlocal ts=3 sw=3 et
-	autocmd FileType tex setlocal ts=2 sw=2 et
-	autocmd FileType python setlocal ts=2 sw=2 et
+    autocmd FileType make setlocal ts=8 sw=8 noet
+    autocmd FileType html setlocal ts=2 sw=2 et cc= omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css setlocal ts=2 sw=2 et cc= omnifunc=csscomplete#CompleteCSS
+    autocmd FileType javascript setlocal ts=4 sw=4 et
+    autocmd FileType c setlocal ts=4 sw=4 noet
+    autocmd FileType ada setlocal ts=3 sw=3 et
+    autocmd FileType tex setlocal ts=2 sw=2 et
+    autocmd FileType python setlocal ts=2 sw=2 et
 endif
 
 " ######################
@@ -108,6 +108,7 @@ endif
 let g:airline_symbols.branch = '⎇'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline#extensions#syntastic#enabled = 1
 
 "nerdtree
 nmap <Leader>e :NERDTreeToggle<CR>
