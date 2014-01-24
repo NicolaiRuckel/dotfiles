@@ -102,6 +102,12 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "airline
 set laststatus=2
 set noshowmode
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = '⎇'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 "nerdtree
 nmap <Leader>e :NERDTreeToggle<CR>
