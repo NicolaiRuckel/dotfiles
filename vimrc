@@ -9,9 +9,12 @@ filetype plugin indent on
 set cc=80
 set ff=unix
 colorscheme molokai
+
 "backspace working in vim 7.3
 set bs=2
+
 "set bg=dark
+"
 "moar colors
 set t_Co=256
 "make Line Numbers grey
@@ -25,7 +28,7 @@ set expandtab
 set ruler
 "Turn on wildmenu
 set wildmenu
-"filtes not shown in wild menu
+"files not shown in wild menu
 set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out
 set history=700
 " Turn backup off, since all important stuff is in git anyway...
@@ -55,7 +58,7 @@ set smartcase
 set ignorecase
 set incsearch
 set hlsearch
-nnoremap <silent> <ESC> :noh<CR><ESC>
+
 
 " ######################
 " keybindings
@@ -73,6 +76,7 @@ noremap   <Right>  <NOP>
 "use space for folding and unfolding
 nnoremap <space> za
 
+nmap <Leader>e :NERDTreeToggle<CR>
 
 "F3 for paste
 set pt=<F3>
@@ -103,7 +107,7 @@ endif
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "let g:syntastic_mode_map = { 'mode': 'active',
 "                               \ 'passive_filetypes': ['html'] }
-"
+
 "airline
 set laststatus=2
 set noshowmode
@@ -113,7 +117,10 @@ endif
 let g:airline_symbols.branch = '⎇'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline#extensions#syntastic#enabled = 1
+"let g:airline#extensions#syntastic#enabled = 1
+let g:airline_detect_paste=1
 
 "nerdtree
-nmap <Leader>e :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
+let NERDTreeMouseMode=2
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
