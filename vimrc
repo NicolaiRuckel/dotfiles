@@ -119,6 +119,8 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline_detect_paste=1
+let g:airline_symbols.readonly = ''
+let g:airline_section_z = '%3l,%-3c %P'
 
 "nerdtree
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
