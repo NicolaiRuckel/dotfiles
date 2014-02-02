@@ -47,6 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias l="ls -l"
 alias j="jump"
+alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
 case `uname` in
 	Darwin)
 		alias gvim="mvim"
