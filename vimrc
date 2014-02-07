@@ -8,7 +8,9 @@ call pathogen#infect()
 filetype plugin indent on
 set cc=80
 set ff=unix
-colorscheme molokai
+"colorscheme molokai
+colorscheme lucius
+LuciusWhite
 
 "backspace working in vim 7.3
 set bs=2
@@ -18,7 +20,8 @@ set bs=2
 "moar colors
 set t_Co=256
 "make Line Numbers grey
-hi LineNr ctermfg=darkgray
+"hi LineNr ctermfg=darkgray
+
 set mouse=nv
 set shiftwidth=4
 set encoding=utf-8
