@@ -36,6 +36,7 @@ git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone git://github.com/tpope/vim-git ~/.vim/bundle/vim-git
 git clone git://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone git://github.com/jonathanfilip/vim-lucius ~/.vim/bundle/vim-lucius
 
 # install oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
