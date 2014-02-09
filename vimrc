@@ -10,7 +10,6 @@ set cc=80
 set ff=unix
 "colorscheme molokai
 colorscheme lucius
-LuciusWhite
 
 "backspace working in vim 7.3
 set bs=2
