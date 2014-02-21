@@ -2,8 +2,10 @@ if has("gui_macvim")
   set guifont=Monaco:h12
 else
     "set guifont=Hermit:h8
+    set guifont=Liberation\ Mono\ 8
     set guioptions-=m "remove menu bar
     set guioptions-=T "remove toolbar
+    set guioptions-=e " gui tabs
 endif
 set lines=100
 "escape removes highlight of searches

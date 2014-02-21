@@ -50,7 +50,7 @@ set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 
 set list
-set lcs=tab:▸\ 
+set lcs=tab:▸\ ,trail:_
 
 " ######################
 " search settings
@@ -87,6 +87,9 @@ set pt=<F3>
 map <leader>t :! pdflatex %; open %:r.pdf<CR>
 command W w
 command Q q
+
+nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
+nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
 
 " ######################
 " rules
@@ -128,3 +131,11 @@ let g:airline_section_z = '%3l,%-3c %P'
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
 let NERDTreeMouseMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
+
+" ######################
+" functions
+" ######################
+
+function! AdjustFontSize(amount)
+  let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
+endfunction
