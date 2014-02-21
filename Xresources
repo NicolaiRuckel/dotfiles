@@ -9,24 +9,31 @@ Xcursor.theme: oxy-whitewater
 URxvt.depth: 32
 URxvt.scrollBar: off
 URxvt.font: xft:monospace:size=10
-URxvt.boldfont:xft:Monospace-Bold:size=10
-!URxvt.font: xft:liberationmono:size=8
+!URxvt.boldfont:xft:Monospace-Bold:size=10
+URxvt.font: xft:liberationmono:size=8
 !URxvt.font: xft:hermit:size=8
 !URxvt.font: xft:droidsansmono:size=8
 !URxvt.perl-ext-common: tabbedex,vtwheel,matcher
-URxvt.perl-ext-common: default,url-select,keyboard-select,clipboard
+URxvt.perl-ext-common: default,url-select,keyboard-select,clipboard,font-size
 URxvt.url-select.button: 1
 URxvt.url-select.launcher: /usr/bin/chromium
 URxvt.url-select.underline: true
-!URxvt.matcher.launcher: /usr/bin/firefox
-!URxvt.matcher.button: 1
+URxvt.matcher.launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 URxvt.saveLines: 8192
 URxvt.urgentOnBell: true
+
+URxvt.keysym.C-Up: perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-S-Up: perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
