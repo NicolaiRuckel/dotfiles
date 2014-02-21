@@ -53,3 +53,5 @@ case `uname` in
 		alias gvim="mvim"
 	;;
 esac
+
+export GNATPATH=/opt/gnat/bin
