@@ -132,6 +132,11 @@ let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
 let NERDTreeMouseMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
 
+"taglist
+let Tlist_Use_Right_Window=1
+let Tlist_Exit_OnlyWindow=1
+nnoremap <Leader>t :TlistToggle<CR>
+
 " ######################
 " functions
 " ######################
