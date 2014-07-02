@@ -16,6 +16,7 @@ set cursorline
 set bs=2
 
 "set bg=dark
+set bg=light
 "
 "moar colors
 set t_Co=256
