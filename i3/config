@@ -230,7 +230,7 @@ assign [class="Amarok"] → $ws5
 assign [class="Audacious"] → $ws5
 assign [class="Deadbeef"] → $ws5
 assign [class="Sayonara"] → $ws5
-assign [class="gmpc"] → $ws5
+assign [class="GMPC"] → $ws5
 assign [class="Skype"] → $ws4
 
 # window rules
