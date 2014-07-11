@@ -12,6 +12,8 @@ set ff=unix
 colorscheme lucius
 set cursorline
 
+let mapleader = ","
+
 "backspace working in vim 7.3
 set bs=2
 
@@ -53,6 +55,8 @@ set dictionary+=/usr/share/dict/ngerman
 set list
 set lcs=tab:▸\ ,trail:_
 
+set relativenumber
+set undofile
 " ######################
 " search settings
 " ######################
@@ -61,6 +65,8 @@ set smartcase
 set ignorecase
 set incsearch
 set hlsearch
+
+nnoremap <leader><space> :noh<cr>
 
 
 " ######################
@@ -77,7 +83,9 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 "use space for folding and unfolding
-nnoremap <space> za
+"nnoremap <space> za
+
+nnoremap ; :
 
 nmap <Leader>e :NERDTreeToggle<CR>
 
@@ -91,6 +99,13 @@ command Q q
 
 nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
 nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
+
+nnoremap <leader>w <C-w>v<C-w>l
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " ######################
 " rules
