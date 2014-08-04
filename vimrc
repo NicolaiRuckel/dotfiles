@@ -56,7 +56,7 @@ set dictionary+=/usr/share/dict/ngerman
 set list
 set lcs=tab:▸\ ,trail:_
 
-set relativenumber
+"set relativenumber
 set undofile
 " ######################
 " search settings
