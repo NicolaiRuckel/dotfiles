@@ -232,7 +232,6 @@ assign [class="Deadbeef"] → $ws6
 assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
 assign [class="Skype"] → $ws4
-assign [class="xbmc.bin"] → $ws10
 
 # window rules
 for_window [class="MPlayer"] floating enable
