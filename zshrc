@@ -55,3 +55,4 @@ case `uname` in
 esac
 
 export GNATPATH=/opt/gnat/bin
+export GOPATH=$HOME/go
