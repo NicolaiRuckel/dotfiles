@@ -126,6 +126,19 @@ endif
 " plugins
 " ######################
 
+" CtrlP
+nnoremap <Leader>e :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>m :CtrlPMRUFiles<CR>
+nnoremap <Leader>c :CtrlP %:h<CR>
+"let g:ctrlp_match_window = 'max:50,results:50'
+let g:ctrlp_reuse_window = 'help'
+
+let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
+
+" Y U NO COMMIT AFTER 20 LINES???!?!
+let g:YUNOcommit_after = 20
+
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "let g:syntastic_mode_map = { 'mode': 'active',
 "                               \ 'passive_filetypes': ['html'] }
