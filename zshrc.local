@@ -4,9 +4,9 @@
 
 # use with grml config: https://grml.org/zsh/
 
-##################
-# CONFIGURATION ##
-##################
+#########################
+# GLOBAL CONFIGURATION ##
+#########################
 
 # variables
 export PATH=$PATH:~/nicolai/bin
@@ -14,6 +14,10 @@ export GNATPATH=/usr/bin/gnat
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
+
+# names directories: http://zshwiki.org/home/examples/aliasdirs
+hash -d dotfiles=~/dotfiles
+hash -d bachelor=~/Documents/Uni/Bachelor
 
 ###################################
 # SYSTEM DEPENDENT CONFIGURATION ##
@@ -41,5 +45,15 @@ case `uname` in
             print "chpwd(): Switching to profile: $profile"
             export PATH="/usr/bin/gnat:$PATH"
         }
+    ;;
+esac
+
+####################################
+# MACHINE DEPENDENT CONFIGURATION ##
+####################################
+
+case `uname -n` in
+    snitsig)
+        hash -d media=/media/nico/media
     ;;
 esac
