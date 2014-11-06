@@ -1,0 +1,31 @@
+# use with grml config: https://grml.org/zsh/
+
+# variables
+export PATH=$PATH:~/nicolai/bin
+export GNATPATH=/opt/gnat/bin
+
+# Mac OS stuff
+case `uname` in
+	Darwin)
+		alias gvim="mvim"
+	;;
+esac
+
+# Linux stuff
+case `uname` in
+	Linux)
+        alias hibernate="sudo pm-hibernate"
+	;;
+esac
+
+# aliases
+alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
+
+# profiles
+zstyle ':chpwd:profiles:~/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
+chpwd_profile_ada()
+{
+    [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+    print "chpwd(): Switching to profile: $profile"
+    export PATH="$GNATPATH:$PATH"
+}
