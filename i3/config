@@ -97,7 +97,7 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10: xbmc
-set $wsf1 F1
+set $wsf1 F1: games
 set $wsf2 F2
 set $wsf3 F3
 set $wsf4 F4
@@ -225,6 +225,7 @@ assign [class="Evolution"] → $ws3
 assign [class="Evolution"] → $ws3
 assign [class="Pidgin"] → $ws4
 assign [class="Xchat"] → $ws4
+assign [class="Hexchat"] → $ws4
 assign [class="Polari"] → $ws4
 assign [class="Amarok"] → $ws6
 assign [class="Audacious"] → $ws6
@@ -232,6 +233,8 @@ assign [class="Deadbeef"] → $ws6
 assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
 assign [class="Skype"] → $ws4
+assign [class="Steam"] → $wsf1
+assign [title="Scrolls"] → $wsf1
 
 # window rules
 for_window [class="MPlayer"] floating enable
@@ -264,7 +267,7 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_
 bindsym $mod+Prior exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%+
 bindsym $mod+Next exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%-
 bindsym XF86AudioMute exec amixer set Master toggle && killall -SIGUSR1 i3status
-bindsym Print exec scrot
+bindsym $mod+Print exec scrot
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 # startup applications

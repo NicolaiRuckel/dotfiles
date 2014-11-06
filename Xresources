@@ -8,6 +8,7 @@ Xcursor.theme: oxy-whitewater
 
 URxvt.depth: 32
 URxvt.scrollBar: off
+URxvt.scrollBar: false
 URxvt.font: xft:monospace:size=10
 !URxvt.boldfont:xft:Monospace-Bold:size=10
 URxvt.font: xft:liberationmono:size=8
