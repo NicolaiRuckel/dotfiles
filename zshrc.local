@@ -1,31 +1,45 @@
+##########
+# NOTES ##
+##########
+
 # use with grml config: https://grml.org/zsh/
+
+##################
+# CONFIGURATION ##
+##################
 
 # variables
 export PATH=$PATH:~/nicolai/bin
 export GNATPATH=/usr/bin/gnat
 
+# aliases
+alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
+
+###################################
+# SYSTEM DEPENDENT CONFIGURATION ##
+###################################
+
 # Mac OS stuff
 case `uname` in
-	Darwin)
-		alias gvim="mvim"
-	;;
+    Darwin)
+        #aliases
+        alias gvim="mvim"
+    ;;
 esac
 
 # Linux stuff
 case `uname` in
-	Linux)
+    Linux)
+        # aliases
         alias hibernate="sudo pm-hibernate"
+
+        #profiles
         zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
-	;;
+        chpwd_profile_ada()
+        {
+            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+            print "chpwd(): Switching to profile: $profile"
+            export PATH="/usr/bin/gnat:$PATH"
+        }
+    ;;
 esac
-
-# aliases
-alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
-
-# profiles
-chpwd_profile_ada()
-{
-    [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-    print "chpwd(): Switching to profile: $profile"
-    export PATH="$GNATPATH:$PATH"
-}
