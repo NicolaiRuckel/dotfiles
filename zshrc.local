@@ -1,12 +1,12 @@
-##########
-# NOTES ##
-##########
+###########
+## NOTES ##
+###########
 
 # use with grml config: https://grml.org/zsh/
 
-#########################
-# GLOBAL CONFIGURATION ##
-#########################
+###########################
+## GENERAL CONFIGURATION ##
+###########################
 
 # variables
 export PATH=$PATH:~/nicolai/bin
@@ -19,9 +19,9 @@ alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg
 hash -d dotfiles=~/dotfiles
 hash -d bachelor=~/Documents/Uni/Bachelor
 
-###################################
-# SYSTEM DEPENDENT CONFIGURATION ##
-###################################
+####################################
+## SYSTEM DEPENDENT CONFIGURATION ##
+####################################
 
 # Mac OS stuff
 case `uname` in
@@ -48,9 +48,9 @@ case `uname` in
     ;;
 esac
 
-####################################
-# MACHINE DEPENDENT CONFIGURATION ##
-####################################
+#####################################
+## MACHINE DEPENDENT CONFIGURATION ##
+#####################################
 
 case `uname -n` in
     snitsig)
