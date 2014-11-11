@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# needs procmail package
+
 # example usage:
 # volume.sh 5%-
 # volume.sh 5%+
