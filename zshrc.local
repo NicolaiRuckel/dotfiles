@@ -28,6 +28,16 @@ case `uname` in
     Darwin)
         #aliases
         alias gvim="mvim"
+
+        #profiles
+        zstyle ':chpwd:profiles:/Users/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
+        chpwd_profile_ada()
+        {
+            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+            print "chpwd(): Switching to profile: $profile"
+            export MACOSX_DEPLOYMENT_TARGET=10.9
+            #export PATH="/usr/bin/gnat:$PATH"
+        }
     ;;
 esac
 
