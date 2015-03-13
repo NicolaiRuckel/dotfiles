@@ -17,5 +17,7 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xrdb ~/.Xresources &
-xsetroot -cursor_name left_ptr
+#xsetroot -cursor_name left_ptr
 exec i3
+
+#exec startkde
