@@ -20,7 +20,8 @@ set $mod Mod4
 # chose an xft font, such as:
 # font xft:DejaVu Sans Mono 9
 # font xft:Liberation Mono 8
-font xft:Hermit Mono 8
+#font xft:Hermit Mono 8
+font xft:Source Sans Pro Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -34,7 +35,7 @@ bindsym $mod+backspace kill
 
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
-bindsym Mod1+space exec dmenu_run -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+bindsym Mod1+space exec dmenu_run -p -i "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
 
 # change focus
 bindsym $mod+h focus left
@@ -233,6 +234,7 @@ assign [class="Audacious"] → $ws6
 assign [class="Deadbeef"] → $ws6
 assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
+assign [class="Celementine"] → $ws6
 assign [class="Steam"] → $ws10
 assign [title="Scrolls"] → $ws10
 
@@ -273,7 +275,10 @@ bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this
 # startup applications
 exec urxvt
 #exec nm-applet
-#exec dropboxd
+exec dropboxd
+exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
+#xset r rate 250 50
+#setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
 # colors
 # class border backgr. text indicator
