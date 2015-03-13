@@ -35,7 +35,7 @@ bindsym $mod+backspace kill
 
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
-bindsym Mod1+space exec dmenu_run -p -i "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
 
 # change focus
 bindsym $mod+h focus left
