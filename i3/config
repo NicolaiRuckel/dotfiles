@@ -235,7 +235,7 @@ assign [class="Deadbeef"] → $ws6
 assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
 assign [class="Celementine"] → $ws6
-assign [class="Cantata"] → $ws6
+assign [title="Cantata"] → $ws6
 assign [class="Steam"] → $ws10
 assign [title="Scrolls"] → $ws10
 
