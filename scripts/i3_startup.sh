@@ -4,7 +4,6 @@
 
 xset r rate 250 50
 
-xset -dpms
 
 #setxkbmap us altgr-intl
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
