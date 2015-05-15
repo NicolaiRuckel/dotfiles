@@ -11,6 +11,8 @@ call pathogen#infect()
 
 filetype plugin indent on
 set cc=80
+set tw=80
+set formatoptions+=t
 set ff=unix
 set cursorline
 
