@@ -10,7 +10,6 @@
 
 # variables
 export PATH=$PATH:~/nicolai/bin
-export GNATPATH=/usr/bin/gnat
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
@@ -26,6 +25,9 @@ hash -d bachelor=~/Documents/Uni/Bachelor
 # Mac OS stuff
 case `uname` in
     Darwin)
+        # variables
+        export GNATPATH=/usr/bin/gnat
+
         #aliases
         alias gvim="mvim"
 
@@ -48,6 +50,19 @@ case `uname` in
         alias hibernate="sudo pm-hibernate"
 
         #profiles
+    ;;
+esac
+
+#####################################
+## MACHINE DEPENDENT CONFIGURATION ##
+#####################################
+
+case `uname -n` in
+    snitsig)
+        # variables
+        export GNATPATH=/usr/bin/gnat
+
+        hash -d media=/media/nico/media
         zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
         chpwd_profile_ada()
         {
@@ -58,12 +73,18 @@ case `uname` in
     ;;
 esac
 
-#####################################
-## MACHINE DEPENDENT CONFIGURATION ##
-#####################################
-
 case `uname -n` in
-    snitsig)
-        hash -d media=/media/nico/media
-    ;;
+    archbook)
+        # variables
+        export GNATPATH=/opt/gnat/bin
+
+        #profiles
+        zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
+        chpwd_profile_ada()
+        {
+            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+            print "chpwd(): Switching to profile: $profile"
+            export PATH="/opt/gnat/bin:$PATH"
+        }
+        ;;
 esac

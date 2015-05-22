@@ -257,26 +257,35 @@ for_window [class="Dolphin" title="Moving"] floating enable
 for_window [class="Steam" title="Install"] floating enable
 
 # custom keybindings
-bindsym XF86Launch1 exec xset dpms force off
-bindsym XF86ScreenSaver exec i3lock -c 000000
-bindsym XF86Display exec x-toggle-2nd.sh
-bindsym Mod1+XF86Display exec x-mirror.sh
-bindsym Shift+XF86Display exec x-switch-display.sh
-bindsym XF86TouchpadToggle exec toggletouchpad.sh
-#bindsym XF86AudioLowerVolume exec amixer set Master 8%- unmute
-#bindsym XF86AudioRaiseVolume exec amixer set Master 8%+ unmute
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- -6% && amixer set Master unmute && killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- +6% && amixer set Master unmute && killall -SIGUSR1 i3status
+#bindsym XF86Launch1 exec xset dpms force off
+#bindsym XF86ScreenSaver exec i3lock -c 000000
+#bindsym XF86Display exec x-toggle-2nd.sh
+#bindsym Mod1+XF86Display exec x-mirror.sh
+#bindsym Shift+XF86Display exec x-switch-display.sh
+
+# touchpad
+bindsym XF86Tools exec ~/dotfiles/scripts/toggletouchpad.sh
+
+# audio
+bindsym XF86AudioMute exec amixer set Master toggle && killall -SIGUSR1 i3status
 bindsym $mod+Prior exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%+
 bindsym $mod+Next exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%-
-bindsym XF86AudioMute exec amixer set Master toggle && killall -SIGUSR1 i3status
-bindsym $mod+Print exec scrot
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%-
+
+# screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/dotfiles/scripts/backlight.sh 1.5
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/dotfiles/scripts/backlight.sh 0.66
+
+# screenshots
+bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
+
+# rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 # startup applications
 exec urxvt
-#exec nm-applet
-exec dropboxd
+#exec dropboxd
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 #xset r rate 250 50
 #setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
@@ -301,15 +310,15 @@ bar {
     status_command i3status
     tray_output LVDS1
         colors {
-            background #eeeeee
-            statusline #444444
+            background #005faf
+            statusline #eeeeee
             separator #eeeeee
 
             # class border backgr. text
             focused_workspace #eeeeee #eeeeee #005faf
             active_workspace #eeeeee #eeeeee #444444
             inactive_workspace #eeeeee #eeeeee #888888
-            urgent_workspace #eeeeee #eeeeee #af0000
+            urgent_workspace #af0000 #af0000 #eeeeee
         }
 }
 
