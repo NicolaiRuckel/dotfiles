@@ -219,16 +219,20 @@ bindsym $mod+Mod1+shift+Right move workspace to output right
 # workspace assignments
 assign [class="Firefox"] → $ws2
 assign [class="Chromium"] → $ws2
-assign [class="Liferea"] → $ws2
+
 assign [class="Claws-mail"] → $ws3
 assign [class="Thunderbird"] → $ws3
 assign [class="Kmail"] → $ws3
 assign [class="Evolution"] → $ws3
+
 assign [class="Pidgin"] → $ws4
 assign [class="Xchat"] → $ws4
 assign [class="Hexchat"] → $ws4
 assign [class="Polari"] → $ws4
 assign [class="Skype"] → $ws4
+
+assign [class="Liferea"] → $ws5
+
 assign [class="Amarok"] → $ws6
 assign [class="Audacious"] → $ws6
 assign [class="Deadbeef"] → $ws6
@@ -236,6 +240,7 @@ assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
 assign [class="Celementine"] → $ws6
 assign [title="Cantata"] → $ws6
+
 assign [class="Steam"] → $ws10
 assign [title="Scrolls"] → $ws10
 
@@ -307,6 +312,7 @@ exec_always --no-startup-id nitrogen --restore
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    font pango:Source Sans Pro, Icons 10
     status_command i3status
     tray_output LVDS1
         colors {
