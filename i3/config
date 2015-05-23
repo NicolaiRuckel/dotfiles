@@ -88,16 +88,16 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # workspace names
-set $ws1 1: term
-set $ws2 2: web
-set $ws3 3: mail
-set $ws4 4: chat
-set $ws5 5: rss
-set $ws6 6: music
+set $ws1 1: 
+set $ws3 3: 
+set $ws2 2: 
+set $ws4 4: 
+set $ws5 5: 
+set $ws6 6: ♫
 set $ws7 7
 set $ws8 8
 set $ws9 9
-set $ws10 10: games
+set $ws10 10: 
 set $wsf1 F1:
 set $wsf2 F2
 set $wsf3 F3
@@ -113,27 +113,27 @@ set $wsf12 F12
 
 # switch to workspace
 bindsym $mod+1   workspace $ws1
-bindsym $mod+2   workspace number $ws2
-bindsym $mod+3   workspace number $ws3
-bindsym $mod+4   workspace number $ws4
-bindsym $mod+5   workspace number $ws5
-bindsym $mod+6   workspace number $ws6
-bindsym $mod+7   workspace number $ws7
-bindsym $mod+8   workspace number $ws8
-bindsym $mod+9   workspace number $ws9
-bindsym $mod+0   workspace number $ws10
-bindsym $mod+F1  workspace number 11
-bindsym $mod+F2  workspace number 12
-bindsym $mod+F3  workspace number 13
-bindsym $mod+F4  workspace number 14
-bindsym $mod+F5  workspace number 15
-bindsym $mod+F6  workspace number 16
-bindsym $mod+F7  workspace number 17
-bindsym $mod+F8  workspace number 18
-bindsym $mod+F9  workspace number 19
-bindsym $mod+F10 workspace number 20
-bindsym $mod+F11 workspace number 21
-bindsym $mod+F12 workspace number 22
+bindsym $mod+2   workspace $ws2
+bindsym $mod+3   workspace $ws3
+bindsym $mod+4   workspace $ws4
+bindsym $mod+5   workspace $ws5
+bindsym $mod+6   workspace $ws6
+bindsym $mod+7   workspace $ws7
+bindsym $mod+8   workspace $ws8
+bindsym $mod+9   workspace $ws9
+bindsym $mod+0   workspace $ws10
+bindsym $mod+F1  workspace 11
+bindsym $mod+F2  workspace 12
+bindsym $mod+F3  workspace 13
+bindsym $mod+F4  workspace 14
+bindsym $mod+F5  workspace 15
+bindsym $mod+F6  workspace 16
+bindsym $mod+F7  workspace 17
+bindsym $mod+F8  workspace 18
+bindsym $mod+F9  workspace 19
+bindsym $mod+F10 workspace 20
+bindsym $mod+F11 workspace 21
+bindsym $mod+F12 workspace 22
 bindsym $mod+Escape workspace back_and_forth
 
 # move focused container to workspace
@@ -315,6 +315,7 @@ bar {
     font pango:Source Sans Pro, Icons 10
     status_command i3status
     tray_output LVDS1
+    strip_workspace_numbers yes
         colors {
             background #005faf
             statusline #eeeeee
