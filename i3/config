@@ -285,8 +285,17 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
+# load layputs
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+
 # startup applications
 exec urxvt
+exec firefox
+exec hexchat
+exec pidgin
+exec thunderbird
+exec liferea
+exec --no-startup-id "i3-msg 'workspace $ws1'"
 #exec dropboxd
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 #xset r rate 250 50
