@@ -3,3 +3,4 @@ vim/.netrwhist
 backups/*
 *~
 *.swp
+*.swo
