@@ -239,7 +239,7 @@ assign [class="Celementine"] → $ws6
 assign [title="Cantata"] → $ws6
 
 assign [class="Steam"] → $ws10
-assign [title="Scrolls"] → $ws10
+assign [class="Scrolls"] → $ws10
 
 # window rules
 for_window [class="MPlayer"] floating enable
@@ -257,6 +257,9 @@ for_window [class="Dolphin" title="Moving"] floating enable
 
 # steam
 for_window [class="Steam" title="Install"] floating enable
+
+# skype
+for window [class="Skype" title="File Transfers"] floating enable
 
 # custom keybindings
 #bindsym XF86Launch1 exec xset dpms force off
@@ -293,6 +296,7 @@ exec urxvt
 exec firefox
 exec hexchat
 exec pidgin
+exec skype
 exec thunderbird
 exec liferea
 exec --no-startup-id "i3-msg 'workspace $ws1'"
