@@ -323,15 +323,27 @@ bar {
     tray_output LVDS1
     strip_workspace_numbers yes
         colors {
-            background #005faf
+            # light theme
+            #background #005faf
+            #statusline #eeeeee
+            #separator #eeeeee
+
+            ## class border backgr. text
+            #focused_workspace #eeeeee #eeeeee #005faf
+            #active_workspace #eeeeee #eeeeee #444444
+            #inactive_workspace #eeeeee #eeeeee #888888
+            #urgent_workspace #af0000 #af0000 #eeeeee
+ 
+            # dark theme
+            background #222222
             statusline #eeeeee
             separator #eeeeee
 
             # class border backgr. text
-            focused_workspace #eeeeee #eeeeee #005faf
+            focused_workspace #222222 #005faf #eeeeee
             active_workspace #eeeeee #eeeeee #444444
-            inactive_workspace #eeeeee #eeeeee #888888
-            urgent_workspace #af0000 #af0000 #eeeeee
+            inactive_workspace #222222 #222222 #eeeeee
+            urgent_workspace #222222 #af0000 #eeeeee
         }
 }
 
