@@ -8,6 +8,7 @@ else
     set guioptions-=e " gui tabs
 endif
 set lines=100
+set columns=100
 "escape removes highlight of searches
 "this does strange things in vim but works in gvim
 nnoremap <silent> <ESC> :noh<CR><ESC>
