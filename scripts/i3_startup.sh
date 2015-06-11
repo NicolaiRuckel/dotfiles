@@ -19,7 +19,11 @@ xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
 case $HOSTNAME in
     ("$LAPTOP_HOSTNAME")
     #  laptop specific settings
-    /home/nicolai/dotfiles/scripts/laptop-touchpad-settings.sh;;
+    /home/nicolai/dotfiles/scripts/laptop-touchpad-settings.sh;
+
+    #  stop screen from turning off after inactivity
+    xset -dpms s off;;
+
     ("$DESKTOP_HOSTNAME")
     #  desktop specific settings
         ;;
