@@ -9,7 +9,7 @@
 ###########################
 
 # variables
-export PATH=$PATH:~/nicolai/bin
+export PATH=$PATH:~/bin
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
