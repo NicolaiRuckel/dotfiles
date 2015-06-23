@@ -304,6 +304,7 @@ exec pidgin
 exec skype
 exec thunderbird
 exec liferea
+exec cantata
 exec --no-startup-id "i3-msg 'workspace $ws1'"
 #exec dropboxd
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
