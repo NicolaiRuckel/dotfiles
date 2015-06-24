@@ -1,0 +1,5 @@
+cache=500000
+
+fs
+ytdl
+ytdl-format=best,bestvideo+bestaudio
