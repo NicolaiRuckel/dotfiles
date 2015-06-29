@@ -19,7 +19,7 @@ set cursorline
 "moar colors
 set t_Co=256
 colorscheme lucius
-set bg=light
+set bg=dark
 
 set history=10000
 
