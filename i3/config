@@ -312,11 +312,19 @@ exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 #setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
 # colors
+# light theme
 # class border backgr. text indicator
-client.focused #005faf #005faf #eeeeee #2e9ef4
-client.focused_inactive #888888 #888888 #eeeeee #484e50
-client.unfocused #dadada #dadada #888888 #292d2e
-client.urgent #af0000 #af0000 #eeeeee #900000
+#client.focused #005faf #005faf #eeeeee #2e9ef4
+#client.focused_inactive #888888 #888888 #eeeeee #484e50
+#client.unfocused #dadada #dadada #888888 #292d2e
+#client.urgent #af0000 #af0000 #eeeeee #900000
+
+# dark theme
+# class                 border  backgr. text    indicator
+client.focused          #005F87 #005F87 #d7d7d7 #2e9ef4
+client.focused_inactive #303030 #303030 #d7d7d7 #484e50
+client.unfocused        #303030 #303030 #888888 #292d2e
+client.urgent           #af0000 #af0000 #d7d7d7 #900000
 
 # generel config
 hide_edge_borders both
@@ -335,9 +343,19 @@ bar {
     strip_workspace_numbers yes
         colors {
             # light theme
+
             #background #005faf
             #statusline #eeeeee
             #separator #eeeeee
+
+            # class border backgr. text
+            focused_workspace #222222 #005faf #eeeeee
+            active_workspace #eeeeee #eeeeee #444444
+            inactive_workspace #222222 #222222 #eeeeee
+            urgent_workspace #222222 #af0000 #eeeeee
+
+
+            # dark theme
 
             ## class border backgr. text
             #focused_workspace #eeeeee #eeeeee #005faf
@@ -345,16 +363,10 @@ bar {
             #inactive_workspace #eeeeee #eeeeee #888888
             #urgent_workspace #af0000 #af0000 #eeeeee
  
-            # dark theme
             background #222222
             statusline #eeeeee
             separator #222222
 
-            # class border backgr. text
-            focused_workspace #222222 #005faf #eeeeee
-            active_workspace #eeeeee #eeeeee #444444
-            inactive_workspace #222222 #222222 #eeeeee
-            urgent_workspace #222222 #af0000 #eeeeee
         }
 }
 
