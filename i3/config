@@ -294,10 +294,14 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 # load layputs
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+#exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
 
 # startup applications
 exec urxvt
+# load layouts
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+
+# startup applications
 exec firefox
 exec hexchat
 exec pidgin
@@ -306,8 +310,10 @@ exec thunderbird
 exec liferea
 exec cantata
 exec --no-startup-id "i3-msg 'workspace $ws1'"
-#exec dropboxd
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
+
+#exec dropboxd
+
 #xset r rate 250 50
 #setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
