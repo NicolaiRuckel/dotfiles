@@ -31,6 +31,7 @@ bindsym $mod+backspace kill
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
 bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+#bindsym Mod1+space exec rofi -dmenu
 
 # change focus
 bindsym $mod+h focus left
@@ -298,18 +299,18 @@ bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this
 
 # startup applications
 exec urxvt
-# load layouts
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
-
-# startup applications
-exec firefox
-exec hexchat
-exec pidgin
-exec skype
-exec thunderbird
-exec liferea
-exec cantata
-exec --no-startup-id "i3-msg 'workspace $ws1'"
+## load layouts
+#exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+#
+## startup applications
+#exec firefox
+#exec hexchat
+#exec pidgin
+#exec skype
+#exec thunderbird
+#exec liferea
+#exec cantata
+#exec --no-startup-id "i3-msg 'workspace $ws1'"
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 
 #exec dropboxd

@@ -18,6 +18,10 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xrdb ~/.Xresources &
 #xsetroot -cursor_name left_ptr
-exec i3
 
+export DE="kde"
+export KDE_FULLSESSION=true
+export KDE_SESSION_VERSION="5"
+
+exec i3
 #exec startkde

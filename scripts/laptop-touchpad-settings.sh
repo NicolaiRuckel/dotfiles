@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #  This adjusts the settings for the laptop touchpad
 

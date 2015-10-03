@@ -20,7 +20,7 @@ case $HOSTNAME in
     ("$LAPTOP_HOSTNAME")
     #  laptop specific settings
     /home/nicolai/dotfiles/scripts/laptop-touchpad-settings.sh;
-    /home/nicolai/dotfiles/scripts/laptop-startup-apps.sh;
+    #/home/nicolai/dotfiles/scripts/laptop-startup-apps.sh;
 
     #  stop screen from turning off after inactivity
     xset -dpms s off;;
