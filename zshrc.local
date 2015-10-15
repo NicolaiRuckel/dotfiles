@@ -9,7 +9,8 @@
 ###########################
 
 # variables
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:/home/nicolai/.gem/ruby/2.2.0/bin
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
