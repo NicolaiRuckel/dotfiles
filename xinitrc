@@ -20,7 +20,7 @@ xrdb ~/.Xresources &
 #xsetroot -cursor_name left_ptr
 
 export DE="kde"
-export KDE_FULLSESSION=true
+export KDE_FULL_SESSION=true
 export KDE_SESSION_VERSION="5"
 
 exec i3
