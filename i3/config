@@ -31,7 +31,9 @@ bindsym $mod+backspace kill
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
 #bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
-bindsym Mod1+space exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "75" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+set $bg-color #2f343f
+set $text-color #f3f4f5
+bindsym Mod1+space exec rofi -show run -fuzzy -lines 3 -eh 2 -width 100 -padding 800 -opacity "75" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Source Sans Pro 28"
 
 # change focus
 bindsym $mod+h focus left
@@ -335,7 +337,7 @@ client.unfocused        #222222 #222222 #888888 #292d2e
 client.urgent           #af0000 #af0000 #d7d7d7 #900000
 
 # generel config
-hide_edge_borders both
+#hide_edge_borders both
 bindsym $mod+b border toggle
 workspace_layout stacking
 
@@ -345,10 +347,10 @@ workspace_layout stacking
 # finds out, if available)
 bar {
     #position top
-    font pango:Source Sans Pro, Icons 10
+    font pango:Source Sans Pro, FontAwesome 10, Icons 10
     status_command i3status
     tray_output LVDS1
-    strip_workspace_numbers yes
+    #strip_workspace_numbers yes
         colors {
             # light theme
 
