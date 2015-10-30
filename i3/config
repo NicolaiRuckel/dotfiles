@@ -246,7 +246,7 @@ assign [class="Sayonara"] → $ws6
 assign [class="Gmpc"] → $ws6
 assign [class="Celementine"] → $ws6
 assign [title="Cantata"] → $ws6
-assign [title="Spotify"] → $ws6
+assign [class="Spotify"] → $ws6
 
 assign [class="Steam"] → $ws10
 assign [class="Scrolls"] → $ws10
