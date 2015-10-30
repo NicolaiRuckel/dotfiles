@@ -15,7 +15,7 @@ set tm=500                  " set timeoutlen to 500
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 " }}}
-" Colors {{{{
+" Colors {{{
 set t_Co=256                " more colors for more fun!
 colorscheme lucius          " awesome colorscheme
 set background=dark         " dark background
@@ -28,6 +28,7 @@ set expandtab               " tabs are spaces
 " }}}
 " UI Config {{{
 set number                  " show line numbers
+set relativenumber          " show relative line numbers
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
 set autoindent
@@ -35,7 +36,8 @@ set smartindent
 filetype plugin indent on   " load filetype-specific indent files and plugins
 set wildmenu                " visual autocomplete for command menu
 set wildmode=full
-set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out
+set wildignore+=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out,*.ali,*.zip,*/obj/*,*.gcno
+set wildignore+=*.git/*,*.pyc
 set wildignorecase
 set wildcharm=<Tab>
 set lazyredraw              " redraw only when we need to
@@ -70,6 +72,10 @@ nnoremap <space> za
 " }}}
 " Leader Shortcuts {{{
 let mapleader=","           " leader is comma
+
+nnoremap <leader>w <C-w>v<C-w>l
+
+nnoremap <leader>v :vsplit<cr>
 " }}}
 " Keybindings {{{
 nnoremap ; :
@@ -78,8 +84,6 @@ set pt=<F3>                 " paste mode
 
 command W w
 command Q q
-
-nnoremap <leader>w <C-w>v<C-w>l
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -119,7 +123,8 @@ let g:airline_right_sep = ''
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline_detect_paste=1
 let g:airline_symbols.readonly = ''
-let g:airline_section_z = '%3l,%-3c %P'
+"let g:airline_section_z = '%3l,%-3c %P'
+let g:airline_section_z = '%-3c %P'
 " }}}
 " Nerdtree {{{
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
