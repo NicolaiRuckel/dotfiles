@@ -61,7 +61,7 @@ esac
 case `uname -n` in
     snitsig)
         # variables
-        export GNATPATH=/usr/bin/gnat
+        export GNATPATH=/opt/bin/gnat
 
         hash -d media=/media/nico/media
         zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
@@ -69,7 +69,7 @@ case `uname -n` in
         {
             [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
             print "chpwd(): Switching to profile: $profile"
-            export PATH="/usr/gnat/bin:$PATH"
+            export PATH="/opt/gnat/bin:$PATH"
         }
     ;;
 esac

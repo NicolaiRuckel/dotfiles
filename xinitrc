@@ -23,5 +23,5 @@ export DE="kde"
 export KDE_FULL_SESSION=true
 export KDE_SESSION_VERSION="5"
 
-exec i3
+#exec i3
 #exec startkde
