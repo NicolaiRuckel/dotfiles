@@ -144,6 +144,7 @@ augroup configgroup
     autocmd FileType ada setlocal ts=3 sw=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et
     autocmd FileType python setlocal ts=2 sw=2 et
+    autocmd FileType markdown setlocal ts=4 sw=4
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal tabstop=2
