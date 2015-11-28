@@ -11,7 +11,7 @@ URxvt.scrollBar: off
 URxvt.scrollBar: false
 URxvt.font: xft:monospace:size=10
 !URxvt.boldfont:xft:Monospace-Bold:size=10
-URxvt.font: xft:liberationmono:size=8
+URxvt.font: xft:liberationmono:size=10
 !URxvt.font: xft:hermit:size=8
 !URxvt.font: xft:droidsansmono:size=8
 !URxvt.perl-ext-common: tabbedex,vtwheel,matcher
@@ -137,22 +137,36 @@ URxvt.tabbed.autohide: yes
 
 !! LuciusDark
 
-*background:  #303030
-*foreground:  #d7d7d7
-*cursorColor: #87afd7
-*color0:      #303030
-*color8:      #303030
-*color1:      #ff5f5f
-*color9:      #ff5f5f
-*color2:      #afd787
-*color10:     #afd787
-*color3:      #d7d7af
-*color11:     #d7d7af
-*color4:      #87d7ff
-*color12:     #87d7ff
-*color5:      #d7afd7
-*color13:     #d7afd7
-*color6:      #87d7af
-*color14:     #87d7af
-*color7:      #d7d7d7
-*color15:     #d7d7d7
+URxvt.background:  #303030
+URxvt.foreground:  #d7d7d7
+URxvt.cursorColor: #87afd7
+URxvt.color0:      #303030
+URxvt.color8:      #303030
+URxvt.color1:      #ff5f5f
+URxvt.color9:      #ff5f5f
+URxvt.color2:      #afd787
+URxvt.color10:     #afd787
+URxvt.color3:      #d7d7af
+URxvt.color11:     #d7d7af
+URxvt.color4:      #87d7ff
+URxvt.color12:     #87d7ff
+URxvt.color5:      #d7afd7
+URxvt.color13:     #d7afd7
+URxvt.color6:      #87d7af
+URxvt.color14:     #87d7af
+URxvt.color7:      #d7d7d7
+URxvt.color15:     #d7d7d7
+
+!!{{{ Rofi
+!rofi.background:    #2f343f
+!rofi.foreground:    #f3f4f5
+!rofi.highlightbg:   #2f343f
+!rofi.highlightfg:   #9575cd
+!rofi.eh:            2
+!rofi.width:         100
+!rofi.padding:       100
+!rofi.lines:         3
+!rofi.bw:            0
+!rofi.font:          Source Sans Pro 28
+!rofi.opacity:       80
+! }}}
