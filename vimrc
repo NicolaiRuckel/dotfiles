@@ -133,6 +133,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 nmap <Leader>e :NERDTreeToggle<CR>
 " }}}
+" Instant Markdown {{{
+let g:instant_markdown_autostart = 0
+" }}}
 " Autogroups {{{
 augroup configgroup
     autocmd!
