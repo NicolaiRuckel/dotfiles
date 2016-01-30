@@ -23,5 +23,8 @@ export DE="kde"
 export KDE_FULL_SESSION=true
 export KDE_SESSION_VERSION="5"
 
-#exec i3
+case `uname -n` in
+    archbook)
+    exec i3
+esac
 #exec startkde
