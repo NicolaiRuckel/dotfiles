@@ -22,7 +22,8 @@ font xft:Source Sans Pro Regular 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
@@ -236,6 +237,7 @@ assign [class="Xchat"] → $ws4
 assign [class="Hexchat"] → $ws4
 assign [class="Polari"] → $ws4
 assign [class="Skype"] → $ws4
+assign [class="Discord"] → $ws4
 
 assign [class="Liferea"] → $ws5
 assign [class="feedreader"] → $ws5
@@ -303,7 +305,9 @@ bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this
 #exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
 
 # startup applications
-exec urxvt
+#exec urxvt
+exec termite
+
 ## load layouts
 #exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
 #
@@ -375,7 +379,7 @@ bar {
             #active_workspace #eeeeee #eeeeee #444444
             #inactive_workspace #eeeeee #eeeeee #888888
             #urgent_workspace #af0000 #af0000 #eeeeee
- 
+
             background #222222
             statusline #eeeeee
             separator #222222
