@@ -267,6 +267,7 @@ for_window [class="MediathekView 3.2.1"] floating enable
 # Dolphin
 for_window [class="Dolphin" title="Copying"] floating enable
 for_window [class="Dolphin" title="Moving"] floating enable
+for_window [class="Dolphin" title="Progress Dialog"] floating enable
 
 # steam
 for_window [class="Steam" title="Install"] floating enable
