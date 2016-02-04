@@ -230,6 +230,7 @@ assign [class="Claws-mail"] → $ws3
 assign [class="Thunderbird"] → $ws3
 assign [class="Kmail"] → $ws3
 assign [class="Evolution"] → $ws3
+assign [class="Geary"] → $ws3
 
 assign [class="Pidgin"] → $ws4
 assign [class="Kopete"] → $ws4
