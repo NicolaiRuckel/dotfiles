@@ -31,10 +31,10 @@ bindsym $mod+backspace kill
 
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
-#bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-10" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-12" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
 set $bg-color #2f343f
 set $text-color #f3f4f5
-bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "" -fuzzy -font "Source Sans Pro 20" -lines 5 -separator-style "solid" -hide-scrollbar -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"'
+#bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "" -fuzzy -font "Source Sans Pro 20" -lines 5 -separator-style "solid" -hide-scrollbar -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"'
 #bindsym Mod1+space exec rofi -show run -fuzzy -levenshtein-sort -font "Source Sans Pro 20" -lines 5 -separator-style "solid" -hide-scrollbar -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
 #bindsym Mod1+space exec rofi -show run -fuzzy -lines 3 -eh 2 -width 100 -padding 400 -opacity "80" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Source Sans Pro 28"
 
