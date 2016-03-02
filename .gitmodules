@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-instant-markdown"]
 	path = vim/bundle/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown
+[submodule "nvim/bundle/nyaovim-markdown-preview"]
+	path = nvim/bundle/nyaovim-markdown-preview
+	url = git@github.com:rhysd/nyaovim-markdown-preview.git
