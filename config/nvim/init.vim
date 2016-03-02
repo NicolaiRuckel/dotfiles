@@ -12,6 +12,9 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
+
+" NyaoVim plugins
+Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
 call plug#end()
 " }}}
 " General {{{
