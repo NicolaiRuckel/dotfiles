@@ -1,9 +1,17 @@
 " most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
-" Pathogen {{{
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Vim-Plug {{{
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/scrooloose/syntastic'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/jonathanfilip/vim-lucius'
+Plug 'https://github.com/esneider/YUNOcommit.vim'
+call plug#end()
 " }}}
 " General {{{
 set fileformat=unix         " set fileformat to unix

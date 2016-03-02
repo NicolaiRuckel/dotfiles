@@ -1,39 +1,6 @@
-[submodule "vim/bundle/vim-pathogen"]
-	path = vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/bundle/vim-lucius"]
-	path = vim/bundle/vim-lucius
-	url = https://github.com/jonathanfilip/vim-lucius
-[submodule "vim/bundle/html5"]
-	path = vim/bundle/html5
-	url = https://github.com/othree/html5.vim
-[submodule "vim/bundle/taglist.vim"]
-	path = vim/bundle/taglist.vim
-	url = https://github.com/vim-scripts/taglist.vim
-[submodule "vim/bundle/YUNOcommit.vim"]
-	path = vim/bundle/YUNOcommit.vim
-	url = https://github.com/esneider/YUNOcommit.vim.git
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
 	url = https://github.com/nelstrom/vim-markdown-preview.git
-[submodule "vim/bundle/vim-instant-markdown"]
-	path = vim/bundle/vim-instant-markdown
-	url = https://github.com/suan/vim-instant-markdown
 [submodule "nvim/bundle/nyaovim-markdown-preview"]
 	path = nvim/bundle/nyaovim-markdown-preview
 	url = git@github.com:rhysd/nyaovim-markdown-preview.git
