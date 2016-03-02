@@ -1,4 +1,4 @@
-" most settings and comments are taken from
+ most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
 " Vim-Plug {{{
@@ -14,6 +14,7 @@ Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 
 " NyaoVim plugins
+Plug 'rhysd/nyaovim-popup-tooltip'
 Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
 call plug#end()
 " }}}
@@ -101,7 +102,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"this did strange things in vim but hopefully works in nvim
+nnoremap <silent> <ESC> :noh<CR><ESC>
 " }}}
+" Plugins {{{
 " CtrlP {{{
 nnoremap <Leader>e :CtrlP<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
@@ -147,6 +152,7 @@ nmap <Leader>e :NERDTreeToggle<CR>
 " }}}
 " Markdown-Preview {{{
 let g:markdown_preview_no_default_mapping = 1
+" }}}
 " }}}
 " Autogroups {{{
 augroup configgroup
