@@ -5,12 +5,10 @@ have referenced the source. Check them if you want to use those.
 
 ## Setup
 
-### Vim plugins
-I included all plugins I use as [submodules]
-(http://git-scm.com/book/de/v1/Git-Tools-Submodule). To get them do
+### Vim/NVim plugins
+To get all vim/nvim plugins, start vim/nvim and run
 ```
-git submodule init
-git submodule update
+:PlugInstall
 ```
 
 ### ZSH
