@@ -15,7 +15,6 @@ Plug 'https://github.com/esneider/YUNOcommit.vim'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
-  Plug 'rhysd/nyaovim-popup-tooltip'
   Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
 endif
 
