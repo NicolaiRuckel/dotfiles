@@ -13,9 +13,12 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 
+if exists('g:nyaovim_version')
 " NyaoVim plugins
-Plug 'rhysd/nyaovim-popup-tooltip'
-Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
+  Plug 'rhysd/nyaovim-popup-tooltip'
+  Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
+endif
+
 call plug#end()
 " }}}
 " General {{{
