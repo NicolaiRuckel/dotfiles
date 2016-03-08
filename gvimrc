@@ -2,7 +2,7 @@ if has("gui_macvim")
   set guifont=Monaco:h12
 else
     "set guifont=Hermit:h8
-    set guifont=Liberation\ Mono\ 10
+    set guifont=Liberation\ Mono\ 11
     set guioptions-=m "remove menu bar
     set guioptions-=T "remove toolbar
     set guioptions-=e " gui tabs
