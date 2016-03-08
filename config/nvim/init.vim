@@ -13,10 +13,6 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 
-Plug 'https://github.com/Valloric/YouCompleteMe'
-" Note: compile YCM with
-" ./install.py --clang-completer
-
 " NyaoVim plugins
 Plug 'rhysd/nyaovim-popup-tooltip'
 Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
