@@ -67,7 +67,7 @@ set smartcase
 set ignorecase
 
 " turn of search highlight
-nnoremap <leader><space> :noh<cr>
+nnoremap <silent> <BS> :noh<CR><ESC>
 " }}}
 " Folding {{{
 set foldenable              " enable folding
@@ -178,6 +178,22 @@ endfunction
 
 nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
 nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
+" }}}
+" GVIM {{{
+if has("gui_running")
+  if has("gui_macvim")
+    set guifont=Monaco:h12
+  else
+    "set guifont=Hermit:h8
+    set guifont=Liberation\ Mono\ 11
+    set guioptions-=m " remove menu bar
+    set guioptions-=T " remove toolbar
+    set guioptions+=c " console for choices
+    set guioptions-=e " gui tabs
+  endif
+  set lines=100
+  set columns=100
+endif
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
