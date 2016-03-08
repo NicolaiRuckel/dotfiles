@@ -1,4 +1,4 @@
- most settings and comments are taken from
+" most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
 " Vim-Plug {{{
@@ -72,7 +72,7 @@ set smartcase
 set ignorecase
 
 " turn of search highlight
-nnoremap <leader><space> :noh<cr>
+nnoremap <silent> <BS> :noh<CR><ESC>
 " }}}
 " Folding {{{
 set foldenable              " enable folding
