@@ -13,6 +13,7 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
+Plug 'https://github.com/tpope/vim-commentary'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
