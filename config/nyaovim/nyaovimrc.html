@@ -14,12 +14,14 @@
     </style>
 
     <!-- Component tags here -->
-    <neovim-editor
-      id="nyaovim-editor"
-      argv$="[[argv]]"
-      font-size="15"
-      font="Liberation Mono,monospace"
-    ></neovim-editor>
-    <markdown-preview editor="[[editor]]"></markdown-preview>
+    <div class="horizontal">
+      <neovim-editor
+         id="nyaovim-editor"
+         argv$="[[argv]]"
+         font-size="15"
+         font="Liberation Mono,monospace"
+         ></neovim-editor>
+        <markdown-preview editor="[[editor]]"></markdown-preview>
+    </div>
   </template>
 </dom-module>

@@ -153,7 +153,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
 " }}}
 " Markdown-Preview {{{
-let g:markdown_preview_no_default_mapping = 1
+if exists('g:nyaovim_version')
+  let g:markdown_preview_eager = 1
+  "let g:markdown_preview_no_default_mapping = 1
+endif
 " }}}
 " }}}
 " Autogroups {{{
