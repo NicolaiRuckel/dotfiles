@@ -12,6 +12,7 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
+Plug 'https://github.com/mhinz/vim-signify'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
