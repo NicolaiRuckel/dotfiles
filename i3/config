@@ -347,7 +347,7 @@ client.focused_inactive #222222 #222222 #d7d7d7 #484e50
 client.unfocused        #222222 #222222 #888888 #292d2e
 client.urgent           #af0000 #af0000 #d7d7d7 #900000
 
-# generel config
+# general config
 #hide_edge_borders both
 bindsym $mod+b border toggle
 workspace_layout stacking
