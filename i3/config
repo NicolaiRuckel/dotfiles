@@ -226,6 +226,7 @@ bindsym $mod+p move container to output right, focus output right
 # workspace assignments
 assign [class="Firefox"] → $ws2
 assign [class="Chromium"] → $ws2
+assign [class="google-chrome"] → $ws2
 
 assign [class="Claws-mail"] → $ws3
 assign [class="Thunderbird"] → $ws3
@@ -329,7 +330,8 @@ exec termite
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 exec --no-startup-id compton
 exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id i3-battery-popup -n
+exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
+exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 
 #exec dropboxd
 
