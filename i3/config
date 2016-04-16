@@ -281,10 +281,15 @@ for_window [class="Skype" title="File Transfers"] floating enable
 
 # battery warning
 for_window [title="Battery Warning"] sticky enable
+
 # custom keybindings
+
 #bindsym XF86Launch1 exec xset dpms force off
 #bindsym XF86ScreenSaver exec i3lock -c 000000
+
+# toggle 2nd monitor to the right with Fn+F11
 bindsym XF86LaunchA exec ~/dotfiles/scripts/x-toggle-2nd.sh
+
 #bindsym Mod1+XF86Display exec x-mirror.sh
 #bindsym Shift+XF86Display exec x-switch-display.sh
 
