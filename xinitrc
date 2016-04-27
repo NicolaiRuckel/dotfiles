@@ -25,6 +25,7 @@ export KDE_SESSION_VERSION="5"
 
 case `uname -n` in
     archbook)
+    export LC_ALL=C
     exec i3
 esac
 #exec startkde

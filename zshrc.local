@@ -96,3 +96,10 @@ case `uname -n` in
         }
         ;;
 esac
+
+case `uname -n` in
+    swagberrypi)
+        # variables
+        export TERM=linux
+        ;;
+esac
