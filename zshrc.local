@@ -9,7 +9,7 @@
 ###########################
 
 # variables
-export PATH=$PATH:~/bin:/home/nicolai/.gem/ruby/2.2.0/bin
+export PATH=~/bin:/home/nicolai/.gem/ruby/2.2.0/bin:$PATH
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # aliases
@@ -52,6 +52,7 @@ esac
 # Linux stuff
 case `uname` in
     Linux)
+
         # aliases
         alias hibernate="sudo pm-hibernate"
 
@@ -65,16 +66,19 @@ esac
 
 case `uname -n` in
     snitsig)
+
         # variables
-        export GNATPATH=/opt/bin/gnat
+        export GNATPATH=/opt/gnat2016/bin
 
         hash -d media=/media/nico/media
+
+        #profiles
         zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
         chpwd_profile_ada()
         {
             [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
             print "chpwd(): Switching to profile: $profile"
-            export PATH="/opt/gnat2016/bin:$PATH"
+            export PATH="$GNATPATH:$PATH"
         }
     ;;
 esac
@@ -83,7 +87,7 @@ case `uname -n` in
     archbook)
         # variables
         export TERMINAL=termite
-        export GNATPATH=/opt/gnat/bin
+        export GNATPATH=/opt/gnat2016/bin
 
 
         #profiles
@@ -92,7 +96,7 @@ case `uname -n` in
         {
             [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
             print "chpwd(): Switching to profile: $profile"
-            export PATH="/opt/gnat2016/bin:$PATH"
+            export PATH="$GNATPATH:$PATH"
         }
         ;;
 esac
