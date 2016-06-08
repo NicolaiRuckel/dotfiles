@@ -1,5 +1,6 @@
 .DS_Store
 vim/.netrwhist
+config/nvim/.netrwhist
 vim/plugged
 config/nvim/plugged
 backups/*
