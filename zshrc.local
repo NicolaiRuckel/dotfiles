@@ -92,7 +92,7 @@ case `uname -n` in
         {
             [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
             print "chpwd(): Switching to profile: $profile"
-            export PATH="/opt/gnat/bin:$PATH"
+            export PATH="/opt/gnat2016/bin:$PATH"
         }
         ;;
 esac
