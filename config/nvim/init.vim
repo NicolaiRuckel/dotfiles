@@ -12,6 +12,8 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
+Plug 'https://github.com/mhinz/vim-signify'
+Plug 'https://github.com/tpope/vim-commentary'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
@@ -25,6 +27,7 @@ set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
+set formatoptions+=t        " automatic word wrapping at 80 characters
 " }}}
 " Dictionary {{{
 set dictionary+=/usr/share/dict/american-english
@@ -59,7 +62,6 @@ set lazyredraw              " redraw only when we need to
 set showmatch               " highlight matching [{()}]
 set colorcolumn=80          " highlight 80th charactercoloumn
 set textwidth=80
-set formatoptions+=t        " automatic word wrapping at 80 characters
 set history=10000           " vim has to remember a lot of commands
 set mouse=nv                " allows usage of mouse
 set ruler                   " show ruler
