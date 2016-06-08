@@ -8,3 +8,4 @@ backups/*
 *.swp
 *.swo
 scripts/battery/uevent
+config/gtk-3.0/bookmarks
