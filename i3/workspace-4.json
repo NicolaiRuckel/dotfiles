@@ -1,8 +1,10 @@
+// vim:ts=4:sw=4:et
 {
+    // stacked split container with 1 children
     "border": "normal",
     "floating": "auto_off",
-    "layout": "tabbed",
-    "percent": 1,
+    "layout": "stacked",
+    "percent": 0.5,
     "type": "con",
     "nodes": [
         {
@@ -10,59 +12,109 @@
             "current_border_width": 2,
             "floating": "auto_off",
             "geometry": {
-               "height": 1034,
-               "width": 1920,
-               "x": 0,
-               "y": 22
-            },
-            "name": "HexChat",
-            "percent": 0.333333333333333,
-            "swallows": [
-               {
-                "class": "^Hexchat$"
-               }
-            ],
-            "type": "con"
-        },
-        {
-            "border": "normal",
-            "current_border_width": 2,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 1012,
-               "width": 1603,
+               "height": 1030,
+               "width": 956,
                "x": 0,
                "y": 0
             },
-            "name": "Pidgin conversation",
-            "percent": 0.333333333333333,
+            "name": "Discord",
+            "percent": 1,
             "swallows": [
                {
-                "class": "^Pidgin$",
-                "window_role": "^conversation$"
+                "class": "^discord$"
+               // "instance": "^discord$",
+               // "title": "^Discord$",
+               // "transient_for": "^$",
+               // "window_role": "^browser\\-window$"
                }
             ],
             "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            // splith split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    // stacked split container with 1 children
+                    "border": "normal",
+                    "floating": "auto_off",
+                    "layout": "stacked",
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "normal",
+                            "current_border_width": 2,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 982,
+                               "width": 1916,
+                               "x": 0,
+                               "y": 72
+                            },
+                            "name": "Buddy List",
+                            "percent": 1,
+                            "swallows": [
+                               {
+                                "class": "^Pidgin$"
+                               // "instance": "^Pidgin$",
+                               // "title": "^Buddy\\ List$",
+                               // "transient_for": "^$",
+                               // "window_role": "^buddy_list$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                }
+            ]
         },
         {
+            // stacked split container with 1 children
             "border": "normal",
-            "current_border_width": 2,
             "floating": "auto_off",
-            "geometry": {
-               "height": 1012,
-               "width": 1920,
-               "x": 0,
-               "y": 44
-            },
-            "name": "Buddy List",
-            "percent": 0.333333333333333,
-            "swallows": [
-               {
-                "class": "^Pidgin$",
-                "window_role": "^buddy_list$"
-               }
-            ],
-            "type": "con"
+            "layout": "stacked",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 502,
+                       "width": 1916,
+                       "x": 0,
+                       "y": 552
+                    },
+                    "name": "HexChat",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                        "class": "^Hexchat$"
+                       // "instance": "^hexchat$",
+                       // "title": "^HexChat$",
+                       // "transient_for": "^$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
         }
     ]
 }

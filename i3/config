@@ -96,7 +96,7 @@ set $ws4 4: 
 set $ws5 5: 
 #set $ws6 6: ♫
 set $ws6 6: 
-set $ws7 7
+set $ws7 7: dev
 set $ws8 8
 set $ws9 9
 # games
@@ -316,16 +316,25 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
-# load layputs
-#exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+# load startup scripts
+exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
+exec --no-startup-id compton
+exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
+exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
+
+# load desktop background
+exec_always --no-startup-id nitrogen --restore
+
+# load layouts
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+
+# and switch to workspace 1
+exec --no-startup-id "i3-msg 'workspace $ws1'"
 
 # startup applications
 #exec urxvt
-exec termite
+#exec termite
 
-## load layouts
-#exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
-#
 ## startup applications
 #exec firefox
 #exec hexchat
@@ -334,12 +343,6 @@ exec termite
 #exec thunderbird
 #exec liferea
 #exec cantata
-#exec --no-startup-id "i3-msg 'workspace $ws1'"
-exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
-exec --no-startup-id compton
-exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
-exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 
 #exec dropboxd
 
