@@ -316,6 +316,9 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
+# load layouts
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 exec --no-startup-id compton
@@ -324,16 +327,6 @@ exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 
 # load desktop background
 exec_always --no-startup-id nitrogen --restore
-
-# load layouts
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
-
-# and switch to workspace 1
-exec --no-startup-id "i3-msg 'workspace $ws1'"
-
-# startup applications
-#exec urxvt
-#exec termite
 
 ## startup applications
 #exec firefox
@@ -345,6 +338,14 @@ exec --no-startup-id "i3-msg 'workspace $ws1'"
 #exec cantata
 
 #exec dropboxd
+
+# and switch to workspace 1
+exec --no-startup-id "i3-msg 'workspace $ws1'"
+
+# startup applications
+#exec urxvt
+exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
+#exec termite
 
 #xset r rate 250 50
 #setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
