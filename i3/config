@@ -16,7 +16,9 @@ set $mod Mod4
 # font xft:DejaVu Sans Mono 9
 # font xft:Liberation Mono 8
 #font xft:Hermit Mono 8
-font xft:Source Sans Pro Regular 11
+
+#font xft:Source Sans Pro Regular 11
+font xft:Overpass 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -31,7 +33,8 @@ bindsym $mod+backspace kill
 
 # start dmenu (a program launcher)
 #bindsym Mod1+space exec dmenu_run
-bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-12" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+#bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Source Sans Pro-12" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
+bindsym Mod1+space exec dmenu_run -p "Run:" -fn "Overpass-12" -nb "#eeeeee" -nf "#444444" -sb "#005faf"
 set $bg-color #2f343f
 set $text-color #f3f4f5
 #bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "" -fuzzy -font "Source Sans Pro 20" -lines 5 -separator-style "solid" -hide-scrollbar -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"'
@@ -345,6 +348,7 @@ exec --no-startup-id "i3-msg 'workspace $ws1'"
 # startup applications
 #exec urxvt
 exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
+exec --no-startup-id xss-lock -- i3lock -n -e -I=10
 #exec termite
 
 #xset r rate 250 50
@@ -374,7 +378,8 @@ workspace_layout stacking
 # finds out, if available)
 bar {
     #position top
-    font pango:Source Sans Pro, FontAwesome 10, Icons 10
+    #font pango:Source Sans Pro, FontAwesome 10, Icons 10
+    font pango:Overpass, FontAwesome 10, Icons 10
     status_command i3status
     tray_output LVDS1
     #strip_workspace_numbers yes

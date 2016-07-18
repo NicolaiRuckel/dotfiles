@@ -1,5 +1,7 @@
 [options]
-font = Liberation Mono 11
+#font = Liberation Mono 11
+font = Source Code Pro Medium 11
+#font = Monaco 10
 
 [colors]
 # LuciusDark Theme
