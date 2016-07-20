@@ -17,8 +17,8 @@ set $mod Mod4
 # font xft:Liberation Mono 8
 #font xft:Hermit Mono 8
 
-#font xft:Source Sans Pro Regular 11
-font xft:Overpass 11
+font xft:Source Sans Pro Regular 11
+#font xft:Overpass 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -348,7 +348,7 @@ exec --no-startup-id "i3-msg 'workspace $ws1'"
 # startup applications
 #exec urxvt
 exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
-exec --no-startup-id xss-lock -- i3lock -n -e -I=10
+exec --no-startup-id xss-lock -- i3lock -n
 #exec termite
 
 #xset r rate 250 50
@@ -378,8 +378,8 @@ workspace_layout stacking
 # finds out, if available)
 bar {
     #position top
-    #font pango:Source Sans Pro, FontAwesome 10, Icons 10
-    font pango:Overpass, FontAwesome 10, Icons 10
+    font pango:Source Sans Pro, FontAwesome 10, Icons 10
+    #font pango:Overpass, FontAwesome 10, Icons 10
     status_command i3status
     tray_output LVDS1
     #strip_workspace_numbers yes

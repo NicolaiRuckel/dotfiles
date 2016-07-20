@@ -3,6 +3,8 @@
 font = Source Code Pro Medium 11
 #font = Monaco 10
 
+scrollback_lines = 10000
+
 [colors]
 # LuciusDark Theme
 #background=  #303030
