@@ -261,7 +261,7 @@ assign [class="Spotify"] → $ws6
 assign [class="Steam"] → $ws10
 assign [class="Scrolls"] → $ws10
 assign [class="Minecraft"] → $ws10
-assign [class="Minecraft Launcher"] → $ws10
+assign [title="Minecraft Launcher"] → $ws10
 
 # window rules
 for_window [class="MPlayer"] floating enable
