@@ -25,6 +25,9 @@ set tm=500                  " set timeoutlen to 500
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 " }}}
+" Spell {{{
+set spelllang=en,de_20
+" }}}
 " Colors {{{
 set t_Co=256                " more colors for more fun!
 "colorscheme vylight         " awesome colorscheme
@@ -162,15 +165,15 @@ augroup configgroup
     autocmd FileType javascript setlocal ts=4 sw=4 et
     autocmd FileType c setlocal ts=4 sw=4 noet
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
-    autocmd FileType tex setlocal ts=2 sw=2 et
+    autocmd FileType tex setlocal ts=2 sw=2 et spell
     autocmd FileType python setlocal ts=2 sw=2 et
-    autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t
+    autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal tabstop=2
     autocmd BufEnter *.sh setlocal shiftwidth=2
     autocmd BufEnter *.sh setlocal softtabstop=2
-    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 formatoptions+=t
+    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 formatoptions+=t spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
 augroup END
 " }}}
