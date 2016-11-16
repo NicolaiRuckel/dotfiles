@@ -24,7 +24,7 @@ do
                 else
                         EXECUTE+="--output $CURRENT --off "
                 fi
-        else # make sure disconnected outputs are off 
+        else # make sure disconnected outputs are off
                 EXECUTE+="--output $CURRENT --off "
         fi
 done
