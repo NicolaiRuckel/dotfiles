@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
+Plug 'https://github.com/tpope/vim-commentary'
 call plug#end()
 " }}}
 " General {{{
