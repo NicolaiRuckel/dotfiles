@@ -47,11 +47,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+## alternatively, you can use the cursor keys:
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -306,10 +306,10 @@ for_window [class="Spotify"] move to workspace $ws6
 
 #bindsym XF86Launch1 exec xset dpms force off
 #bindsym XF86ScreenSaver exec i3lock -c 000000
-bindsym XF86WLAN exec --no-startup-id i3lock -i -u ~/Pictures/windows.png
+bindsym XF86Explorer exec --no-startup-id i3lock -i ~/Pictures/windows.png -u
 
 # toggle 2nd monitor to the right with Fn+F11
-bindsym XF86LaunchA exec ~/dotfiles/scripts/x-toggle-2nd.sh
+bindsym XF86Display exec ~/dotfiles/scripts/x-toggle-2nd.sh
 
 #bindsym Mod1+XF86Display exec x-mirror.sh
 #bindsym Shift+XF86Display exec x-switch-display.sh
@@ -323,6 +323,13 @@ bindsym $mod+Prior exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%+
 bindsym $mod+Next exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/dotfiles/scripts/volume.sh 5%-
+
+# spotify
+bindsym $mod+Down exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+Right exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym $mod+Left exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym $mod+Up exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
+
 
 # screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/dotfiles/scripts/backlight.sh 1.5
