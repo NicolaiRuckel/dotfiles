@@ -306,6 +306,7 @@ for_window [class="Spotify"] move to workspace $ws6
 
 #bindsym XF86Launch1 exec xset dpms force off
 #bindsym XF86ScreenSaver exec i3lock -c 000000
+bindsym XF86WLAN exec --no-startup-id i3lock -i -u ~/Pictures/windows.png
 
 # toggle 2nd monitor to the right with Fn+F11
 bindsym XF86LaunchA exec ~/dotfiles/scripts/x-toggle-2nd.sh
@@ -362,7 +363,8 @@ exec --no-startup-id "i3-msg 'workspace $ws1'"
 # startup applications
 #exec urxvt
 exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
-exec --no-startup-id xss-lock -- i3lock -n
+#exec --no-startup-id xss-lock -- i3lock -n
+#exec --no-startup-id xss-lock -- i3lock -i -u ~/Pictures/windows.png
 #exec termite
 
 #xset r rate 250 50
@@ -410,7 +412,7 @@ bar {
             focused_workspace #222222 #005faf #eeeeee
             active_workspace #eeeeee #eeeeee #444444
             inactive_workspace #222222 #222222 #eeeeee
-            urgent_workspace #222222 #af0000 #eeeeee
+            urgent_workspace #222222 #444444 #eeeeee
 
 
             # dark theme
