@@ -405,6 +405,7 @@ bar {
     #position top
     font pango:Source Sans Pro, FontAwesome 10, Icons 10
     #font pango:Overpass, FontAwesome 10, Icons 10
+    #status_command i3status | ~/dotfiles/scripts/i3spotifystatus/pystatus.py
     status_command i3status
     tray_output LVDS1
     #strip_workspace_numbers yes
@@ -419,7 +420,10 @@ bar {
             focused_workspace #222222 #005faf #eeeeee
             active_workspace #eeeeee #eeeeee #444444
             inactive_workspace #222222 #222222 #eeeeee
-            urgent_workspace #222222 #444444 #eeeeee
+            # grey
+            #urgent_workspace #222222 #444444 #eeeeee
+            # red
+            urgent_workspace #222222 #af0000 #eeeeee
 
 
             # dark theme
@@ -436,4 +440,3 @@ bar {
 
         }
 }
-

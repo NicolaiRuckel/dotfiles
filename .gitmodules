@@ -7,3 +7,6 @@
 [submodule "scripts/i3-battery-popup"]
 	path = scripts/i3-battery-popup
 	url = https://github.com/rjekker/i3-battery-popup
+[submodule "scripts/i3spotifystatus"]
+	path = scripts/i3spotifystatus
+	url = git@github.com:pradzio1/i3spotifystatus.git
