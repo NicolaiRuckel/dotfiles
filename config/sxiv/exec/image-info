@@ -1,0 +1,11 @@
+#!/bin/sh
+filename=$(basename -- "$1")
+filesize=$(du --human-readable --dereference-args -- "$1" | cut -f 1)
+s=" | " # field separator
+
+if which identify >/dev/null 2>&1; then
+	geometry=$(identify -format '%wx%h' ":$1[0]")
+	type=$(identify -format '%m' ":$1[0]")
+fi
+
+echo "${filename}${type:+$s}${type}${geometry:+$s}${geometry}${filesize:+$s}${filesize}"
