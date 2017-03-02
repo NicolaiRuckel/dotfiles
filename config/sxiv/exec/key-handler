@@ -1,0 +1,21 @@
+#!/bin/sh
+
+readonly KEY="$1"
+
+delete_file() {
+	while read file; do
+		rm -- "$file"
+	done
+}
+
+open_with() {
+	readonly PROGRAM="$1"
+	while read file; do
+		$PROGRAM -- "$file" &
+	done
+}
+
+case "$KEY" in
+	'd' )	delete_file ;;
+	'g' )	open_with gimp ;;
+esac
