@@ -369,7 +369,7 @@ exec --no-startup-id "i3-msg 'workspace $ws1'"
 
 # startup applications
 #exec urxvt
-exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
+#exec --no-startup-id conky -c ~/dotfiles/conky/seamod/conkyrc.lua
 #exec --no-startup-id xss-lock -- i3lock -n
 #exec --no-startup-id xss-lock -- i3lock -i -u ~/Pictures/windows.png
 #exec termite
