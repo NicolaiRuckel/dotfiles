@@ -31,7 +31,6 @@ set spelllang=en,de_20
 " }}}
 " Colors {{{
 set t_Co=256                " more colors for more fun!
-"colorscheme vylight         " awesome colorscheme
 colorscheme lucius
 "set background=dark         " dark background
 set background=light        " light background
