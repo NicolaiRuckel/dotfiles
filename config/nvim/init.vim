@@ -3,17 +3,18 @@
 
 " Vim-Plug {{{
 " https://github.com/junegunn/vim-plug
-
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/mhinz/vim-signify'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
@@ -27,16 +28,20 @@ set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
-set formatoptions+=t        " automatic word wrapping at 80 characters
+"set formatoptions+=t        " automatic word wrapping at 80 characters
 " }}}
 " Dictionary {{{
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 " }}}
+" Spell {{{
+set spelllang=en,de_20
+" }}}
 " Colors {{{
 set t_Co=256                " more colors for more fun!
-colorscheme lucius          " awesome colorscheme
-set background=dark         " dark background
+colorscheme lucius
+"set background=dark         " dark background
+set background=light        " light background
 syntax enable               " enable syntax processing
 " }}}
 " Spaces and Tabs {{{
@@ -133,6 +138,7 @@ let Tlist_Exit_OnlyWindow=1
 nnoremap <Leader>t :TlistToggle<CR>
 " }}}
 " Airline {{{
+let g:airline_theme='papercolor'
 set laststatus=2
 set noshowmode
 if !exists('g:airline_symbols')
@@ -144,6 +150,11 @@ let g:airline_right_sep = ''
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline_detect_paste=1
 let g:airline_symbols.readonly = ''
+"let g:airline_section_a =
+let g:airline_section_b = '%t'
+let g:airline_section_c = ''
+"let g:airline_section_b = '%{getcwd()}'
+"let g:airline_section_c = '%t'
 "let g:airline_section_z = '%3l,%-3c %P'
 let g:airline_section_z = '%-3c %P'
 " }}}
@@ -169,15 +180,17 @@ augroup configgroup
     autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
     autocmd FileType javascript setlocal ts=4 sw=4 et
     autocmd FileType c setlocal ts=4 sw=4 noet
-    autocmd FileType ada setlocal ts=3 sw=3 et
-    autocmd FileType tex setlocal ts=2 sw=2 et
+    autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
+    autocmd FileType tex setlocal ts=2 sw=2 et spell
     autocmd FileType python setlocal ts=2 sw=2 et
-    autocmd FileType markdown setlocal ts=4 sw=4
+    autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal tabstop=2
     autocmd BufEnter *.sh setlocal shiftwidth=2
     autocmd BufEnter *.sh setlocal softtabstop=2
+    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
+    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
 augroup END
 " }}}
 " Backups {{{
