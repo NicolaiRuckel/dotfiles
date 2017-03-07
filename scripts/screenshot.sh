@@ -1,3 +1,3 @@
 #!/bin/bash
 
-scrot ~/Dropbox/Screenshots/%Y-%m-%d-%T-screenshot.png
+scrot ~/Pictures/screenshot-%Y-%m-%d-%T.png
