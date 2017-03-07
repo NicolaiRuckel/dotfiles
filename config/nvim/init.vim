@@ -15,6 +15,7 @@ Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/mhinz/vim-signify'
+Plug 'https://github.com/neomake/neomake'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
@@ -124,6 +125,7 @@ nnoremap <Leader>c :CtrlP %:h<CR>
 
 "let g:ctrlp_match_window = 'max:50,results:50'
 let g:ctrlp_reuse_window = 'help'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 " }}}
@@ -171,6 +173,7 @@ if exists('g:nyaovim_version')
   "let g:markdown_preview_no_default_mapping = 1
 endif
 " }}}
+let g:neomake_tex_enabled_makers = ['rubber']
 " }}}
 " Autogroups {{{
 augroup configgroup
@@ -200,14 +203,6 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 "set undofile
-" }}}
-" Functions {{{
-function! AdjustFontSize(amount)
-  let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
-endfunction
-
-nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
-nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
