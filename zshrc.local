@@ -14,6 +14,7 @@ export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
+alias gnv=nvim-qt
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
