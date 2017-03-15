@@ -402,7 +402,7 @@ workspace_layout stacking
 bar {
     wheel_up_cmd nop
     wheel_down_cmd nop
-    #position top
+    position top
     font pango:Source Sans Pro, FontAwesome 10, Icons 10
     #font pango:Overpass, FontAwesome 10, Icons 10
     #status_command i3status | ~/dotfiles/scripts/i3spotifystatus/pystatus.py
