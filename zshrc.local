@@ -9,7 +9,7 @@
 ###########################
 
 # variables
-export PATH=~/bin:/home/nicolai/.gem/ruby/2.2.0/bin:$PATH
+export PATH=~/bin:/home/nicolai/.gem/ruby/2.4.0/bin:$PATH
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # aliases
