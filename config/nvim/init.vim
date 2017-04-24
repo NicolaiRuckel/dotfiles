@@ -99,6 +99,9 @@ let mapleader=","           " leader is comma
 nnoremap <leader>w <C-w>v<C-w>l
 
 nnoremap <leader>v :vsplit<cr>
+
+nnoremap <Leader>. :wa<CR>:Neomake!<CR>
+nnoremap <Leader>/ :w<CR>:Neomake<CR>
 " }}}
 " Keybindings {{{
 nnoremap ; :
