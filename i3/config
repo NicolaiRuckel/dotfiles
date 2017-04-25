@@ -343,7 +343,7 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 # load layouts
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json';i3-msg 'workspace $ws1'"
 
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
@@ -366,7 +366,7 @@ exec_always --no-startup-id nitrogen --restore
 #exec dropboxd
 
 # and switch to workspace 1
-exec --no-startup-id "i3-msg 'workspace $ws1'"
+#exec --no-startup-id "i3-msg 'workspace $ws1'"
 
 # startup applications
 #exec urxvt
