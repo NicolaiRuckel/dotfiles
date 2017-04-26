@@ -104,7 +104,7 @@ set $ws8 8
 set $ws9 9
 # games
 set $ws10 10: 
-set $wsf1 F1:
+set $wsf1 F1
 set $wsf2 F2
 set $wsf3 F3
 set $wsf4 F4
@@ -140,18 +140,18 @@ bindsym $mod+7   workspace $ws7
 bindsym $mod+8   workspace $ws8
 bindsym $mod+9   workspace $ws9
 bindsym $mod+0   workspace $ws10
-bindsym $mod+F1  workspace 11
-bindsym $mod+F2  workspace 12
-bindsym $mod+F3  workspace 13
-bindsym $mod+F4  workspace 14
-bindsym $mod+F5  workspace 15
-bindsym $mod+F6  workspace 16
-bindsym $mod+F7  workspace 17
-bindsym $mod+F8  workspace 18
-bindsym $mod+F9  workspace 19
-bindsym $mod+F10 workspace 20
-bindsym $mod+F11 workspace 21
-bindsym $mod+F12 workspace 22
+bindsym $mod+F1  workspace $wsf1
+bindsym $mod+F2  workspace $wsf2
+bindsym $mod+F3  workspace $wsf3
+bindsym $mod+F4  workspace $wsf4
+bindsym $mod+F5  workspace $wsf5
+bindsym $mod+F6  workspace $wsf6
+bindsym $mod+F7  workspace $wsf7
+bindsym $mod+F8  workspace $wsf8
+bindsym $mod+F9  workspace $wsf9
+bindsym $mod+F10 workspace $wsf10
+bindsym $mod+F11 workspace $wsf11
+bindsym $mod+F12 workspace $wsf12
 bindsym $mod+Escape workspace back_and_forth
 
 # move focused container to workspace
@@ -257,6 +257,7 @@ assign [class="Hexchat"] → $ws4
 assign [class="Polari"] → $ws4
 assign [class="Skype"] → $ws4
 assign [class="discord"] → $ws4
+assign [class="Slack"] → $ws4
 
 assign [class="Liferea"] → $ws5
 assign [class="feedreader"] → $ws5
@@ -342,7 +343,7 @@ bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 # load layouts
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json'"
+# exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json';i3-msg 'workspace $ws1'"
 
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
@@ -363,9 +364,6 @@ exec_always --no-startup-id nitrogen --restore
 #exec cantata
 
 #exec dropboxd
-
-# and switch to workspace 1
-exec --no-startup-id "i3-msg 'workspace $ws1'"
 
 # startup applications
 #exec urxvt
@@ -402,7 +400,7 @@ workspace_layout stacking
 bar {
     wheel_up_cmd nop
     wheel_down_cmd nop
-    position top
+    #position top
     font pango:Source Sans Pro, FontAwesome 10, Icons 10
     #font pango:Overpass, FontAwesome 10, Icons 10
     #status_command i3status | ~/dotfiles/scripts/i3spotifystatus/pystatus.py

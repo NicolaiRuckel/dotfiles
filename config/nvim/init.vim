@@ -110,6 +110,9 @@ nnoremap <leader>P "*P
 vnoremap <leader>p "*p
 vnoremap <leader>P "*P
 
+nnoremap <Leader>. :wa<CR>:Neomake!<CR>
+nnoremap <Leader>/ :w<CR>:Neomake<CR>
+
 " Keybindings
 nnoremap ; :
 
