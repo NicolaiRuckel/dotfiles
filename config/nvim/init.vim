@@ -1,7 +1,7 @@
 " most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
-" Vim-Plug {{{
+" Vim-Plug
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -23,34 +23,32 @@ if exists('g:nyaovim_version')
 endif
 
 call plug#end()
-" }}}
-" General {{{
+
+" General
 set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
-"set formatoptions+=t        " automatic word wrapping at 80 characters
-" }}}
-" Dictionary {{{
+
+" Dictionary
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
-" }}}
-" Spell {{{
+
+" Spell
 set spelllang=en,de_20
-" }}}
-" Colors {{{
+
+" Colors
 set t_Co=256                " more colors for more fun!
 colorscheme lucius
-"set background=dark         " dark background
 set background=light        " light background
 syntax enable               " enable syntax processing
-" }}}
-" Spaces and Tabs {{{
+
+" Spaces and Tabs
 set tabstop=4               " number of visual spaces per TAB
 set softtabstop=4           " number of spaces in tab when editing
 set expandtab               " tabs are spaces
-" }}}
-" UI Config {{{
+
+" UI Config
 set number                  " show line numbers
 set relativenumber          " show relative line numbers
 set showcmd                 " show command in bottom bar
@@ -74,16 +72,17 @@ set ruler                   " show ruler
 set scrolloff=5             " minimum number of lines above and below the cursor
 set list                    " make whitespace characters visible
 set lcs=tab:▸\ ,trail:_     " symbols for tabs and trailing whitespaces
-" }}}
-" Searching {{{
+
+" Searching
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
 set smartcase
 set ignorecase
 
 " turn of search highlight
-nnoremap <silent> <BS> :noh<CR><ESC>
-" }}}
+" this did strange things in vim but hopefully works in nvim
+nnoremap <silent> <ESC> :noh<CR><ESC>
+
 " Folding {{{
 set foldenable              " enable folding
 set foldlevelstart=10       " open most folds by default
@@ -92,15 +91,26 @@ set foldmethod=indent       " fold based on indent level
 
 " space open/closes folds
 nnoremap <space> za
-" }}}
+
 " Leader Shortcuts {{{
 let mapleader=","           " leader is comma
 
 nnoremap <leader>w <C-w>v<C-w>l
 
 nnoremap <leader>v :vsplit<cr>
-" }}}
-" Keybindings {{{
+
+" " Copy to primary
+vnoremap  <leader>y  "*y
+nnoremap  <leader>Y  "*yg_
+nnoremap  <leader>y  "*y
+
+" " Paste from primary
+nnoremap <leader>p "*p
+nnoremap <leader>P "*P
+vnoremap <leader>p "*p
+vnoremap <leader>P "*P
+
+" Keybindings
 nnoremap ; :
 
 set pt=<F3>                 " paste mode
@@ -113,11 +123,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"this did strange things in vim but hopefully works in nvim
-nnoremap <silent> <ESC> :noh<CR><ESC>
-" }}}
-" Plugins {{{
-" CtrlP {{{
+" ------------------------------------------------------------------------------
+" Plugins
+" ------------------------------------------------------------------------------
+
+" CtrlP
 nnoremap <Leader>e :CtrlP<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>m :CtrlPMRUFiles<CR>
@@ -128,18 +138,18 @@ let g:ctrlp_reuse_window = 'help'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
-" }}}
-" Y U NO COMMIT AFTER 20 LINES???!?! {{{
+
+" Y U NO COMMIT AFTER 20 LINES???!?!
 let g:YUNOcommit_after = 20
-" }}}
-" Taglist {{{
+
+" Taglist
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
 
 nnoremap <Leader>t :TlistToggle<CR>
-" }}}
-" Airline {{{
+
+" Airline
 let g:airline_theme='papercolor'
 set laststatus=2
 set noshowmode
@@ -159,23 +169,24 @@ let g:airline_section_c = ''
 "let g:airline_section_c = '%t'
 "let g:airline_section_z = '%3l,%-3c %P'
 let g:airline_section_z = '%-3c %P'
-" }}}
-" Nerdtree {{{
+
+" Nerdtree
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
 let NERDTreeMouseMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
 
 nmap <Leader>e :NERDTreeToggle<CR>
-" }}}
-" Markdown-Preview {{{
+
+" Markdown-Preview
 if exists('g:nyaovim_version')
   let g:markdown_preview_eager = 1
   "let g:markdown_preview_no_default_mapping = 1
 endif
-" }}}
+
+" Neomake
 let g:neomake_tex_enabled_makers = ['rubber']
-" }}}
-" Autogroups {{{
+
+" Autogroups
 augroup configgroup
     autocmd!
     autocmd FileType make setlocal ts=8 sw=8 noet
@@ -195,14 +206,11 @@ augroup configgroup
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
 augroup END
-" }}}
-" Backups {{{
+
+" Backups
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 "set undofile
-" }}}
-
-" vim:foldmethod=marker:foldlevel=0
