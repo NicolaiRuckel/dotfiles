@@ -16,5 +16,5 @@ For my zsh configuration I use the zshrc from [grml](https://grml.org/zsh/).
 Look at their site for setup and further configuration.
 
 ### Symlinks
-To create all the necessary symlinks, I copied a bash script from [here]
-(https://github.com/christopher-l/dotfiles/blob/master/deploy.sh).
+To create all the necessary symlinks, I copied a bash script from
+[here](https://github.com/christopher-l/dotfiles/blob/master/deploy.sh).
