@@ -18,6 +18,7 @@ alias gnv=nvim-qt
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
+hash -d project=~/Documents/Uni/Semester14/17-SS-Password-Hashing
 
 
 if [[ $TERM == xterm-termite ]]; then
