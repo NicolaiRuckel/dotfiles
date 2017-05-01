@@ -18,7 +18,7 @@ alias gnv=nvim-qt
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
-hash -d bachelor=~/Documents/Uni/Bachelor
+
 
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
