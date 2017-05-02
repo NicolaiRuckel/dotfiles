@@ -172,6 +172,7 @@ let g:airline_section_c = ''
 "let g:airline_section_c = '%t'
 "let g:airline_section_z = '%3l,%-3c %P'
 let g:airline_section_z = '%-3c %P'
+"let g:airline#extensions#neomake#enabled
 
 " Nerdtree
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
