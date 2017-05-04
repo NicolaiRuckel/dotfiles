@@ -17,6 +17,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
+Plug 'https://github.com/cespare/vim-toml'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
