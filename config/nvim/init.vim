@@ -192,6 +192,10 @@ endif
 " Neomake
 let g:neomake_tex_enabled_makers = ['rubber']
 let g:neomake_rust_enabled_makers = ['cargo']
+let g:neomake_markdown_pandoc_maker = {
+    \ 'args': ['-o', '%:r.pdf'],
+    \ }
+let g:neomake_markdown_enabled_makers = ['pandoc']
 
 " Autogroups
 augroup configgroup
