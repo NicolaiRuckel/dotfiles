@@ -191,6 +191,7 @@ endif
 
 " Neomake
 let g:neomake_tex_enabled_makers = ['rubber']
+let g:neomake_rust_enabled_makers = ['cargo']
 
 " Autogroups
 augroup configgroup
