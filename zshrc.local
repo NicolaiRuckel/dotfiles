@@ -8,9 +8,17 @@
 ## GENERAL CONFIGURATION ##
 ###########################
 
+# setting path
+export PATH_LOCAL=~/bin
+export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
+export PATH_RUST=$HOME/.cargo/bin
+
+export PATH=$PATH_LOCAL:$PATH_RUBY:$PATH_RUST:$PATH
+
 # variables
-export PATH=~/bin:/home/nicolai/.gem/ruby/2.4.0/bin:$PATH
+
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+
 
 # aliases
 alias lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20
