@@ -33,4 +33,4 @@ case `uname -n` in
     archbook)
     export LC_ALL=C
     exec i3
-sac
+esac
