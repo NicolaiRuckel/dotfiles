@@ -386,6 +386,8 @@ exec_always --no-startup-id nitrogen --restore
 #client.urgent #af0000 #af0000 #eeeeee #900000
 
 # dark theme
+
+#set grey = #2a373e
 # class                 border  backgr. text    indicator
 client.focused          #005F87 #005F87 #d7d7d7 #2e9ef4
 client.focused_inactive #222222 #222222 #d7d7d7 #484e50

@@ -1,4 +1,4 @@
-#run systemd as user intsance
+#run systemd as user instance
 systemd --user &
 xset r rate 250 50
 
