@@ -7,8 +7,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/syntastic'
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'https://github.com/vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
@@ -31,6 +31,33 @@ set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
+
+" Statusline
+set laststatus=2            " enable statusline all the time
+
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=                       " Custom status line
+set statusline+=%#PmenuSel#           " Show git branch if it exists
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f                  " Show file name
+set statusline+=%m\                   " Show whether file has been modified
+set statusline+=%=                    " Right align the following
+set statusline+=%#CursorColumn#
+set statusline+=\ %y                  " Filetype
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding} " File encoding
+set statusline+=\[%{&fileformat}\]    " File format
+set statusline+=\ %p%%                " Percentage through file
+set statusline+=\ %l:%c               " Line number:Column number
+set statusline+=\ 
 
 " Dictionary
 set dictionary+=/usr/share/dict/american-english
@@ -155,27 +182,27 @@ let Tlist_Exit_OnlyWindow=1
 
 nnoremap <Leader>t :TlistToggle<CR>
 
-" Airline
-let g:airline_theme='papercolor'
-set laststatus=2
-set noshowmode
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.branch = '⎇'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-"let g:airline#extensions#syntastic#enabled = 1
-let g:airline_detect_paste=1
-let g:airline_symbols.readonly = ''
-"let g:airline_section_a =
-let g:airline_section_b = '%t'
-let g:airline_section_c = ''
-"let g:airline_section_b = '%{getcwd()}'
-"let g:airline_section_c = '%t'
-"let g:airline_section_z = '%3l,%-3c %P'
-let g:airline_section_z = '%-3c %P'
-"let g:airline#extensions#neomake#enabled
+"" Airline
+"let g:airline_theme='papercolor'
+"set laststatus=2
+"set noshowmode
+"if !exists('g:airline_symbols')
+"    let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+""let g:airline#extensions#syntastic#enabled = 1
+"let g:airline_detect_paste=1
+"let g:airline_symbols.readonly = ''
+""let g:airline_section_a =
+"let g:airline_section_b = '%t'
+"let g:airline_section_c = ''
+""let g:airline_section_b = '%{getcwd()}'
+""let g:airline_section_c = '%t'
+""let g:airline_section_z = '%3l,%-3c %P'
+"let g:airline_section_z = '%-3c %P'
+""let g:airline#extensions#neomake#enabled
 
 " Nerdtree
 let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
