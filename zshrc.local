@@ -8,6 +8,8 @@
 ## GENERAL CONFIGURATION ##
 ###########################
 
+export EDITOR=nvim
+
 # setting path
 export PATH_LOCAL=~/bin
 export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
