@@ -8,6 +8,6 @@ modename=$(cvt $2 $3 $4 | tail -n1 | cut -d " " -f 2)
 
 xrandr --newmode $modeline
 xrandr --addmode $1 $modename
-xrandr --output $1 --mode $modename --right-of eDP1
+xrandr --output $1 --mode $modename --same-as eDP1
 
 # nitrogen --restore
