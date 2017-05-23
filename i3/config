@@ -117,17 +117,17 @@ set $wsf10 F10
 set $wsf11 F11
 set $wsf12 F12
 
-# assign workspaces to displays
-workspace 1 output eDP1
-workspace 2 output eDP1
-workspace 3 output eDP1
-workspace 4 output eDP1
-workspace 5 output eDP1
-workspace 6 output eDP1
-workspace 7 output eDP1
-workspace 8 output eDP1
-workspace 9 output eDP1
-workspace 10 output eDP1
+# # assign workspaces to displays
+# workspace 1 output eDP1
+# workspace 2 output eDP1
+# workspace 3 output eDP1
+# workspace 4 output eDP1
+# workspace 5 output eDP1
+# workspace 6 output eDP1
+# workspace 7 output eDP1
+# workspace 8 output eDP1
+# workspace 9 output eDP1
+# workspace 10 output eDP1
 
 # switch to workspace
 bindsym $mod+1   workspace $ws1
