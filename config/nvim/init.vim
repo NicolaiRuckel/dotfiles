@@ -245,7 +245,7 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal tabstop=2
     autocmd BufEnter *.sh setlocal shiftwidth=2
     autocmd BufEnter *.sh setlocal softtabstop=2
-    autocmd BufEnter plaintex setlocal ts=2 sw=2 sts=2 spell
+    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
 augroup END
 
