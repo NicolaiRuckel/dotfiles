@@ -28,6 +28,7 @@ alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias v=nvim-qt
 alias f="nautilus . &"
 alias l="ls -lsh"
+alias o=open
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
