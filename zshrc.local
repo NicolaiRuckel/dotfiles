@@ -12,10 +12,11 @@ export EDITOR=nvim
 
 # setting path
 export PATH_LOCAL=~/bin
+export PATH_DOTFILES=~/dotfiles/bin
 export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
 export PATH_RUST=$HOME/.cargo/bin
 
-export PATH=$PATH_LOCAL:$PATH_RUBY:$PATH_RUST:$PATH
+export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
 # variables
 
