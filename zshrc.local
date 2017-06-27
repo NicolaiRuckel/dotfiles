@@ -25,8 +25,8 @@ export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
-# alias v="nvim-qt >/dev/null 2>&1"
-alias v=nvim
+alias v="nvim-qt >/dev/null 2>&1"
+# alias v=nvim
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
