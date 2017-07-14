@@ -31,6 +31,14 @@ alias f="files . &"
 alias l="ls -lsh"
 alias o=open
 
+# git aliases
+alias ga="git add"
+alias gc="git commit"
+alias gs="git status"
+alias gd="git diff"
+alias gp="git push"
+alias gl="git pull"
+
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
 hash -d project=~/Documents/Uni/Semester14/17-SS-Password-Hashing
