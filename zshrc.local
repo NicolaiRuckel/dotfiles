@@ -32,12 +32,12 @@ alias l="ls -lsh"
 alias o=open
 
 # git aliases
-alias ga="git add"
-alias gc="git commit"
-alias gs="git status"
-alias gd="git diff"
-alias gp="git push"
-alias gl="git pull"
+alias gita="git add"
+alias gitc="git commit"
+alias gits="git status"
+alias gitd="git diff"
+alias gitp="git push"
+alias gitl="git pull"
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
