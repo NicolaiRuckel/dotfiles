@@ -130,53 +130,53 @@ set $wsf12 F12
 # workspace 10 output eDP1
 
 # switch to workspace
-bindsym $mod+1   workspace $ws1
-bindsym $mod+2   workspace $ws2
-bindsym $mod+3   workspace $ws3
-bindsym $mod+4   workspace $ws4
-bindsym $mod+5   workspace $ws5
-bindsym $mod+6   workspace $ws6
-bindsym $mod+7   workspace $ws7
-bindsym $mod+8   workspace $ws8
-bindsym $mod+9   workspace $ws9
-bindsym $mod+0   workspace $ws10
-bindsym $mod+F1  workspace $wsf1
-bindsym $mod+F2  workspace $wsf2
-bindsym $mod+F3  workspace $wsf3
-bindsym $mod+F4  workspace $wsf4
-bindsym $mod+F5  workspace $wsf5
-bindsym $mod+F6  workspace $wsf6
-bindsym $mod+F7  workspace $wsf7
-bindsym $mod+F8  workspace $wsf8
-bindsym $mod+F9  workspace $wsf9
-bindsym $mod+F10 workspace $wsf10
-bindsym $mod+F11 workspace $wsf11
-bindsym $mod+F12 workspace $wsf12
+bindsym $mod+1   workspace number 1
+bindsym $mod+2   workspace number 2
+bindsym $mod+3   workspace number 3
+bindsym $mod+4   workspace number 4
+bindsym $mod+5   workspace number 5
+bindsym $mod+6   workspace number 6
+bindsym $mod+7   workspace number 7
+bindsym $mod+8   workspace number 8
+bindsym $mod+9   workspace number 9
+bindsym $mod+0   workspace number 10
+bindsym $mod+F1  workspace number 11
+bindsym $mod+F2  workspace number 12
+bindsym $mod+F3  workspace number 13
+bindsym $mod+F4  workspace number 14
+bindsym $mod+F5  workspace number 15
+bindsym $mod+F6  workspace number 16
+bindsym $mod+F7  workspace number 17
+bindsym $mod+F8  workspace number 18
+bindsym $mod+F9  workspace number 19
+bindsym $mod+F10 workspace number 20
+bindsym $mod+F11 workspace number 21
+bindsym $mod+F12 workspace number 22
 bindsym $mod+Escape workspace back_and_forth
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+F1 move container to workspace $wsf1
-bindsym $mod+Shift+F2 move container to workspace $wsf2
-bindsym $mod+Shift+F3 move container to workspace $wsf3
-bindsym $mod+Shift+F4 move container to workspace $wsf4
-bindsym $mod+Shift+F5 move container to workspace $wsf5
-bindsym $mod+Shift+F6 move container to workspace $wsf6
-bindsym $mod+Shift+F7 move container to workspace $wsf7
-bindsym $mod+Shift+F8 move container to workspace $wsf8
-bindsym $mod+Shift+F9 move container to workspace $wsf9
-bindsym $mod+Shift+F10 move container to workspace $wsf10
-bindsym $mod+Shift+F11 move container to workspace $wsf11
-bindsym $mod+Shift+F12 move container to workspace $wsf12
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+F1 move container to workspace number 11
+bindsym $mod+Shift+F2 move container to workspace number 12
+bindsym $mod+Shift+F3 move container to workspace number 13
+bindsym $mod+Shift+F4 move container to workspace number 14
+bindsym $mod+Shift+F5 move container to workspace number 15
+bindsym $mod+Shift+F6 move container to workspace number 16
+bindsym $mod+Shift+F7 move container to workspace number 17
+bindsym $mod+Shift+F8 move container to workspace number 18
+bindsym $mod+Shift+F9 move container to workspace number 19
+bindsym $mod+Shift+F10 move container to workspace number 20
+bindsym $mod+Shift+F11 move container to workspace number 21
+bindsym $mod+Shift+F12 move container to workspace number 22
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -239,42 +239,42 @@ bindsym $mod+p move container to output right, focus output right
 
 
 # workspace assignments
-assign [class="Firefox"] → $ws2
-assign [class="Chromium"] → $ws2
-assign [class="google-chrome"] → $ws2
+# assign [class="Firefox"] → $ws2
+# assign [class="Chromium"] → $ws2
+# assign [class="google-chrome"] → $ws2
 
-assign [class="Claws-mail"] → $ws3
-assign [class="Thunderbird"] → $ws3
-assign [class="Kmail"] → $ws3
-assign [class="Evolution"] → $ws3
-assign [class="Geary"] → $ws3
-assign [class="Gnome-calendar"] → $ws3
+# assign [class="Claws-mail"] → $ws3
+# assign [class="Thunderbird"] → $ws3
+# assign [class="Kmail"] → $ws3
+# assign [class="Evolution"] → $ws3
+# assign [class="Geary"] → $ws3
+# assign [class="Gnome-calendar"] → $ws3
 
-assign [class="Pidgin"] → $ws4
-assign [class="Kopete"] → $ws4
-assign [class="Xchat"] → $ws4
-assign [class="Hexchat"] → $ws4
-assign [class="Polari"] → $ws4
-assign [class="Skype"] → $ws4
-assign [class="discord"] → $ws4
-assign [class="Slack"] → $ws4
+# assign [class="Pidgin"] → $ws4
+# assign [class="Kopete"] → $ws4
+# assign [class="Xchat"] → $ws4
+# assign [class="Hexchat"] → $ws4
+# assign [class="Polari"] → $ws4
+# assign [class="Skype"] → $ws4
+# assign [class="discord"] → $ws4
+# assign [class="Slack"] → $ws4
 
-assign [class="Liferea"] → $ws5
-assign [class="feedreader"] → $ws5
+# assign [class="Liferea"] → $ws5
+# assign [class="feedreader"] → $ws5
 
-assign [class="Amarok"] → $ws6
-assign [class="Audacious"] → $ws6
-assign [class="Deadbeef"] → $ws6
-assign [class="Sayonara"] → $ws6
-assign [class="Gmpc"] → $ws6
-assign [class="Celementine"] → $ws6
-assign [title="Cantata"] → $ws6
-assign [class="Spotify"] → $ws6
+# assign [class="Amarok"] → $ws6
+# assign [class="Audacious"] → $ws6
+# assign [class="Deadbeef"] → $ws6
+# assign [class="Sayonara"] → $ws6
+# assign [class="Gmpc"] → $ws6
+# assign [class="Celementine"] → $ws6
+# assign [title="Cantata"] → $ws6
+# assign [class="Spotify"] → $ws6
 
-assign [class="Steam"] → $ws10
-assign [class="Scrolls"] → $ws10
-assign [class="Minecraft"] → $ws10
-assign [title="Minecraft Launcher"] → $ws10
+# assign [class="Steam"] → $ws10
+# assign [class="Scrolls"] → $ws10
+# assign [class="Minecraft"] → $ws10
+# assign [title="Minecraft Launcher"] → $ws10
 
 # window rules
 for_window [class="MPlayer"] floating enable
@@ -340,7 +340,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id ~/dotfiles/scripts/backlight.
 bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
 
 # rename workspace
-bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
+bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
 
 # load layouts
 # exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json';i3-msg 'workspace $ws1'"
