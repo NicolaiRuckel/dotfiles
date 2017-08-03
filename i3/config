@@ -345,7 +345,7 @@ bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
 # load layouts
 # exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/.i3/workspace-4.json';i3-msg 'workspace $ws1'"
 
-exec --no-startup-id "i3-msg 'workspace $ws1'"
+# exec --no-startup-id "i3-msg 'workspace $ws1'"
 
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
