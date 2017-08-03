@@ -238,7 +238,7 @@ augroup configgroup
     autocmd FileType python setlocal ts=2 sw=2 et
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd FileType rust setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 cc=100
          \| nnoremap <Leader>. :wa<CR>:Neomake cargo<CR>
          \| nnoremap <Leader>/ :wa<CR>:sp +te\ cargo\ run<CR>
     autocmd BufEnter Makefile setlocal noexpandtab
