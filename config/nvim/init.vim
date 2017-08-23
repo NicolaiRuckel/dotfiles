@@ -14,7 +14,6 @@ Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
@@ -31,6 +30,20 @@ set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
+set splitright              " splits appear right
+
+" Backup, Swap and Undo
+set undofile                " persistent undo
+set directory=~/.vim/swap,/tmp
+set backupdir=~/.vim/backup,/tmp
+set undodir=~/.vim/undo,/tmp
+
+" NetRW
+let g:netrw_liststyle = 1 " Detail View
+let g:netrw_sizestyle = "H" " Human-readable file sizes
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " hide dotfiles
+let g:netrw_hide = 1 " hide dotfiles by default
+let g:netrw_banner = 0 " Turn off banner
 
 " Statusline
 set laststatus=2            " enable statusline all the time
@@ -209,7 +222,7 @@ let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
 let NERDTreeMouseMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
 
-nmap <Leader>e :NERDTreeToggle<CR>
+" nmap <Leader>e :NERDTreeToggle<CR>
 
 " Markdown-Preview
 if exists('g:nyaovim_version')
