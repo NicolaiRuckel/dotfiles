@@ -34,9 +34,9 @@ set splitright              " splits appear right
 
 " Backup, Swap and Undo
 set undofile                " persistent undo
-set directory=~/.vim/swap,/tmp
-set backupdir=~/.vim/backup,/tmp
-set undodir=~/.vim/undo,/tmp
+set directory=~/.config/nvim/swap,/tmp
+set backupdir=~/.config/nvim/backup,/tmp
+set undodir=~/.config/nvim/undo,/tmp
 
 " NetRW
 let g:netrw_liststyle = 1 " Detail View
@@ -258,6 +258,7 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType json setlocal ts=2 sw=2 sts=2
 augroup END
 
 " Backups
