@@ -241,6 +241,7 @@ let g:neomake_markdown_enabled_makers = ['pandoc']
 " Autogroups
 augroup configgroup
     autocmd!
+    autocmd BufRead,BufNewFile *.tex set filetype=tex
     autocmd FileType make setlocal ts=8 sw=8 noet
     autocmd FileType html setlocal ts=2 sw=2 et omnifunc=htmlcomplete#CompleteTags
     autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
