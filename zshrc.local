@@ -21,6 +21,7 @@ export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 # variables
 
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export JAVA_HOME=/usr/lib/jvm/default
 
 
 # aliases
@@ -41,7 +42,7 @@ alias gitl="git pull"
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
-hash -d project=~/Documents/Uni/Semester14/17-SS-Password-Hashing
+hash -d project=~/Documents/Uni/Semester15/17-WS-Password-Hashing
 
 
 if [[ $TERM == xterm-termite ]]; then
