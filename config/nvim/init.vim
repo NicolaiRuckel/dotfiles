@@ -17,6 +17,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
@@ -238,6 +239,11 @@ let g:neomake_markdown_pandoc_maker = {
     \ }
 let g:neomake_markdown_enabled_makers = ['pandoc']
 
+" Language Client
+
+" Automatically start language servers.
+let g:LanguageClient_autoStart = 1
+
 " Autogroups
 augroup configgroup
     autocmd!
@@ -249,7 +255,7 @@ augroup configgroup
     autocmd FileType c setlocal ts=4 sw=4 noet
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
-    autocmd FileType python setlocal ts=2 sw=2 et
+    autocmd FileType python setlocal ts=4 sw=4 sts=4 et
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 cc=100
@@ -260,6 +266,8 @@ augroup configgroup
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
     autocmd FileType json setlocal ts=2 sw=2 sts=2
+    autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
+         \| nnoremap <Leader>. :wa<CR>:!love .<CR>
 augroup END
 
 " Backups
