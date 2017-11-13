@@ -10,3 +10,9 @@
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
 	url = git@github.com:pradzio1/i3spotifystatus.git
+[submodule "oh-my-zsh/custom/oh-my-zsh-candy-light"]
+	path = oh-my-zsh/custom/oh-my-zsh-candy-light
+	url = git@github.com:RanaExMachina/oh-my-zsh-candy-light.git
+[submodule "oh-my-zsh/custom/alien"]
+	path = oh-my-zsh/custom/alien
+	url = git@github.com:eendroroy/alien.git
