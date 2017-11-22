@@ -1,3 +1,5 @@
+set nocompatible
+
 " most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
@@ -18,6 +20,7 @@ Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'https://github.com/vimwiki/vimwiki'
 
 if exists('g:nyaovim_version')
 " NyaoVim plugins
@@ -32,6 +35,8 @@ set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
 set splitright              " splits appear right
+
+filetype plugin on
 
 " Backup, Swap and Undo
 set undofile                " persistent undo
@@ -94,7 +99,7 @@ set expandtab               " tabs are spaces
 
 " UI Config
 set number                  " show line numbers
-set relativenumber          " show relative line numbers
+" set relativenumber          " show relative line numbers
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
 set autoindent
@@ -162,8 +167,8 @@ nnoremap ; :
 
 set pt=<F3>                 " paste mode
 
-command W w
-command Q q
+" command W w
+" command Q q
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
