@@ -17,7 +17,39 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="candy-light/candy-light"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# DEFAULT_USER=nicolai
+POWERLEVEL9K_MODE="awesome-fontconfig"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHORTEN_DELIMITER=..
+POWERLEVEL9K_PROMPT_ON_NEWLINE=false
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=""
+# POWERLEVEL9K_ALWAYS_SHOW_USER=true
+# POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
+POWERLEVEL9K_STATUS_OK=false
+POWERLEVEL9K_USER_ICON="\$"
+POWERLEVEL9K_ROOT_ICON="#"
+POWERLEVEL9K_USER_TEMPLATE="%v"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline status)
+POWERLEVEL9K_DISABLE_RPROMPT=true
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
+# POWERLEVEL9K_STATUS_OK_BACKGROUND='33'
+# POWERLEVEL9K_STATUS_ERROR_BACKGROUND='33'
+POWERLEVEL9K_CONTEXT_BACKGROUND='033'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='046'
+POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='001'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='033'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='033'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='033'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='236'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='236'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='236'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='039'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='039'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='039'
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -62,7 +94,7 @@ ZSH_THEME="candy-light/candy-light"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/dotfiles/oh-my-zsh-themes
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
