@@ -8,11 +8,16 @@
 ## OH-MY-ZSH ##
 ###############
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# set PATH
+export PATH_LOCAL=/home/nicolai/bin
+export PATH_DOTFILES=/home/nicolai/dotfiles/bin
+export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
+export PATH_RUST=$HOME/.cargo/bin
+
+export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/nicolai/.oh-my-zsh
+export ZSH=/home/nicolai/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -145,14 +150,6 @@ source $ZSH/oh-my-zsh.sh
 ###########################
 
 export EDITOR=nvim
-
-# setting path
-export PATH_LOCAL=/home/nicolai/bin
-export PATH_DOTFILES=/home/nicolai/dotfiles/bin
-export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
-export PATH_RUST=$HOME/.cargo/bin
-
-export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
 # variables
 
