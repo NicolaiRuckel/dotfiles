@@ -24,6 +24,11 @@ export ZSH=/home/nicolai/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+local user_symbol="$"
+if [[ $(print -P "%#") =~ "#" ]]; then
+        user_symbol = "#"
+fi
+
 # DEFAULT_USER=nicolai
 POWERLEVEL9K_MODE="awesome-fontconfig"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
@@ -36,7 +41,10 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=""
 POWERLEVEL9K_STATUS_OK=false
 # POWERLEVEL9K_USER_ICON="\$"
 # POWERLEVEL9K_ROOT_ICON="#"
-POWERLEVEL9K_USER_TEMPLATE="%n \$"
+# POWERLEVEL9K_USER_TEMPLATE=''
+POWERLEVEL9K_HOME_ICON=''
+POWERLEVEL9K_HOME_SUB_ICON=''
+POWERLEVEL9K_FOLDER_ICON=''
 
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline status user)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline status )
@@ -59,6 +67,7 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='039'
 POWERLEVEL9K_USER_BACKGROUND='033'
 POWERLEVEL9K_USER_DEFAULT_FOREGROUND='046'
 POWERLEVEL9K_USER_ROOT_FOREGROUND='196'
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
