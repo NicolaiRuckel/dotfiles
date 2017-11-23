@@ -1,24 +1,15 @@
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
 	url = https://github.com/nelstrom/vim-markdown-preview.git
-[submodule "nvim/bundle/nyaovim-markdown-preview"]
-	path = nvim/bundle/nyaovim-markdown-preview
-	url = git@github.com:rhysd/nyaovim-markdown-preview.git
 [submodule "scripts/i3-battery-popup"]
 	path = scripts/i3-battery-popup
 	url = https://github.com/rjekker/i3-battery-popup
-[submodule "scripts/i3spotifystatus"]
-	path = scripts/i3spotifystatus
-	url = git@github.com:pradzio1/i3spotifystatus.git
 [submodule "oh-my-zsh/custom/oh-my-zsh-candy-light"]
 	path = oh-my-zsh/custom/oh-my-zsh-candy-light
-	url = git@github.com:RanaExMachina/oh-my-zsh-candy-light.git
-[submodule "oh-my-zsh/custom/alien"]
-	path = oh-my-zsh/custom/alien
-	url = git@github.com:eendroroy/alien.git
+	url = https://github.com/RanaExMachina/oh-my-zsh-candy-light.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "oh-my-zsh-themes/powerlevel9k"]
 	path = oh-my-zsh-themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
