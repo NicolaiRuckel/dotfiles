@@ -22,11 +22,6 @@ Plug 'https://github.com/cespare/vim-toml'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'https://github.com/vimwiki/vimwiki'
 
-if exists('g:nyaovim_version')
-" NyaoVim plugins
-  Plug 'https://github.com/rhysd/nyaovim-markdown-preview'
-endif
-
 call plug#end()
 
 " General
