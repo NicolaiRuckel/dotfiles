@@ -408,7 +408,7 @@ exec --no-startup-id albert
 # client.urgent           #af0000 #af0000 #d7d7d7 #900000
 
 # class                 border  backgr. text    indicator
-client.focused          #005F87 #005F87 #d7d7d7 #2e9ef4
+client.focused          #005faf #005faf #d7d7d7 #2e9ef4
 client.focused_inactive #222222 #222222 #d7d7d7 #484e50
 client.unfocused        #222222 #222222 #888888 #292d2e
 client.urgent           #222222 #222222 #af0000 #900000
