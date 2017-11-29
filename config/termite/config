@@ -1,6 +1,7 @@
 [options]
 #font = Liberation Mono 11
-font = Source Code Pro Medium 11
+# font = Source Code Pro Medium 11
+font = SauceCodePro Nerd Font Medium 11
 #font = Monaco 10
 
 scrollback_lines = 10000
