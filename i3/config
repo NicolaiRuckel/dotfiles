@@ -359,6 +359,7 @@ exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 exec --no-startup-id compton
 exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
 exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
+exec --no-startup-id dunst
 
 # gnome stuff
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
