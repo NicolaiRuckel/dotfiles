@@ -253,6 +253,7 @@ augroup configgroup
     autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
     autocmd FileType javascript setlocal ts=4 sw=4 et
     autocmd FileType c setlocal ts=4 sw=4 noet
+    autocmd FileType cpp setlocal ts=2 sw=2 sts=2 et
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
     autocmd FileType python setlocal ts=4 sw=4 sts=4 et
