@@ -27,5 +27,7 @@ case $HOSTNAME in
 
     ("$DESKTOP_HOSTNAME")
     #  desktop specific settings
-        ;;
+
+    #  stop screen from turning off after inactivity
+    xset -dpms s off;;
 esac

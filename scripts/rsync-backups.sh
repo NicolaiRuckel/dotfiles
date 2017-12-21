@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo rsync -av -e ssh /media/data nicolai@vilgot:CloudStation/
+exclude=".Trash*"
+sudo rsync -av --exclude=$exclude -e ssh /media/data nicolai@vilgot:CloudStation/
 
 #set -e
 #
