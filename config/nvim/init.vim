@@ -19,7 +19,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'https://github.com/vimwiki/vimwiki'
 
 call plug#end()
@@ -242,7 +242,7 @@ let g:neomake_markdown_enabled_makers = ['pandoc']
 " Language Client
 
 " Automatically start language servers.
-let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_autoStart = 1
 
 " Autogroups
 augroup configgroup
