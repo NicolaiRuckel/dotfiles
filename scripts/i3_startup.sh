@@ -27,6 +27,7 @@ case $HOSTNAME in
 
     ("$DESKTOP_HOSTNAME")
     #  desktop specific settings
+    /home/nicolai/dotfiles/scripts/desktop_monitor.sh;
 
     #  stop screen from turning off after inactivity
     xset -dpms s off;;
