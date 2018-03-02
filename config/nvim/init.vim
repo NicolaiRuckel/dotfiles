@@ -83,7 +83,7 @@ set spelllang=en,de_20
 " Colors
 set t_Co=256                " more colors for more fun!
 colorscheme lucius
-LuciusWhite
+LuciusLight
 set background=light        " light background
 syntax enable               " enable syntax processing
 
