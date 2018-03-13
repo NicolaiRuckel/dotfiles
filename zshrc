@@ -190,7 +190,7 @@ alias gitl="git pull"
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
-hash -d project=~/Documents/Uni/Semester15/17-WS-Password-Hashing
+hash -d project=~/uni/Semester15/17-WS-Password-Hashing
 
 
 if [[ $TERM == xterm-termite ]]; then
