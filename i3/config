@@ -269,14 +269,14 @@ assign [class="whats-app"] → $ws4
 assign [class="Liferea"] → $ws5
 assign [class="feedreader"] → $ws5
 
-assign [class="Amarok"] → $ws6
-assign [class="Audacious"] → $ws6
-assign [class="Deadbeef"] → $ws6
-assign [class="Sayonara"] → $ws6
-assign [class="Gmpc"] → $ws6
-assign [class="Celementine"] → $ws6
-assign [title="Cantata"] → $ws6
-assign [class="Spotify"] → $ws6
+assign [class="Amarok"] → $ws5
+assign [class="Audacious"] → $ws5
+assign [class="Deadbeef"] → $ws5
+assign [class="Sayonara"] → $ws5
+assign [class="Gmpc"] → $ws5
+assign [class="Celementine"] → $ws5
+assign [title="Cantata"] → $ws5
+assign [class="Spotify"] → $ws5
 
 # assign [class="Steam"] → $ws10
 # assign [class="Scrolls"] → $ws10
@@ -308,7 +308,7 @@ for_window [class="Skype" title="File Transfers"] floating enable
 for_window [title="Battery Warning"] sticky enable
 
 # spotify
-for_window [class="Spotify"] move to workspace $ws6
+for_window [class="Spotify"] move to workspace $ws5
 
 # padding left for window titles
 for_window [class=".*"] title_format " %title"
