@@ -1,0 +1,53 @@
+#!/bin/bash
+
+DOCSTRING="Creates a new latex project from a template.  The template has to
+be in \$XDG_TEMPLATE/latex.\nUsage:\n\t$0 TEMPLATE NAME\n"
+
+# check for the correct number of arguments
+if [ $# -ne 2 ]; then
+        echo -e $DOCSTRING
+        exit 1
+else
+        # check if $XDG_TEMPLATES exists
+        TEMPLATES=$(xdg-user-dir TEMPLATES)
+        if [ !  -d $TEMPLATES ]; then
+                echo -e "\$XDG_TEMPLATES doesn't exist!\nIt's currently set to
+                $TEMPLATES."
+                exit 1
+        fi
+
+        # check if $XDG_TEMPLATES/latex exists
+        LATEX="$TEMPLATES/latex"
+        if [ !  -d $LATEX ]; then
+                echo -e "No latex directory in $TEMPLATES!"
+                exit 1
+        fi
+
+        # check if specified template exists
+        TEMPLATE="$LATEX/$1"
+        if [ !  -d $TEMPLATE ]; then
+                echo -e "No template $1 found!"
+                exit 1
+        fi
+
+        # check if folder already exists
+        DESTINATION="$PWD/$2"
+        if [ -d $DESTINATION ]; then
+                echo -e "$DESTINATION already exists!"
+                exit 1
+        fi
+
+        # create new folder from template
+        mkdir $DESTINATION
+        rsync -av --progress $TEMPLATE/ $DESTINATION\
+        --exclude=README.md\
+        --exclude="*.pdf"\
+        --exclude="*.aux"\
+        --exclude="*.log"\
+        --exclude="*.nav"\
+        --exclude="*.out"\
+        --exclude="*.snm"\
+        --exclude="*.toc"\
+        --exclude="*.vrb"\
+        --exclude=.git
+fi
