@@ -5,6 +5,7 @@ let s:font = "Source Code Pro Medium"
 function! SetFont() abort
   if exists('g:GtkGuiLoaded')
     call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
+    let g:GuiInternalClipboard = 1
   else
     exec "GuiFont " . s:font . ":h" . s:fontsize
   endif
