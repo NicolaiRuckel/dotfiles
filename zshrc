@@ -128,6 +128,7 @@ ZSH_CUSTOM=~/dotfiles/oh-my-zsh-themes
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  gitfast
   aws
 )
 
@@ -179,14 +180,6 @@ alias f="files . &"
 alias l="ls -lsh"
 alias o=open
 
-# git aliases
-alias gita="git add"
-alias gitc="git commit"
-alias gits="git status"
-alias gitd="git diff"
-alias gitp="git push"
-alias gitl="git pull"
-
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
 hash -d project=~/uni/Semester15/17-WS-Password-Hashing
@@ -196,10 +189,6 @@ if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
 fi
-
-# functions
-transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 ####################################
 ## SYSTEM DEPENDENT CONFIGURATION ##
