@@ -16,15 +16,19 @@ Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/neomake/neomake'
+" Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
-" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'https://github.com/vimwiki/vimwiki'
-
+Plug 'skywind3000/asyncrun.vim'
+Plug 'autozimu/LanguageClient-neovim', {
+                        \ 'branch': 'next',
+                        \ 'do': 'bash install.sh',
+                        \ }
 call plug#end()
 
 " General
+set exrc                    " run .exrc files if present
 set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
@@ -58,6 +62,30 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
+" AsyncRun
+function! RunAsync(...)
+  if a:0 == 1
+    let g:async_command = a:1
+  elseif !exists("g:async_command")
+    let g:async_command = 'make'
+  endif
+  exec "AsyncRun " . g:async_command
+endfunction
+command! -nargs=? RunAsync :call RunAsync(<f-args>)
+
+function! Get_asyncrun_status()
+  let async_status = g:asyncrun_status
+  if async_status == 'running'
+    return g:async_command . ' •'
+  elseif async_status == 'success'
+    return g:async_command . ' ✔'
+  elseif async_status == 'failure'
+    return g:async_command . ' ✘'
+  else
+    return ''
+  endif
+endfunction
+
 set statusline=                       " Custom status line
 set statusline+=%#PmenuSel#           " Show git branch if it exists
 set statusline+=%{StatuslineGit()}
@@ -65,6 +93,7 @@ set statusline+=%#LineNr#
 set statusline+=\ %f                  " Show file name
 set statusline+=%m\                   " Show whether file has been modified
 set statusline+=%=                    " Right align the following
+set statusline+=%{Get_asyncrun_status()}
 set statusline+=%#CursorColumn#
 set statusline+=\ %y                  " Filetype
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} " File encoding
@@ -108,7 +137,9 @@ set wildignorecase
 set wildcharm=<Tab>
 set lazyredraw              " redraw only when we need to
 set showmatch               " highlight matching [{()}]
-set colorcolumn=80          " highlight 80th charactercoloumn
+" set colorcolumn=80          " highlight 80th charactercoloumn
+" Highlight all columns after current textwidth
+let &colorcolumn=join(map(range(1,999), '"+".v:val'), ",")
 set textwidth=80
 set history=10000           " vim has to remember a lot of commands
 set mouse=nv                " allows usage of mouse
@@ -154,8 +185,13 @@ nnoremap <leader>P "*P
 vnoremap <leader>p "*p
 vnoremap <leader>P "*P
 
-nnoremap <Leader>. :wa<CR>:Neomake!<CR>
-nnoremap <Leader>/ :w<CR>:Neomake<CR>
+" nnoremap <Leader>. :wa<CR>:Neomake!<CR>
+" nnoremap <Leader>/ :w<CR>:Neomake<CR>
+
+nnoremap <silent> <Leader>. :wa<CR>:RunAsync<CR>
+nnoremap <Leader>/ :wa<CR>:RunAsync 
+
+nnoremap <Leader>s :set spell!<CR>
 
 " Keybindings
 nnoremap ; :
@@ -231,13 +267,13 @@ if exists('g:nyaovim_version')
   "let g:markdown_preview_no_default_mapping = 1
 endif
 
-" Neomake
-let g:neomake_tex_enabled_makers = ['rubber']
-let g:neomake_rust_enabled_makers = ['cargo']
-let g:neomake_markdown_pandoc_maker = {
-    \ 'args': ['-o', '%:r.pdf'],
-    \ }
-let g:neomake_markdown_enabled_makers = ['pandoc']
+" " Neomake
+" let g:neomake_tex_enabled_makers = ['rubber']
+" let g:neomake_rust_enabled_makers = ['cargo']
+" let g:neomake_markdown_pandoc_maker = {
+"     \ 'args': ['-o', '%:r.pdf'],
+"     \ }
+" let g:neomake_markdown_enabled_makers = ['pandoc']
 
 " Language Client
 
@@ -260,8 +296,11 @@ augroup configgroup
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 cc=100
-         \| nnoremap <Leader>. :wa<CR>:Neomake cargo<CR>
-         \| nnoremap <Leader>/ :wa<CR>:sp +te\ cargo\ run<CR>
+         \| if !exists("g:async_command") | let g:async_command = 'cargo build'
+         \| endif
+         \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
+         " \| nnoremap <Leader>. :wa<CR>:Neomake cargo<CR>
+         " \| nnoremap <Leader>/ :wa<CR>:sp +te\ cargo\ run<CR>
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell

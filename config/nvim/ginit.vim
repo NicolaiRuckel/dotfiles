@@ -1,15 +1,25 @@
-let s:fontsize=11
-exec "GuiFont Source Code Pro Medium:h" . s:fontsize
-GuiLinespace 2
+let s:default_fontsize = 11
+let s:fontsize = s:default_fontsize
+let s:font = "Source Code Pro Medium"
+
+function! SetFont() abort
+  if exists('g:GtkGuiLoaded')
+    call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
+  else
+    exec "GuiFont " . s:font . ":h" . s:fontsize
+  endif
+endfunction
+
+call SetFont()
 
 function! AdjustFontSize(delta)
-  let l:font=substitute(g:GuiFont, ':h\zs\d\+', '\=eval(submatch(0)+a:delta)', '')
-  exec "GuiFont " . l:font
+  let s:fontsize += a:delta
+  call SetFont()
 endfunction
 
 function! ResetFontSize()
-  let l:font=substitute(g:GuiFont, ':h\zs\d\+', s:fontsize, '')
-  exec "GuiFont " . l:font
+  let s:fontsize = s:default_fontsize
+  call SetFont()
 endfunction
 
 nnoremap <C-=> :call AdjustFontSize(1)<CR>
