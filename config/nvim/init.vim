@@ -1,22 +1,20 @@
-set nocompatible
-
 " most settings and comments are taken from
 " http://dougblack.io/words/a-good-vimrc.html
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Plug
 " https://github.com/junegunn/vim-plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/syntastic'
-" Plug 'https://github.com/vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
-" Plug 'https://github.com/neomake/neomake'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/vimwiki/vimwiki'
@@ -27,7 +25,9 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ }
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set exrc                    " run .exrc files if present
 set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
@@ -50,7 +50,131 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " hide dotfiles
 let g:netrw_hide = 1 " hide dotfiles by default
 let g:netrw_banner = 0 " Turn off banner
 
+
+" Dictionary
+set dictionary+=/usr/share/dict/american-english
+set dictionary+=/usr/share/dict/ngerman
+
+" Spell
+set spelllang=en,de_20
+
+" Colors
+set t_Co=256                " more colors for more fun!
+colorscheme lucius
+LuciusLight
+set background=light        " light background
+syntax enable               " enable syntax processing
+
+" Spaces and Tabs
+set tabstop=4               " number of visual spaces per TAB
+set softtabstop=4           " number of spaces in tab when editing
+set expandtab               " tabs are spaces
+
+" UI Config
+set number                  " show line numbers
+set showcmd                 " show command in bottom bar
+set cursorline              " highlight current line
+set autoindent
+set smartindent
+filetype plugin indent on   " load filetype-specific indent files and plugins
+set wildmenu                " visual autocomplete for command menu
+set wildmode=full
+set wildignore+=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out,*.ali,*.zip,*/obj/*,*.gcno
+set wildignore+=*.git/*,*.pyc
+set wildignorecase
+set wildcharm=<Tab>
+set lazyredraw              " redraw only when we need to
+set showmatch               " highlight matching [{()}]
+" Highlight all columns after current textwidth
+let &colorcolumn=join(map(range(1,999), '"+".v:val'), ",")
+set textwidth=80
+set history=10000           " vim has to remember a lot of commands
+set mouse=nv                " allows usage of mouse
+set ruler                   " show ruler
+set scrolloff=5             " minimum number of lines above and below the cursor
+set list                    " make whitespace characters visible
+set lcs=tab:▸\ ,trail:·     " symbols for tabs and trailing whitespaces
+
+" Searching
+set incsearch               " search as characters are entered
+set hlsearch                " highlight matches
+set smartcase
+set ignorecase
+
+" turn of search highlight
+" this did strange things in vim but hopefully works in nvim
+nnoremap <silent> <ESC> :noh<CR><ESC>
+
+" Folding
+set foldenable              " enable folding
+set foldlevelstart=10       " open most folds by default
+set foldnestmax=10          " 10 nested fold max
+set foldmethod=indent       " fold based on indent level
+
+" space open/closes folds
+nnoremap <space> za
+
+" Leader Shortcuts
+let mapleader=","           " leader is comma
+
+nnoremap <leader>v :vsplit<cr>
+
+" Copy to primary
+vnoremap  <leader>y  "*y
+nnoremap  <leader>Y  "*yg_
+nnoremap  <leader>y  "*y
+
+" Paste from primary
+nnoremap <leader>p "*p
+nnoremap <leader>P "*P
+vnoremap <leader>p "*p
+vnoremap <leader>P "*P
+
+" nnoremap <Leader>. :wa<CR>:Neomake!<CR>
+" nnoremap <Leader>/ :w<CR>:Neomake<CR>
+
+nnoremap <silent> <Leader>. :wa<CR>:RunAsync<CR>
+nnoremap <Leader>/ :wa<CR>:RunAsync 
+
+nnoremap <Leader>s :set spell!<CR>
+
+" Keybindings
+nnoremap ; :
+
+
+" ------------------------------------------------------------------------------
+" Plugins
+" ------------------------------------------------------------------------------
+
+" CtrlP
+nnoremap <Leader>e :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>m :CtrlPMRUFiles<CR>
+nnoremap <Leader>c :CtrlP %:h<CR>
+
+"let g:ctrlp_match_window = 'max:50,results:50'
+let g:ctrlp_reuse_window = 'help'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
+let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
+
+" Y U NO COMMIT AFTER 20 LINES???!?!
+let g:YUNOcommit_after = 20
+
+" Taglist
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let Tlist_Use_Right_Window=1
+let Tlist_Exit_OnlyWindow=1
+
+
+" Language Client
+
+" Automatically start language servers.
+let g:LanguageClient_autoStart = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2            " enable statusline all the time
 
 function! GitBranch()
@@ -102,196 +226,25 @@ set statusline+=\ %p%%                " Percentage through file
 set statusline+=\ %l:%c               " Line number:Column number
 set statusline+=\ 
 
-" Dictionary
-set dictionary+=/usr/share/dict/american-english
-set dictionary+=/usr/share/dict/ngerman
-
-" Spell
-set spelllang=en,de_20
-
-" Colors
-set t_Co=256                " more colors for more fun!
-colorscheme lucius
-LuciusLight
-set background=light        " light background
-syntax enable               " enable syntax processing
-
-" Spaces and Tabs
-set tabstop=4               " number of visual spaces per TAB
-set softtabstop=4           " number of spaces in tab when editing
-set expandtab               " tabs are spaces
-
-" UI Config
-set number                  " show line numbers
-" set relativenumber          " show relative line numbers
-set showcmd                 " show command in bottom bar
-set cursorline              " highlight current line
-set autoindent
-set smartindent
-filetype plugin indent on   " load filetype-specific indent files and plugins
-set wildmenu                " visual autocomplete for command menu
-set wildmode=full
-set wildignore+=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out,*.ali,*.zip,*/obj/*,*.gcno
-set wildignore+=*.git/*,*.pyc
-set wildignorecase
-set wildcharm=<Tab>
-set lazyredraw              " redraw only when we need to
-set showmatch               " highlight matching [{()}]
-" set colorcolumn=80          " highlight 80th charactercoloumn
-" Highlight all columns after current textwidth
-let &colorcolumn=join(map(range(1,999), '"+".v:val'), ",")
-set textwidth=80
-set history=10000           " vim has to remember a lot of commands
-set mouse=nv                " allows usage of mouse
-set ruler                   " show ruler
-set scrolloff=5             " minimum number of lines above and below the cursor
-set list                    " make whitespace characters visible
-set lcs=tab:▸\ ,trail:_     " symbols for tabs and trailing whitespaces
-
-" Searching
-set incsearch               " search as characters are entered
-set hlsearch                " highlight matches
-set smartcase
-set ignorecase
-
-" turn of search highlight
-" this did strange things in vim but hopefully works in nvim
-nnoremap <silent> <ESC> :noh<CR><ESC>
-
-" Folding {{{
-set foldenable              " enable folding
-set foldlevelstart=10       " open most folds by default
-set foldnestmax=10          " 10 nested fold max
-set foldmethod=indent       " fold based on indent level
-
-" space open/closes folds
-nnoremap <space> za
-
-" Leader Shortcuts {{{
-let mapleader=","           " leader is comma
-
-nnoremap <leader>w <C-w>v<C-w>l
-
-nnoremap <leader>v :vsplit<cr>
-
-" " Copy to primary
-vnoremap  <leader>y  "*y
-nnoremap  <leader>Y  "*yg_
-nnoremap  <leader>y  "*y
-
-" " Paste from primary
-nnoremap <leader>p "*p
-nnoremap <leader>P "*P
-vnoremap <leader>p "*p
-vnoremap <leader>P "*P
-
-" nnoremap <Leader>. :wa<CR>:Neomake!<CR>
-" nnoremap <Leader>/ :w<CR>:Neomake<CR>
-
-nnoremap <silent> <Leader>. :wa<CR>:RunAsync<CR>
-nnoremap <Leader>/ :wa<CR>:RunAsync 
-
-nnoremap <Leader>s :set spell!<CR>
-
-" Keybindings
-nnoremap ; :
-
-set pt=<F3>                 " paste mode
-
-" command W w
-" command Q q
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" ------------------------------------------------------------------------------
-" Plugins
-" ------------------------------------------------------------------------------
-
-" CtrlP
-nnoremap <Leader>e :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>m :CtrlPMRUFiles<CR>
-nnoremap <Leader>c :CtrlP %:h<CR>
-
-"let g:ctrlp_match_window = 'max:50,results:50'
-let g:ctrlp_reuse_window = 'help'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-
-let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
-
-" Y U NO COMMIT AFTER 20 LINES???!?!
-let g:YUNOcommit_after = 20
-
-" Taglist
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-let Tlist_Use_Right_Window=1
-let Tlist_Exit_OnlyWindow=1
-
-nnoremap <Leader>t :TlistToggle<CR>
-
-"" Airline
-"let g:airline_theme='papercolor'
-"set laststatus=2
-"set noshowmode
-"if !exists('g:airline_symbols')
-"    let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
-""let g:airline#extensions#syntastic#enabled = 1
-"let g:airline_detect_paste=1
-"let g:airline_symbols.readonly = ''
-""let g:airline_section_a =
-"let g:airline_section_b = '%t'
-"let g:airline_section_c = ''
-""let g:airline_section_b = '%{getcwd()}'
-""let g:airline_section_c = '%t'
-""let g:airline_section_z = '%3l,%-3c %P'
-"let g:airline_section_z = '%-3c %P'
-""let g:airline#extensions#neomake#enabled
-
-" Nerdtree
-let NERDTreeIgnore=['\.swp$', '\.o$', '\.ali$', '\.swo$', '\*$']
-let NERDTreeMouseMode=2
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close NT if last window
-
-" nmap <Leader>e :NERDTreeToggle<CR>
-
-" Markdown-Preview
-if exists('g:nyaovim_version')
-  let g:markdown_preview_eager = 1
-  "let g:markdown_preview_no_default_mapping = 1
-endif
-
-" " Neomake
-" let g:neomake_tex_enabled_makers = ['rubber']
-" let g:neomake_rust_enabled_makers = ['cargo']
-" let g:neomake_markdown_pandoc_maker = {
-"     \ 'args': ['-o', '%:r.pdf'],
-"     \ }
-" let g:neomake_markdown_enabled_makers = ['pandoc']
-
-" Language Client
-
-" Automatically start language servers.
-" let g:LanguageClient_autoStart = 1
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 augroup configgroup
     autocmd!
     autocmd BufRead,BufNewFile *.tex set filetype=tex
     autocmd FileType make setlocal ts=8 sw=8 noet
-    autocmd FileType html setlocal ts=2 sw=2 et omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
+    autocmd FileType cmake setlocal ts=2 sw=2 et
+    autocmd FileType html setlocal ts=2 sw=2
+    autocmd FileType css setlocal ts=2 sw=2
+    autocmd FileType text setlocal ts=2 sw=2 sts=2 et spell
+    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType javascript setlocal ts=4 sw=4 et
     autocmd FileType c setlocal ts=4 sw=4 noet
     autocmd FileType cpp setlocal ts=2 sw=2 sts=2 et
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
+         \| syntax spell toplevel
     autocmd FileType python setlocal ts=4 sw=4 sts=4 et
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
@@ -299,18 +252,28 @@ augroup configgroup
          \| if !exists("g:async_command") | let g:async_command = 'cargo build'
          \| endif
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
-         " \| nnoremap <Leader>. :wa<CR>:Neomake cargo<CR>
-         " \| nnoremap <Leader>/ :wa<CR>:sp +te\ cargo\ run<CR>
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
-    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
     autocmd FileType json setlocal ts=2 sw=2 sts=2
     autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
          \| nnoremap <Leader>. :wa<CR>:!love .<CR>
+    autocmd FileType help setlocal nospell
+    autocmd FileType vim setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType gtkrc setlocal commentstring=#\ %s
+    autocmd FileType matlab setlocal commentstring=%\ %s
+    autocmd FileType desktop setlocal commentstring=#\ %s
+    autocmd FileType gitcommit setlocal spell
+    autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
+    autocmd FileType dosini setlocal commentstring=#\ %s
+
+    autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
 augroup END
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backups
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
