@@ -190,6 +190,18 @@ if [[ $TERM == xterm-termite ]]; then
   __vte_osc7
 fi
 
+###############
+## FUNCTIONS ##
+###############
+
+# prevent nested ranger instances
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
 ####################################
 ## SYSTEM DEPENDENT CONFIGURATION ##
 ####################################
