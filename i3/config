@@ -370,7 +370,7 @@ exec --no-startup-id compton --no-fading-openclose=true
 exec --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc
 
 # exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
-# exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
+exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 exec --no-startup-id dunst
 
 # gnome stuff
