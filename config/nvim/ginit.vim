@@ -1,11 +1,12 @@
 let s:default_fontsize = 11
 let s:fontsize = s:default_fontsize
-let s:font = "Source Code Pro Medium"
+let s:font = "Source Code Pro Regular"
 
 function! SetFont() abort
   if exists('g:GtkGuiLoaded')
     call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
     let g:GuiInternalClipboard = 1
+    let NVIM_GTK_NO_HEADERBAR=1
   else
     exec "GuiFont " . s:font . ":h" . s:fontsize
   endif

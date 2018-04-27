@@ -31,4 +31,9 @@ case $HOSTNAME in
 
     #  stop screen from turning off after inactivity
     xset -dpms s off;;
+
+    ("curie")
+      xinput set-button-map 11 1 6 3 4 5 2 7 8 9 10 11 12;
+      # xset -dpms s off;
+      /home/nicolai/dotfiles/scripts/dbl.sh;;
 esac
