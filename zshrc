@@ -175,6 +175,7 @@ fi
 
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
+export GIT_EDITOR=nvim
 
 
 # aliases
