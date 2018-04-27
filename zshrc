@@ -148,6 +148,10 @@ else
   export EDITOR='nvim'
 fi
 
+if [[ -x "$(command -v v)" ]]; then
+  export VISUAL='v'
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -176,7 +180,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 # alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
-alias v=nvim
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
@@ -203,6 +206,7 @@ ranger() {
         exit
     fi
 }
+
 ####################################
 ## SYSTEM DEPENDENT CONFIGURATION ##
 ####################################
