@@ -267,7 +267,7 @@ augroup configgroup
     autocmd FileType gitcommit setlocal spell
     autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
     autocmd FileType dosini setlocal commentstring=#\ %s
-    autocmd BufEnter build.gradle setlocal ts=4 sw=4 sts=4
+    autocmd BufEnter *.gradle setlocal ts=4 sw=4 sts=4 tw=0
 
     autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
 augroup END
