@@ -25,7 +25,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -365,7 +365,7 @@ bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 
 # exec --no-startup-id ~/dotfiles/scripts/i3-battery-popup/i3-battery-popup -L 30
-# exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
+exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 exec --no-startup-id dunst
 
 # gnome stuff

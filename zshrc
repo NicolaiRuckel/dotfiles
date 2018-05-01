@@ -77,37 +77,11 @@ POWERLEVEL9K_USER_DEFAULT_FOREGROUND='046'
 POWERLEVEL9K_USER_ROOT_FOREGROUND='196'
 
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
+# Enable auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+# Display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -130,6 +104,8 @@ plugins=(
   git
   gitfast
   aws
+  mvn
+  gradle
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -146,6 +122,10 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='nvim'
+fi
+
+if [[ -x "$(command -v v)" ]]; then
+  export VISUAL='v'
 fi
 
 # Compilation flags
@@ -171,11 +151,12 @@ fi
 
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
+export GIT_EDITOR=nvim
 
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
-alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
+# alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
@@ -195,13 +176,14 @@ fi
 ###############
 
 # prevent nested ranger instances
-ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
+# ranger() {
+#     if [ -z "$RANGER_LEVEL" ]; then
+#         /usr/bin/ranger "$@"
+#     else
+#         exit
+#     fi
+# }
+
 ####################################
 ## SYSTEM DEPENDENT CONFIGURATION ##
 ####################################
