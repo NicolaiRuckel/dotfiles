@@ -80,9 +80,6 @@ POWERLEVEL9K_USER_ROOT_FOREGROUND='196'
 # Enable auto-correction.
 ENABLE_CORRECTION="true"
 
-# Display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
