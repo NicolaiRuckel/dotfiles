@@ -28,7 +28,6 @@ case $HOSTNAME in
 
     ("$DESKTOP_HOSTNAME")
     #  desktop specific settings
-    compton --backend glx --paint-on-overlay --vsync opengl-swc --no-fading-openclose;
     /home/nicolai/dotfiles/scripts/desktop_monitor.sh;
 
     compton --backend glx --paint-on-overlay --vsync opengl-swc;
