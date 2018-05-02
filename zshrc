@@ -244,6 +244,13 @@ case `uname -n` in
 esac
 
 case `uname -n` in
+    curie)
+
+        hash -d research=~/uni/master/master-research
+    ;;
+esac
+
+case `uname -n` in
     archbook)
         # variables
         export TERMINAL=termite
