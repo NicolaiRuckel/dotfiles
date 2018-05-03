@@ -122,7 +122,7 @@ else
 fi
 
 if [[ -x "$(command -v v)" ]]; then
-  export VISUAL='v'
+  export VISUAL='nvim'
 fi
 
 # Compilation flags
@@ -149,7 +149,7 @@ fi
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
 export GIT_EDITOR=nvim
-
+export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
