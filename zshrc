@@ -107,7 +107,24 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+##########################
+### User configuration ###
+##########################
+
+# ZSH options
+# ###########
+
+# execute history expansion immediately
+unsetopt HIST_VERIFY
+
+# share history between sessions
+setopt SHARE_HISTORY
+
+# don't match dotfiles
+setopt noglobdots
+
+# Variables
+# #########
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -139,12 +156,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-###########################
-## GENERAL CONFIGURATION ##
-###########################
-
-# variables
 
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
