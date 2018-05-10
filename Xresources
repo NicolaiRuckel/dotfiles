@@ -6,6 +6,10 @@
 !Xft.antialias: 1
 !Xft.rgba: rgb
 
+#ifdef SRVR_snitsig
+        Xft.dpi: 117
+#endif
+
 URxvt.depth: 32
 URxvt.scrollBar:  False
 !URxvt.boldfont:xft:Monospace-Bold:size=10
