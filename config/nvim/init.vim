@@ -12,6 +12,7 @@ Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
+Plug 'https://github.com/andreypopp/vim-colors-plain'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
@@ -63,6 +64,7 @@ set t_Co=256                " more colors for more fun!
 colorscheme lucius
 LuciusLight
 set background=light        " light background
+" colorscheme plain
 syntax enable               " enable syntax processing
 
 " Spaces and Tabs

@@ -107,7 +107,24 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+##########################
+### User configuration ###
+##########################
+
+# ZSH options
+# ###########
+
+# execute history expansion immediately
+unsetopt HIST_VERIFY
+
+# share history between sessions
+setopt SHARE_HISTORY
+
+# don't match dotfiles
+setopt noglobdots
+
+# Variables
+# #########
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -122,7 +139,7 @@ else
 fi
 
 if [[ -x "$(command -v v)" ]]; then
-  export VISUAL='v'
+  export VISUAL='nvim'
 fi
 
 # Compilation flags
@@ -139,17 +156,11 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-###########################
-## GENERAL CONFIGURATION ##
-###########################
-
-# variables
 
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
 export GIT_EDITOR=nvim
-
+export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
@@ -237,6 +248,13 @@ case `uname -n` in
             print "chpwd(): Switching to profile: $profile"
             export PATH="$GNATPATH:$PATH"
         }
+    ;;
+esac
+
+case `uname -n` in
+    curie)
+
+        hash -d research=~/uni/master/master-research
     ;;
 esac
 
