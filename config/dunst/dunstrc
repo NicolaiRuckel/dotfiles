@@ -282,8 +282,8 @@
 [discord]
         appname = Discord
         summary = "*"
-        script = ~/dotfiles/set_urgent_hint.sh Discord
-        script = ~/dotfiles/set_urgent_hint.sh discord
+#        script = ~/dotfiles/scripts/discord_urgent_hint.sh
+        script = ~/dotfiles/scripts/set_urgent_hint.sh
         format = ""
 
 #[espeak]
