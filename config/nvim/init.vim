@@ -270,6 +270,8 @@ augroup configgroup
     autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
     autocmd FileType dosini setlocal commentstring=#\ %s
     autocmd BufEnter *.gradle setlocal ts=4 sw=4 sts=4 tw=0
+    autocmd Filetype go setlocal tw=100 " Go style guide does not restrict the
+                                        " line length but 100 seems reasonable.
 
     autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
 augroup END
