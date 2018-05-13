@@ -143,6 +143,8 @@ if [[ -x "$(command -v v)" ]]; then
   export VISUAL='nvim'
 fi
 
+export TERMINAL=alacritty
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
