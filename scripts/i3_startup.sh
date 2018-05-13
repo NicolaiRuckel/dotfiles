@@ -32,6 +32,10 @@ case $HOSTNAME in
 
     compton --backend glx --paint-on-overlay --vsync opengl-swc;
 
+    export QT_AUTO_SCREEN_SCALE_FACTOR=2
+    export GDK_SCALE=2
+    export ELM_SCALE=2
+
     #  stop screen from turning off after inactivity
     xset -dpms s off;;
 
