@@ -19,7 +19,7 @@ xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
 case $HOSTNAME in
     ("$LAPTOP_HOSTNAME")
     #  laptop specific settings
-    compton --backend glx --paint-on-overlay --vsync opengl-swc --no-fading-openclose;
+    (compton --backend glx --paint-on-overlay --vsync opengl-swc --no-fading-openclose) &
     /home/nicolai/dotfiles/scripts/laptop-touchpad-settings.sh;
     #/home/nicolai/dotfiles/scripts/laptop-startup-apps.sh;
 
@@ -30,13 +30,13 @@ case $HOSTNAME in
     #  desktop specific settings
     /home/nicolai/dotfiles/scripts/desktop_monitor.sh;
 
-    compton --backend glx --paint-on-overlay --vsync opengl-swc;
+    compton --backend glx --paint-on-overlay --vsync opengl-swc &
 
     #  stop screen from turning off after inactivity
     xset -dpms s off;;
 
     ("curie")
-      compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil --no-fading-openclose;
+      compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil --no-fading-openclose
       xinput set-button-map 9 1 6 3 4 5 2 7 8 9 10 11 12;
       # xset -dpms s off;
       /home/nicolai/dotfiles/scripts/dbl.sh;;
