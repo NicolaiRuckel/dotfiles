@@ -1,3 +1,0 @@
-#!/bin/sh
-
-NVIM_GTK_NO_HEADERBAR=1 nohup nvim-gtk $@ 2>/dev/null &
