@@ -12,7 +12,7 @@ from ranger.gui.color import (
 
 
 class Luciusdark(ColorScheme):
-    progress_bar_color = 24
+    progress_bar_color = 117
 
     def use(self, context):  # pylint: disable=too-many-branches,too-many-statements
         fg, bg, attr = default_colors
@@ -38,12 +38,12 @@ class Luciusdark(ColorScheme):
                 fg = 124
             if context.directory:
                 attr &= ~bold
-                fg = 24
+                fg = 117
             elif context.executable and not \
                     any((context.media, context.container,
                          context.fifo, context.socket)):
                 attr &= ~bold
-                fg = 28
+                fg = 115
             if context.socket:
                 fg = 90
                 attr &= ~bold
@@ -80,12 +80,12 @@ class Luciusdark(ColorScheme):
         elif context.in_titlebar:
             attr &= ~bold
             if context.hostname:
-                fg = 124 if context.bad else 28
+                fg = 124 if context.bad else 115
             elif context.directory:
-                fg = 24
+                fg = 117
             elif context.tab:
                 if context.good:
-                    bg = 28
+                    bg = 115
             elif context.link:
                 fg = 30
 
@@ -108,7 +108,7 @@ class Luciusdark(ColorScheme):
             if context.loaded:
                 bg = self.progress_bar_color
             if context.vcsinfo:
-                fg = 24
+                fg = 117
                 attr &= ~bold
             if context.vcscommit:
                 fg = 130
@@ -123,7 +123,7 @@ class Luciusdark(ColorScheme):
 
         if context.in_taskview:
             if context.title:
-                fg = 24
+                fg = 117
 
             if context.selected:
                 attr |= reverse
@@ -145,20 +145,20 @@ class Luciusdark(ColorScheme):
             elif context.vcsunknown:
                 fg = 124
             elif context.vcsstaged:
-                fg = 28
+                fg = 115
             elif context.vcssync:
-                fg = 28
+                fg = 115
             elif context.vcsignored:
                 fg = default
 
         elif context.vcsremote and not context.selected:
             attr &= ~bold
             if context.vcssync or context.vcsnone:
-                fg = 28
+                fg = 115
             elif context.vcsbehind:
                 fg = 124
             elif context.vcsahead:
-                fg = 24
+                fg = 117
             elif context.vcsdiverged:
                 fg = 90
             elif context.vcsunknown:
