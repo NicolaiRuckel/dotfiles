@@ -372,9 +372,8 @@ exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 
-# load desktop background
-exec_always --no-startup-id nitrogen --restore
-
+# set wallpaper color
+hsetroot -solid "#303030"
 exec --no-startup-id albert
 
 ## startup applications
