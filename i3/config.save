@@ -1,3 +1,4 @@
+q
 # ------------------------------------------------------------------------------
 # i3 config file (v4)
 #
@@ -373,7 +374,7 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 
 # set wallpaper color
-exec --no-startup-id hsetroot -solid "#303030"
+hsetroot -solid "#303030"
 exec --no-startup-id albert
 
 ## startup applications
