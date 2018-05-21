@@ -172,7 +172,7 @@ class Luciusdark(ColorScheme):
 #    red:        '0xaf0000' 124
 #    green:      '0x008700' 28
 #    yellow:     '0xaf5f00' 130
-#    blue:       '0x005faf' 25
+#    blue:       '0x005faf' 25  -> 117
 #    magenta:    '0x870087' 90
 #    cyan:       '0x008787' 30
 #    white:      '0xeeeeee' 255
