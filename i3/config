@@ -410,16 +410,16 @@ exec --no-startup-id albert
 
 #set grey = #2a373e
 # class                 border  backgr. text    indicator
-# client.focused          #005F87 #005F87 #d7d7d7 #2e9ef4
-# client.focused_inactive #222222 #222222 #d7d7d7 #484e50
-# client.unfocused        #222222 #222222 #888888 #292d2e
-# client.urgent           #af0000 #af0000 #d7d7d7 #900000
-
-# class                 border  backgr. text    indicator
-client.focused          #005faf #005faf #d7d7d7 #2e9ef4
+client.focused          #005F87 #005F87 #d7d7d7 #005f87
 client.focused_inactive #222222 #222222 #d7d7d7 #484e50
 client.unfocused        #222222 #222222 #888888 #292d2e
-client.urgent           #222222 #222222 #af0000 #900000
+client.urgent           #af0000 #af0000 #d7d7d7 #900000
+
+# class                 border  backgr. text    indicator
+# client.focused          #005faf #005faf #d7d7d7 #2e9ef4
+# client.focused_inactive #222222 #222222 #d7d7d7 #484e50
+# client.unfocused        #222222 #222222 #888888 #292d2e
+# client.urgent           #222222 #222222 #af0000 #900000
 
 # general config
 #hide_edge_borders both
@@ -442,33 +442,14 @@ bar {
     tray_output LVDS1
     #strip_workspace_numbers yes
         colors {
-            # light theme
-
-            #background #005faf
-            #statusline #eeeeee
-            #separator #eeeeee
-
-            # class border backgr. text
-            focused_workspace #222222 #005faf #eeeeee
-            active_workspace #eeeeee #eeeeee #444444
-            inactive_workspace #222222 #222222 #eeeeee
-            # grey
-            #urgent_workspace #222222 #444444 #eeeeee
-            # red
-            urgent_workspace #222222 #af0000 #eeeeee
-
-
-            # dark theme
-
             ## class border backgr. text
-            #focused_workspace #eeeeee #eeeeee #005faf
-            #active_workspace #eeeeee #eeeeee #444444
-            #inactive_workspace #eeeeee #eeeeee #888888
-            #urgent_workspace #af0000 #af0000 #eeeeee
+            focused_workspace #005f87 #005f87 #eeeeee
+            active_workspace #444444 #444444 #eeeeee
+            inactive_workspace #222222 #222222 #eeeeee
+            urgent_workspace #af0000 #af0000 #eeeeee
 
             background #222222
             statusline #eeeeee
             separator #222222
-
         }
 }
