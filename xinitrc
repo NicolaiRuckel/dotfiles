@@ -28,7 +28,9 @@ xrdb ~/.Xresources &
 export DE="kde"
 export KDE_FULL_SESSION=true
 export KDE_SESSION_VERSION="5"
-QT_QPA_PLATFORMTHEME=qgnomeplatform
+export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_STYLE_OVERIDE="GTK+"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # start i3
 # case `uname -n` in
