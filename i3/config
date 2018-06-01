@@ -423,7 +423,7 @@ client.urgent           #af0000 #af0000 #d7d7d7 #900000
 # general config
 #hide_edge_borders both
 bindsym $mod+b border toggle
-workspace_layout stacked
+workspace_layout tabbed
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
