@@ -36,6 +36,8 @@ set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
 set splitright              " splits appear right
 
+set noscrollbind " for oni; should be fixed in next release
+
 filetype plugin on
 
 " Backup, Swap and Undo
