@@ -115,6 +115,11 @@ source $ZSH/oh-my-zsh.sh
 # ZSH options
 # ###########
 
+# vim keybindings
+bindkey -v
+# reduce key timeout from 0.4 seconds to 0.1 seconds
+export KEYTIMEOUT=1
+
 # execute history expansion immediately
 unsetopt HIST_VERIFY
 
