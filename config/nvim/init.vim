@@ -115,11 +115,11 @@ set foldlevelstart=10       " open most folds by default
 set foldnestmax=10          " 10 nested fold max
 set foldmethod=indent       " fold based on indent level
 
-" space open/closes folds
-nnoremap <space> za
-
 " Leader Shortcuts
-let mapleader=","           " leader is comma
+let mapleader=" "
+
+" space open/closes folds
+nnoremap <leader><space> za
 
 nnoremap <leader>v :vsplit<cr>
 
@@ -259,7 +259,7 @@ augroup configgroup
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
-    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et tw=0
     autocmd FileType json setlocal ts=2 sw=2 sts=2
     autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
          \| nnoremap <Leader>. :wa<CR>:!love .<CR>

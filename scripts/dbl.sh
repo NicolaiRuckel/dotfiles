@@ -2,7 +2,7 @@
 
 # monitor setup for dbl
 
-LEFT_DISPLAY="--output DP-2 --primary --auto"
-RIGHT_DISPLAY="--output DP-1 --auto --right-of DP-2"
+RIGHT_DISPLAY="--output DP-1 --primary --auto"
+LEFT_DISPLAY="--output DP-2 --auto --left-of DP-1"
 
 xrandr $LEFT_DISPLAY $RIGHT_DISPLAY
