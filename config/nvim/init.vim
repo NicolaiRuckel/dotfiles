@@ -115,11 +115,11 @@ set foldlevelstart=10       " open most folds by default
 set foldnestmax=10          " 10 nested fold max
 set foldmethod=indent       " fold based on indent level
 
-" space open/closes folds
-nnoremap <space> za
-
 " Leader Shortcuts
-let mapleader=","           " leader is comma
+let mapleader=" "
+
+" space open/closes folds
+nnoremap <leader><space> za
 
 nnoremap <leader>v :vsplit<cr>
 
