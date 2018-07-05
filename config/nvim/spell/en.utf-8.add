@@ -9,3 +9,4 @@ plugins
 plugin
 PHP
 toolsets
+dockerfile
