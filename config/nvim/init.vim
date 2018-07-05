@@ -137,7 +137,7 @@ vnoremap <leader>P "*P
 " nnoremap <Leader>. :wa<CR>:Neomake!<CR>
 " nnoremap <Leader>/ :w<CR>:Neomake<CR>
 
-nnoremap <silent> <Leader>. :wa<CR>:RunAsync<CR>
+nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
 nnoremap <Leader>/ :wa<CR>:RunAsync 
 
 nnoremap <Leader>s :set spell!<CR>
