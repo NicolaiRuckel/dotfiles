@@ -9,6 +9,8 @@ function! SetFont() abort
     call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
     let g:GuiInternalClipboard = 1
     let NVIM_GTK_NO_HEADERBAR=1
+  elseif exists("g:gui_oni")
+    call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
   else
     exec "GuiFont " . s:font . ":h" . s:fontsize
   endif

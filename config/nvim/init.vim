@@ -36,6 +36,8 @@ set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
 set splitright              " splits appear right
 
+set noscrollbind " for oni; should be fixed in next release
+
 filetype plugin on
 
 " Backup, Swap and Undo
@@ -113,11 +115,11 @@ set foldlevelstart=10       " open most folds by default
 set foldnestmax=10          " 10 nested fold max
 set foldmethod=indent       " fold based on indent level
 
-" space open/closes folds
-nnoremap <space> za
-
 " Leader Shortcuts
-let mapleader=","           " leader is comma
+let mapleader=" "
+
+" f open/closes folds
+nnoremap <leader>f za
 
 nnoremap <leader>v :vsplit<cr>
 
@@ -135,7 +137,7 @@ vnoremap <leader>P "*P
 " nnoremap <Leader>. :wa<CR>:Neomake!<CR>
 " nnoremap <Leader>/ :w<CR>:Neomake<CR>
 
-nnoremap <silent> <Leader>. :wa<CR>:RunAsync<CR>
+nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
 nnoremap <Leader>/ :wa<CR>:RunAsync 
 
 nnoremap <Leader>s :set spell!<CR>
@@ -257,7 +259,7 @@ augroup configgroup
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
-    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et tw=0
     autocmd FileType json setlocal ts=2 sw=2 sts=2
     autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
          \| nnoremap <Leader>. :wa<CR>:!love .<CR>
