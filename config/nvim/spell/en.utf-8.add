@@ -7,3 +7,6 @@ serverless
 toolchain
 plugins
 plugin
+PHP
+toolsets
+dockerfile

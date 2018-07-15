@@ -9,12 +9,8 @@ DESKTOP_HOSTNAME="snitsig"
 
 xset r rate 250 50
 
-
 #setxkbmap us altgr-intl
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
-
-xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
-xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
 
 #  stop screen from turning off after inactivity
 xset -dpms s off
@@ -24,6 +20,12 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 case $HOSTNAME in
     ("$LAPTOP_HOSTNAME")
     #  laptop specific settings
+    # map capslock to control
+    xmodmap -e 'clear lock'
+    xmodmap -e 'clear control'
+    xmodmap -e 'keycode 66 = Control_L'
+    xmodmap -e 'add control = Control_L Control_R'
+
     (compton --backend glx --paint-on-overlay --vsync opengl-swc --no-fading-openclose) &
     ~/dotfiles/scripts/laptop-touchpad-settings.sh;;
 
