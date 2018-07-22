@@ -9,9 +9,5 @@ xset dpms force off
 
 # lock screen
 i3lock -i /tmp/lockscreenimage.png
-<<<<<<< HEAD
-=======
 
-# stop screen from turning off after inactivity after unlocking the screen
->>>>>>> master
 xset -dpms s off
