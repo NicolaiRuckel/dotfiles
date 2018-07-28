@@ -36,6 +36,10 @@ case $HOSTNAME in
 
     ("curie")
       compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil --no-fading-openclose
+
+      # logitech mouse
       xinput set-button-map 11 1 6 3 4 5 2 7 8 9 10 11 12;
+
+      # displays
       ~/dotfiles/scripts/dbl.sh;;
 esac
