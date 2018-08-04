@@ -2,8 +2,13 @@
 
 # use as root
 
-exclude=".Trash*"
-rsync -av --exclude=$exclude -e ssh /media/data nicolai@vilgot:CloudStation/
+USER="nicolai"
+HOST="192.168.0.144"
+BACKUP_FOLDER="backups/"
+
+EXCLUDE="--exclude=.Trash* --exclude=/data/media/Incoming/*"
+
+rsync -avP --delete-excluded $EXCLUDE -e ssh /media/data $USER@$HOST:$BACKUP_FOLDER
 
 #set -e
 #
