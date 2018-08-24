@@ -122,7 +122,8 @@ source $ZSH/oh-my-zsh.sh
 # ###########
 
 # vim keybindings
-bindkey -v
+# bindkey -v
+
 # reduce key timeout from 0.4 seconds to 0.1 seconds
 export KEYTIMEOUT=1
 
