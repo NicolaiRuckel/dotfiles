@@ -175,10 +175,16 @@ let Tlist_Exit_OnlyWindow=1
 
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
+
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'python': ['/bin/pyls'],
     \ }
+
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
+
+set omnifunc=LanguageClient#omniComplete
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
