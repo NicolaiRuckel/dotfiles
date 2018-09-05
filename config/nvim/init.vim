@@ -260,7 +260,7 @@ augroup configgroup
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
          \| syntax spell toplevel
-    autocmd FileType python setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 tw=100
