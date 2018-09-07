@@ -152,7 +152,7 @@ else
 fi
 
 if [[ -x "$(command -v v)" ]]; then
-  export VISUAL='nvim'
+  export VISUAL='nvim-gtk'
 fi
 
 export TERMINAL=alacritty
