@@ -300,3 +300,5 @@ case `uname -n` in
 esac
 
 source /etc/profile.d/autojump.sh
+export LS_COLOR="rs=0:di=0:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
