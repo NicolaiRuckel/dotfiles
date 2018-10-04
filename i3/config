@@ -225,6 +225,7 @@ for_window [class="Dolphin" title="Progress Dialog"] floating enable
 for_window [class="Steam" title="Install"] floating enable
 
 # skype
+for_window [class="Skype"] floating disable
 for_window [class="Skype" title="File Transfers"] floating enable
 
 # battery warning
