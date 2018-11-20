@@ -290,6 +290,14 @@ augroup configgroup
     autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
 augroup END
 
+" fix a problem with the interactive terminal and vim-fugitive
+" see: https://github.com/tpope/vim-fugitive/issues/957
+augroup nvim_term
+  au!
+  au TermOpen * startinsert
+  au TermClose * stopinsert
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
