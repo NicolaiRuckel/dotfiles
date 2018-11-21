@@ -286,8 +286,6 @@ augroup configgroup
     autocmd Filetype go setlocal tw=100 " Go style guide does not restrict the
                                         " line length but 100 seems reasonable.
     autocmd Filetype dockerfile setlocal tw=0
-
-    autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
 augroup END
 
 " fix a problem with the interactive terminal and vim-fugitive
