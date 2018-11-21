@@ -6,7 +6,7 @@ USER="nicolai"
 HOST="192.168.0.144"
 BACKUP_FOLDER="backups/"
 
-EXCLUDE="--exclude=.Trash* --exclude=/data/media/Incoming/*"
+EXCLUDE="--exclude=.Trash* --exclude=/data/media/Incoming/* --exclude=/data/media/games/SteamLibrary/*"
 
 rsync -avP --delete-excluded $EXCLUDE -e ssh /media/data $USER@$HOST:$BACKUP_FOLDER
 
