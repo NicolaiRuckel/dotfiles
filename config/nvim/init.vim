@@ -279,7 +279,7 @@ augroup configgroup
     autocmd FileType gtkrc setlocal commentstring=#\ %s
     autocmd FileType matlab setlocal commentstring=%\ %s
     autocmd FileType desktop setlocal commentstring=#\ %s
-    autocmd FileType gitcommit setlocal spell tw=0
+    autocmd FileType gitcommit setlocal spell tw=72
     autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
     autocmd FileType dosini setlocal commentstring=#\ %s
     autocmd BufEnter *.gradle setlocal ts=4 sw=4 sts=4 tw=0
