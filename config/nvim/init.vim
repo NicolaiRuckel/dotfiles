@@ -228,12 +228,11 @@ endfunction
 set statusline=                       " Custom status line
 set statusline+=%#PmenuSel#           " Show git branch if it exists
 set statusline+=%{StatuslineGit()}
-set statusline+=%#LineNr#
+set statusline+=%#CursorColumn#
 set statusline+=\ %f                  " Show file name
 set statusline+=%m\                   " Show whether file has been modified
 set statusline+=%=                    " Right align the following
 set statusline+=%{Get_asyncrun_status()}
-set statusline+=%#CursorColumn#
 set statusline+=\ %y                  " Filetype
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} " File encoding
 set statusline+=\[%{&fileformat}\]    " File format
