@@ -15,6 +15,9 @@ setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 #  stop screen from turning off after inactivity
 xset -dpms s off
 
+# set menu to be the compose key
+setxkbmap -option compose:menu
+
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 case $HOSTNAME in
