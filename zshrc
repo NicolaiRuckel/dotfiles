@@ -151,7 +151,7 @@ else
 fi
 
 if [[ -x "$(command -v v)" ]]; then
-  export VISUAL='nvim'
+  export VISUAL='nvim-gtk'
 fi
 
 export TERMINAL=alacritty
@@ -179,6 +179,7 @@ export NVIM_GTK_NO_HEADERBAR=1
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 # alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
+alias v=nvim-gtk
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
@@ -298,3 +299,6 @@ case `uname -n` in
 esac
 
 source /etc/profile.d/autojump.sh
+
+export LS_COLORS="fi=0:di=34:ln=35:so=36:pi=33:ex=32:bd=34:cd=34:su=34:sg=34:tw=34:ow=34:"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}

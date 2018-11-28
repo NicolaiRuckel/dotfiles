@@ -26,12 +26,6 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
-bindsym $mod+semicolon split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -225,6 +219,7 @@ for_window [class="Dolphin" title="Progress Dialog"] floating enable
 for_window [class="Steam" title="Install"] floating enable
 
 # skype
+for_window [class="Skype"] floating disable
 for_window [class="Skype" title="File Transfers"] floating enable
 
 # battery warning
