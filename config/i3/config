@@ -277,15 +277,14 @@ bindsym $mod+Shift+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh -
 # rename workspace
 bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
 
+# gnome stuff
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
 
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 exec --no-startup-id dunst
-
-# gnome stuff
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
 
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
@@ -322,3 +321,4 @@ bar {
             separator  #222222
         }
 }
+exec --no-startup-id ~/dotfiles/scripts/laptop_keyboard.sh

@@ -5,8 +5,8 @@ systemd --user &
 xset r rate 250 50
 
 
-xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
-xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
+# xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
+# xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
 
 #scrolling with Thinkpad TrackPoint
 # xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
