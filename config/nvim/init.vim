@@ -25,6 +25,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ 'branch': 'next',
                         \ 'do': 'bash install.sh',
                         \ }
+Plug 'https://github.com/rhysd/vim-grammarous'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,6 +187,15 @@ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
 
 set omnifunc=LanguageClient#omniComplete
+
+" Grammarous
+
+let g:grammarous#default_comments_only_filetypes = {
+            \ '*' : 1, 'tex' : 0, 'markdown' : 0,
+            \ }
+
+" " use location list
+" let g:grammarous#use_location_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
