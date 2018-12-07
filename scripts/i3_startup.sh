@@ -7,7 +7,7 @@ DESKTOP_HOSTNAME="snitsig"
 
 # needed when i3 is started via sddm
 
-xset r rate 250 50
+xset r rate 350 50
 
 #setxkbmap us altgr-intl
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
