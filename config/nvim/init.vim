@@ -145,6 +145,8 @@ nnoremap <Leader>/ :wa<CR>:RunAsync
 nnoremap <Leader>s :set spell!<CR>
 
 " Keybindings
+
+" I’m probably going to hell for this…
 nnoremap ; :
 
 
