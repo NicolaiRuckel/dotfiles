@@ -17,14 +17,15 @@ Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-unimpaired'
-Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'autozimu/LanguageClient-neovim', {
                         \ 'branch': 'next',
                         \ 'do': 'bash install.sh',
                         \ }
+Plug 'https://github.com/rhysd/vim-grammarous'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -144,8 +145,15 @@ nnoremap <Leader>/ :wa<CR>:RunAsync
 nnoremap <Leader>s :set spell!<CR>
 
 " Keybindings
+
+" I’m probably going to hell for this…
 nnoremap ; :
 
+" faster navigation between split views
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
 
 " ------------------------------------------------------------------------------
 " Plugins
@@ -186,6 +194,15 @@ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
 
 set omnifunc=LanguageClient#omniComplete
+
+" Grammarous
+
+let g:grammarous#default_comments_only_filetypes = {
+            \ '*' : 1, 'tex' : 0, 'markdown' : 0,
+            \ }
+
+" " use location list
+" let g:grammarous#use_location_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
