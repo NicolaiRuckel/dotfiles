@@ -43,6 +43,13 @@ case $HOSTNAME in
       # logitech mouse
       xinput set-button-map 11 1 6 3 4 5 2 7 8 9 10 11 12;
 
+      # start applications
+      i3-msg "exec discord"
+      i3-msg "exec pidgin"
+      i3-msg "exec evolution"
+      i3-msg "exec firefox"
+
       # displays
       ~/dotfiles/scripts/dbl.sh;;
+
 esac
