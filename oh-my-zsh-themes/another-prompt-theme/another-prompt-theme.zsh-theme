@@ -26,7 +26,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
   fi
 }
 
-local user_symbol="%B%F{green}\$%b%f"
+user_symbol="%B%F{green}\$%b%f"
 if [[ $UID == 0 || $EUID == 0 ]]; then
         user_symbol = "%B%F{red}#%b%f"
 fi
