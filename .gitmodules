@@ -16,3 +16,6 @@
 [submodule "oh-my-zsh-themes/oh-my-zsh-candy-light"]
 	path = oh-my-zsh-themes/oh-my-zsh-candy-light
 	url = https://github.com/RanaExMachina/oh-my-zsh-candy-light
+[submodule "oh-my-zsh-themes/nidoranarion"]
+	path = oh-my-zsh-themes/nidoranarion
+	url = git@github.com:NicolaiRuckel/nidoranarion.git
