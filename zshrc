@@ -62,8 +62,8 @@ source $ZSH/oh-my-zsh.sh
 # ZSH options
 # ###########
 
-# vim keybindings
-bindkey -v
+bindkey "^R" history-incremental-pattern-search-backward
+
 # reduce key timeout from 0.4 seconds to 0.1 seconds
 export KEYTIMEOUT=1
 
