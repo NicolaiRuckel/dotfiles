@@ -22,7 +22,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
      git status --porcelain | grep -m 1 '^??' &>/dev/null
   then
-    hook_com[misc]='%B%F{magenta}?%f%b'
+    hook_com[misc]='%B%F{magenta}? %f%b'
   fi
 }
 
