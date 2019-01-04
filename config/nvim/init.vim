@@ -16,6 +16,7 @@ Plug 'https://github.com/andreypopp/vim-colors-plain'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/vimwiki/vimwiki'
@@ -24,6 +25,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ 'branch': 'next',
                         \ 'do': 'bash install.sh',
                         \ }
+Plug 'https://github.com/rhysd/vim-grammarous'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,8 +145,15 @@ nnoremap <Leader>/ :wa<CR>:RunAsync
 nnoremap <Leader>s :set spell!<CR>
 
 " Keybindings
+
+" I’m probably going to hell for this…
 nnoremap ; :
 
+" faster navigation between split views
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
 
 " ------------------------------------------------------------------------------
 " Plugins
@@ -175,6 +184,25 @@ let Tlist_Exit_OnlyWindow=1
 
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'python': ['/bin/pyls'],
+    \ }
+
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
+
+set omnifunc=LanguageClient#omniComplete
+
+" Grammarous
+
+let g:grammarous#default_comments_only_filetypes = {
+            \ '*' : 1, 'tex' : 0, 'markdown' : 0,
+            \ }
+
+" " use location list
+" let g:grammarous#use_location_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
@@ -217,12 +245,11 @@ endfunction
 set statusline=                       " Custom status line
 set statusline+=%#PmenuSel#           " Show git branch if it exists
 set statusline+=%{StatuslineGit()}
-set statusline+=%#LineNr#
+set statusline+=%#CursorColumn#
 set statusline+=\ %f                  " Show file name
 set statusline+=%m\                   " Show whether file has been modified
 set statusline+=%=                    " Right align the following
 set statusline+=%{Get_asyncrun_status()}
-set statusline+=%#CursorColumn#
 set statusline+=\ %y                  " Filetype
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} " File encoding
 set statusline+=\[%{&fileformat}\]    " File format
@@ -250,7 +277,7 @@ augroup configgroup
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
          \| syntax spell toplevel
-    autocmd FileType python setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 tw=100
@@ -268,15 +295,21 @@ augroup configgroup
     autocmd FileType gtkrc setlocal commentstring=#\ %s
     autocmd FileType matlab setlocal commentstring=%\ %s
     autocmd FileType desktop setlocal commentstring=#\ %s
-    autocmd FileType gitcommit setlocal spell
+    autocmd FileType gitcommit setlocal spell tw=72
     autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
     autocmd FileType dosini setlocal commentstring=#\ %s
     autocmd BufEnter *.gradle setlocal ts=4 sw=4 sts=4 tw=0
     autocmd Filetype go setlocal tw=100 " Go style guide does not restrict the
                                         " line length but 100 seems reasonable.
     autocmd Filetype dockerfile setlocal tw=0
+augroup END
 
-    autocmd DirChanged * if filereadable(".exrc") | source .exrc | endif
+" fix a problem with the interactive terminal and vim-fugitive
+" see: https://github.com/tpope/vim-fugitive/issues/957
+augroup nvim_term
+  au!
+  au TermOpen * startinsert
+  au TermClose * stopinsert
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
