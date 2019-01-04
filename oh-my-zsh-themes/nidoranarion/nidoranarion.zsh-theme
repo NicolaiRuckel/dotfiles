@@ -9,9 +9,9 @@ zstyle ':vcs_info:*' enable git svn
 theme_precmd () {
     # check if current branch is ahead
     if $(echo "$(git log origin/$(git_current_branch)..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
-        zstyle ':vcs_info:*' formats ' [%b]%c%u%B%F{yellow}▲%F{green}%m'
+        zstyle ':vcs_info:*' formats ' [%b]%c%u%m%B%F{yellow}▲%F{green}'
     else
-        zstyle ':vcs_info:*' formats ' [%b]%c%u%B%F{green}%m'
+        zstyle ':vcs_info:*' formats ' [%b]%c%u%m%B%F{green}'
     fi
 
     vcs_info
