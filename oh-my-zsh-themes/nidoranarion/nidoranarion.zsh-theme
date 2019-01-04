@@ -1,7 +1,7 @@
 autoload -Uz vcs_info
 
-zstyle ':vcs_info:*' stagedstr '%F{cyan}■'
-zstyle ':vcs_info:*' unstagedstr '%F{red}●'
+zstyle ':vcs_info:*' stagedstr '%F{cyan}✚ '
+zstyle ':vcs_info:*' unstagedstr '%F{red}● '
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 zstyle ':vcs_info:*' enable git svn
@@ -9,9 +9,9 @@ zstyle ':vcs_info:*' enable git svn
 theme_precmd () {
     # check if current branch is ahead
     if $(echo "$(git log origin/$(git_current_branch)..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
-        zstyle ':vcs_info:*' formats ' [%b%m%c%u%B%F{yellow}▲%F{green}]'
+        zstyle ':vcs_info:*' formats ' [%b]%c%u%B%F{yellow}▲%F{green}%m'
     else
-        zstyle ':vcs_info:*' formats ' [%b%m%c%u%B%F{green}]'
+        zstyle ':vcs_info:*' formats ' [%b]%c%u%B%F{green}%m'
     fi
 
     vcs_info
