@@ -4,10 +4,10 @@
 #
 
 # your notebook monitor
-DEFAULT_OUTPUT='eDP1'
+DEFAULT_OUTPUT='DP-1.8'
 
 # outputs to toggle if connected
-OUTPUTS='DP1 DP2 HDMI1 HDMI2'
+OUTPUTS='HDMI-0'
 
 # get info from xrandr
 XRANDR=`xrandr`

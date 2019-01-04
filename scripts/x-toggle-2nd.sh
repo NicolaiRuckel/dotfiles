@@ -7,7 +7,7 @@
 DEFAULT_OUTPUT='eDP1'
 
 # outputs to toggle if connected
-OUTPUTS='DP1 DP2 HDMI1 HDMI2'
+OUTPUTS='DP1 DP2 HDMI-0 HDMI2'
 
 # get info from xrandr
 XRANDR=`xrandr`
