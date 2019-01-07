@@ -245,3 +245,6 @@ source /etc/profile.d/autojump.sh
 
 export LS_COLORS="fi=0:di=34:ln=35:so=36:pi=33:ex=32:bd=34:cd=34:su=34:sg=34:tw=34:ow=34:"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# git completion
+autoload -Uz compinit && compinit
