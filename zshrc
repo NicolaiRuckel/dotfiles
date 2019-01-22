@@ -17,6 +17,10 @@ export GOPATH=$HOME/dev/go
 
 export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
+if [ -d ~/.texmf ] ; then
+    export TEXMFHOME=~/.texmf
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/nicolai/.oh-my-zsh
 
