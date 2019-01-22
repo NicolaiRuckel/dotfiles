@@ -20,7 +20,7 @@
 	path = oh-my-zsh-themes/nidoranarion
 	url = git@github.com:NicolaiRuckel/nidoranarion.git
 [submodule "texmf/tex/latex/beamer/simpler-beamer-theme"]
-	path = texmf/tex/latex/beamer/simpler-beamer-theme
+	path = texmf/tex/latex/beamer/issdark-beamer-theme
 	url = git@github.com:NicolaiRuckel/simpler-beamer-theme.git
 [submodule "texmf/bibtex/bib/bibliography"]
 	path = texmf/bibtex/bib/bibliography
