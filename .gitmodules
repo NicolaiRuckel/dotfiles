@@ -19,9 +19,9 @@
 [submodule "oh-my-zsh-themes/nidoranarion"]
 	path = oh-my-zsh-themes/nidoranarion
 	url = git@github.com:NicolaiRuckel/nidoranarion.git
-[submodule "texmf/tex/latex/beamer/simpler-beamer-theme"]
+[submodule "texmf/tex/latex/beamer/issdark-beamer-theme"]
 	path = texmf/tex/latex/beamer/issdark-beamer-theme
-	url = git@github.com:NicolaiRuckel/simpler-beamer-theme.git
+	url = git@github.com:NicolaiRuckel/issdark-beamer-theme.git
 [submodule "texmf/bibtex/bib/bibliography"]
 	path = texmf/bibtex/bib/bibliography
 	url = git@github.com:NicolaiRuckel/bibliography
