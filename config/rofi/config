@@ -1,0 +1,3 @@
+rofi.lines: 3
+rofi.theme: android_notification
+rofi.font:  Source Sans Pro 12

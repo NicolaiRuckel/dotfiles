@@ -2,6 +2,8 @@
 
 set $mod Mod4
 
+bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i'
+
 # Font for window titles.
 font xft:Source Sans Pro Semibold 11
 
@@ -236,7 +238,7 @@ for_window [class=".*"] title_format " %title"
 
 # screen lock
 bindsym XF86Explorer exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
-bindsym $mod+Down exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
+bindsym $mod+z exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
 
 # toggle 2nd monitor to the right with Fn+F11
 bindsym XF86Display exec ~/dotfiles/scripts/x-toggle-2nd.sh
@@ -283,7 +285,6 @@ exec --no-startup-id dunst
 
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
-exec --no-startup-id albert
 
 # class                 border  backgr. text    indicator
 client.focused          #005F87 #005F87 #d7d7d7 #005f87
