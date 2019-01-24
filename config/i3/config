@@ -2,6 +2,8 @@
 
 set $mod Mod4
 
+bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i'
+
 # Font for window titles.
 font xft:Source Sans Pro Semibold 11
 
@@ -284,7 +286,6 @@ exec_always --no-startup-id gnome-power-manager
 
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
-exec --no-startup-id albert
 
 # class                 border  backgr. text    indicator
 client.focused          #005F87 #005F87 #d7d7d7 #005f87
