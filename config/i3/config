@@ -238,7 +238,7 @@ for_window [class=".*"] title_format " %title"
 
 # screen lock
 bindsym XF86Explorer exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
-bindsym $mod+Down exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
+bindsym $mod+z exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
 
 # toggle 2nd monitor to the right with Fn+F11
 bindsym XF86Display exec ~/dotfiles/scripts/x-toggle-2nd.sh
