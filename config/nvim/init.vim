@@ -26,6 +26,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ 'do': 'bash install.sh',
                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
