@@ -51,6 +51,7 @@ plugins=(
   aws
   mvn
   gradle
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
