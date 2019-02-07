@@ -56,6 +56,7 @@ plugins=(
   mvn
   gradle
   compleat
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
