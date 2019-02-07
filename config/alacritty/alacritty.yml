@@ -101,7 +101,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 7.0
+  size: 6.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -268,6 +268,7 @@ mouse:
   # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+  hide_when_typing: false
 
   hide_when_typing: false
 
@@ -277,13 +278,13 @@ selection:
 dynamic_title: true
 
 
+cursor:
 # Style of the cursor
 #
 # Values for 'cursor_style':
 # - Block
 # - Underline
 # - Beam
-cursor:
   style: Block
 
 # Live config reload (changes require restart)

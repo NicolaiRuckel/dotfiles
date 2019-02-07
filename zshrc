@@ -55,7 +55,10 @@ plugins=(
   aws
   mvn
   gradle
+<<<<<<< HEAD
   compleat
+=======
+>>>>>>> archbook
   z
 )
 
@@ -125,8 +128,12 @@ export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
+<<<<<<< HEAD
 alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
 # alias v=nvim-qt
+=======
+alias v=nvim-gtk
+>>>>>>> archbook
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
