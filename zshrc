@@ -17,72 +17,17 @@ export GOPATH=$HOME/dev/go
 
 export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
+if [ -d ~/.texmf ] ; then
+    export TEXMFHOME=~/.texmf
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/nicolai/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-local user_symbol="%{$FG[046]%}\$%{$reset_color%}"
-if [[ $(print -P "%#") =~ "#" ]]; then
-        user_symbol = "%{$FG[196]%}#%{$reset_color%}"
-fi
-
-# DEFAULT_USER=nicolai
-POWERLEVEL9K_MODE="awesome-fontconfig"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHORTEN_DELIMITER=..
-POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$user_symbol "
-# POWERLEVEL9K_ALWAYS_SHOW_USER=true
-# POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
-POWERLEVEL9K_STATUS_OK=false
-# POWERLEVEL9K_USER_ICON="\$"
-# POWERLEVEL9K_ROOT_ICON="#"
-POWERLEVEL9K_USER_TEMPLATE=''
-POWERLEVEL9K_HOME_ICON=''
-POWERLEVEL9K_HOME_SUB_ICON=''
-POWERLEVEL9K_FOLDER_ICON=''
-
-# disable git icons
-POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=''
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
-POWERLEVEL9K_VCS_GIT_GITLAB_ICON=''
-POWERLEVEL9K_VCS_GIT_ICON=''
-
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline status user)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs newline custom_prefix)
-# POWERLEVEL9K_CUSTOM_PREFIX="echo '%{$FG[046]%}$user_symbol%{$reset_color%}'"
-POWERLEVEL9K_CUSTOM_PREFIX="echo '$user_symbol'"
-POWERLEVEL9K_CUSTOM_PREFIX_BACKGROUND='238'
-POWERLEVEL9K_CUSTOM_PREFIX_FOREGROUND='046'
-POWERLEVEL9K_DISABLE_RPROMPT=true
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
-# POWERLEVEL9K_STATUS_OK_BACKGROUND='33'
-# POWERLEVEL9K_STATUS_ERROR_BACKGROUND='33'
-POWERLEVEL9K_CONTEXT_BACKGROUND='024'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='046'
-POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='196'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='024'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='024'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='024'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='255'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='255'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='255'
-POWERLEVEL9K_VCS_DEFAULT_FOREGROUND='236'
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='236'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='236'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='236'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='117'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='117'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='117'
-POWERLEVEL9K_USER_BACKGROUND='024'
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND='046'
-POWERLEVEL9K_USER_ROOT_FOREGROUND='196'
-
+ZSH_THEME="nidoranarion/nidoranarion"
 
 # Enable auto-correction.
 ENABLE_CORRECTION="true"
@@ -110,6 +55,8 @@ plugins=(
   aws
   mvn
   gradle
+  compleat
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -178,8 +125,8 @@ export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
-# alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
-alias v=nvim-gtk
+alias v="NVIM_GTK_NO_HEADERBAR=1 nvim-gtk 2>/dev/null"
+# alias v=nvim-qt
 alias f="files . &"
 alias l="ls -lsh"
 alias o=open
@@ -302,3 +249,6 @@ source /etc/profile.d/autojump.sh
 
 export LS_COLORS="fi=0:di=34:ln=35:so=36:pi=33:ex=32:bd=34:cd=34:su=34:sg=34:tw=34:ow=34:"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# git completion
+autoload -Uz compinit && compinit
