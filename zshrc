@@ -55,10 +55,7 @@ plugins=(
   aws
   mvn
   gradle
-<<<<<<< HEAD
   compleat
-=======
->>>>>>> archbook
   z
 )
 
