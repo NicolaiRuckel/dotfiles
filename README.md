@@ -18,8 +18,8 @@ or initialize the submodules after cloning the repository with
 To create all the necessary symlinks, I copied a bash script from
 [here](https://github.com/christopher-l/dotfiles/blob/master/deploy.sh).
 
-### Vim/NVim plugins
-To get all vim/nvim plugins, start vim/nvim and run
+### Neovim plugins
+To get all Neovim plugins, start `nvim` and run
 ```
 :PlugInstall
 ```
