@@ -264,8 +264,8 @@ augroup configgroup
     autocmd BufRead,BufNewFile *.tex set filetype=tex
     autocmd FileType make setlocal ts=8 sw=8 noet
     autocmd FileType cmake setlocal ts=2 sw=2 et
-    autocmd FileType html setlocal ts=2 sw=2
-    autocmd FileType css setlocal ts=2 sw=2
+    autocmd FileType html setlocal ts=2 sw=2 tw=0
+    autocmd FileType css setlocal ts=2 sw=2 tw=0
     autocmd FileType text setlocal ts=2 sw=2 sts=2 et spell
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType javascript setlocal ts=4 sw=4 et
