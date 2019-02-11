@@ -129,6 +129,7 @@ alias v=nvim-gtk
 alias f="files . &"
 alias l="ls -lh"
 alias o=open
+alias vim=nvim
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
