@@ -101,7 +101,7 @@ if [[ -x "$(command -v v)" ]]; then
   export VISUAL='nvim-gtk'
 fi
 
-export TERMINAL=alacritty
+export TERMINAL=gnome-terminal
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
