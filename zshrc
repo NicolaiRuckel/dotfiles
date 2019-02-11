@@ -127,7 +127,7 @@ export NVIM_GTK_NO_HEADERBAR=1
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias v=nvim-gtk
 alias f="files . &"
-alias l="ls -lsh"
+alias l="ls -lh"
 alias o=open
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
