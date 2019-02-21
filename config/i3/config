@@ -318,4 +318,3 @@ bar {
             separator  #222222
         }
 }
-exec --no-startup-id ~/dotfiles/scripts/laptop_keyboard.sh
