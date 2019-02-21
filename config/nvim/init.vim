@@ -19,6 +19,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'autozimu/LanguageClient-neovim', {
@@ -26,6 +27,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ 'do': 'bash install.sh',
                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -144,17 +146,6 @@ nnoremap <Leader>/ :wa<CR>:RunAsync
 
 nnoremap <Leader>s :set spell!<CR>
 
-" Keybindings
-
-" I’m probably going to hell for this…
-nnoremap ; :
-
-" faster navigation between split views
-map <C-H> <C-W>h
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
@@ -266,14 +257,14 @@ augroup configgroup
     autocmd BufRead,BufNewFile *.tex set filetype=tex
     autocmd FileType make setlocal ts=8 sw=8 noet
     autocmd FileType cmake setlocal ts=2 sw=2 et
-    autocmd FileType html setlocal ts=2 sw=2
-    autocmd FileType css setlocal ts=2 sw=2
+    autocmd FileType html setlocal ts=2 sw=2 tw=0
+    autocmd FileType css setlocal ts=2 sw=2 tw=0
     autocmd FileType text setlocal ts=2 sw=2 sts=2 et spell
     autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
     autocmd FileType javascript setlocal ts=4 sw=4 et
     autocmd FileType c setlocal ts=4 sw=4 noet
     autocmd FileType cpp setlocal ts=2 sw=2 sts=2 et
-    autocmd FileType java setlocal ts=2 sw=2 sts=2 et tw=100
+    autocmd FileType java setlocal ts=4 sw=4 sts=4 et tw=100
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
          \| syntax spell toplevel

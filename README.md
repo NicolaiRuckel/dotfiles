@@ -5,16 +5,21 @@ have referenced the source.  Check them if you want to use those.
 
 ## Setup
 
-### Vim/NVim plugins
-To get all vim/nvim plugins, start vim/nvim and run
-```
-:PlugInstall
-```
+I use various submodules, so you should either clone the repository recursively
+with
 
-### ZSH
-For my zsh configuration I use the zshrc from [grml](https://grml.org/zsh/).
-Look at their site for setup and further configuration.
+    git clone --recursive
+
+or initialize the submodules after cloning the repository with
+
+    git submodule init
 
 ### Symlinks
 To create all the necessary symlinks, I copied a bash script from
 [here](https://github.com/christopher-l/dotfiles/blob/master/deploy.sh).
+
+### Neovim plugins
+To get all Neovim plugins, start `nvim` and run
+```
+:PlugInstall
+```

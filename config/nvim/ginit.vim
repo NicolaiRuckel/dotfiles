@@ -1,11 +1,12 @@
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,a:blinkwait9999999999999
 
-let s:default_fontsize = 11
+let s:default_fontsize = 10
 let s:fontsize = s:default_fontsize
-let s:font = "Source Code Pro Regular"
+let s:font = "Source Code Pro Light"
 
 function! SetFont() abort
   if exists('g:GtkGuiLoaded')
+    let s:font = "Source Code Pro Regular"
     call rpcnotify(1, 'Gui', 'Font', s:font . ' ' . s:fontsize)
     let g:GuiInternalClipboard = 1
     let NVIM_GTK_NO_HEADERBAR=1

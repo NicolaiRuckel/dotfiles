@@ -2,6 +2,8 @@
 
 set $mod Mod4
 
+bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Source Sans Pro Semibold-13'"
+
 # Font for window titles.
 font xft:Source Sans Pro Semibold 11
 
@@ -9,7 +11,7 @@ font xft:Source Sans Pro Semibold 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -25,12 +27,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# split in horizontal orientation
-bindsym $mod+semicolon split h
-
-# split in vertical orientation
-bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -129,7 +125,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'systemctl poweroff -i'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+control+h resize shrink width 10 px or 3 ppt
@@ -225,6 +222,7 @@ for_window [class="Dolphin" title="Progress Dialog"] floating enable
 for_window [class="Steam" title="Install"] floating enable
 
 # skype
+for_window [class="Skype"] floating disable
 for_window [class="Skype" title="File Transfers"] floating enable
 
 # battery warning
@@ -241,7 +239,7 @@ for_window [class=".*"] title_format " %title"
 
 # screen lock
 bindsym XF86Explorer exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
-bindsym $mod+Down exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
+bindsym $mod+z exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
 
 # toggle 2nd monitor to the right with Fn+F11
 bindsym XF86Display exec ~/dotfiles/scripts/x-toggle-2nd.sh
@@ -277,19 +275,17 @@ bindsym $mod+Shift+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh -
 # rename workspace
 bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
 
+# gnome stuff
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
 
 # load startup scripts
 exec --no-startup-id ~/dotfiles/scripts/i3_startup.sh
 exec --no-startup-id ~/dotfiles/scripts/battery/batt.sh
 exec --no-startup-id dunst
 
-# gnome stuff
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
-
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
-exec --no-startup-id albert
 
 # class                 border  backgr. text    indicator
 client.focused          #005F87 #005F87 #d7d7d7 #005f87

@@ -17,6 +17,10 @@ export GOPATH=$HOME/dev/go
 
 export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
 
+if [ -d ~/.texmf ] ; then
+    export TEXMFHOME=~/.texmf
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/nicolai/.oh-my-zsh
 
@@ -51,6 +55,8 @@ plugins=(
   aws
   mvn
   gradle
+  compleat
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -95,7 +101,7 @@ if [[ -x "$(command -v v)" ]]; then
   export VISUAL='nvim-gtk'
 fi
 
-export TERMINAL=alacritty
+export TERMINAL=gnome-terminal
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -121,8 +127,9 @@ export NVIM_GTK_NO_HEADERBAR=1
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias v=nvim-gtk
 alias f="files . &"
-alias l="ls -lsh"
+alias l="ls -lh"
 alias o=open
+alias vim=nvim
 
 # names directories: http://zshwiki.org/home/examples/aliasdirs
 hash -d dotfiles=~/dotfiles
@@ -242,3 +249,6 @@ source /etc/profile.d/autojump.sh
 
 export LS_COLORS="fi=0:di=34:ln=35:so=36:pi=33:ex=32:bd=34:cd=34:su=34:sg=34:tw=34:ow=34:"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# git completion
+autoload -Uz compinit && compinit
