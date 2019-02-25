@@ -8,6 +8,10 @@ fi
 if [ "$1" == Skype* ]; then
   wmctrl -r Skype -b add,demands_attention
 fi
+# whatsapp
+if [[ "$1" == whats-app-nativefier-* ]]; then
+  wmctrl -r WhatsApp -b add,demands_attention
+fi
 echo $1
 echo $@
 
