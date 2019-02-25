@@ -28,6 +28,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'micarmst/vim-spellsync'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
