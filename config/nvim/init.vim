@@ -29,7 +29,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'micarmst/vim-spellsync'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'davidhalter/jedi-vim'
+Plug 'https://github.com/tpope/vim-surround'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,6 +161,11 @@ nnoremap <Leader>s :set spell!<CR>
 " ------------------------------------------------------------------------------
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" jedi-vim
+
+" open the go-to function in split, not another buffer
+let g:jedi#use_splits_not_buffers = "right"
 
 " CtrlP
 nnoremap <Leader>e :CtrlP<CR>
