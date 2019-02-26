@@ -19,6 +19,3 @@ case $HOSTNAME in
     xmodmap -e 'add control = Control_L Control_R'
     ;;
 esac
-
-# ctrl without another key is escape
-xmodmap -e "keysym Control_L control = Escape Control_L" 
