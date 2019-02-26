@@ -34,6 +34,10 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" remap jk to Esc
+inoremap jk <Esc>
+
 set exrc                    " run .exrc files if present
 set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
