@@ -97,9 +97,7 @@ else
   export EDITOR='nvim'
 fi
 
-if [[ -x "$(command -v v)" ]]; then
-  export VISUAL='nvim-gtk'
-fi
+export VISUAL='nvim-gtk'
 
 export TERMINAL=gnome-terminal
 
@@ -125,7 +123,7 @@ export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
-alias v=nvim-gtk
+# alias v=nvim-gtk
 alias f="files . &"
 alias l="ls -lh"
 alias o=open
@@ -153,6 +151,9 @@ fi
 #         exit
 #     fi
 # }
+v() {
+    "${VISUAL-vi}" "$@"
+}
 
 ####################################
 ## SYSTEM DEPENDENT CONFIGURATION ##
