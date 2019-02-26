@@ -101,21 +101,6 @@ export VISUAL='nvim-gtk'
 
 export TERMINAL=gnome-terminal
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export JAVA_HOME=/usr/lib/jvm/default
 export GIT_EDITOR=nvim
@@ -129,11 +114,6 @@ alias l="ls -lh"
 alias o=open
 alias vim=nvim
 
-# names directories: http://zshwiki.org/home/examples/aliasdirs
-hash -d dotfiles=~/dotfiles
-hash -d project=~/uni/Semester15/17-WS-Password-Hashing
-
-
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
@@ -143,108 +123,9 @@ fi
 ## FUNCTIONS ##
 ###############
 
-# prevent nested ranger instances
-# ranger() {
-#     if [ -z "$RANGER_LEVEL" ]; then
-#         /usr/bin/ranger "$@"
-#     else
-#         exit
-#     fi
-# }
 v() {
     "${VISUAL-vi}" "$@"
 }
-
-####################################
-## SYSTEM DEPENDENT CONFIGURATION ##
-####################################
-
-# Mac OS stuff
-case `uname` in
-    Darwin)
-        # variables
-        export GNATPATH=/usr/bin/gnat
-
-        #aliases
-        alias gvim="mvim"
-
-        #profiles
-        zstyle ':chpwd:profiles:/Users/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
-        chpwd_profile_ada()
-        {
-            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-            print "chpwd(): Switching to profile: $profile"
-            export MACOSX_DEPLOYMENT_TARGET=10.9
-            #export PATH="/usr/bin/gnat:$PATH"
-        }
-    ;;
-esac
-
-# Linux stuff
-case `uname` in
-    Linux)
-
-        # aliases
-        # alias hibernate="sudo pm-hibernate"
-
-        #profiles
-    ;;
-esac
-
-#####################################
-## MACHINE DEPENDENT CONFIGURATION ##
-#####################################
-
-case `uname -n` in
-    snitsig)
-
-        # variables
-        export GNATPATH=/opt/gnat2016/bin
-
-        hash -d media=/media/nico/media
-
-        #profiles
-        zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
-        chpwd_profile_ada()
-        {
-            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-            print "chpwd(): Switching to profile: $profile"
-            export PATH="$GNATPATH:$PATH"
-        }
-    ;;
-esac
-
-case `uname -n` in
-    curie)
-
-        hash -d research=~/uni/master/master-research
-    ;;
-esac
-
-case `uname -n` in
-    archbook)
-        # variables
-        export TERMINAL=termite
-        export GNATPATH=/opt/gnat2016/bin
-
-
-        #profiles
-        zstyle ':chpwd:profiles:/home/nicolai/Documents/Uni/Bachelor(|/|/*)' profile ada
-        chpwd_profile_ada()
-        {
-            [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-            print "chpwd(): Switching to profile: $profile"
-            export PATH="$GNATPATH:$PATH"
-        }
-        ;;
-esac
-
-case `uname -n` in
-    swagberrypi)
-        # variables
-        export TERM=linux
-        ;;
-esac
 
 source /etc/profile.d/autojump.sh
 
