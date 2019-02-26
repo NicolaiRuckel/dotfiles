@@ -71,6 +71,9 @@ set $wsf10 F10
 set $wsf11 F11
 set $wsf12 F12
 
+# load workspace layouts
+exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-messenger.json'"
+
 # switch to workspace
 bindsym $mod+1   workspace number 1
 bindsym $mod+2   workspace number 2
