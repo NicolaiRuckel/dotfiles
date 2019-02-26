@@ -29,6 +29,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'micarmst/vim-spellsync'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -157,6 +158,8 @@ nnoremap <Leader>s :set spell!<CR>
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " CtrlP
 nnoremap <Leader>e :CtrlP<CR>
