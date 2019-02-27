@@ -37,11 +37,11 @@ call plug#end()
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" remap jk to Esc
-inoremap jk <Esc>
-"
-" disable Escape
-inoremap <Esc> <C-O>:echo "Use jk!\nI mean it!"<CR>
+"" remap jk to Esc
+"inoremap jk <Esc>
+""
+"" disable Escape
+"inoremap <Esc> <C-O>:echo "Use jk!\nI mean it!"<CR>
 
 set exrc                    " run .exrc files if present
 set fileformat=unix         " set fileformat to unix
