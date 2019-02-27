@@ -31,6 +31,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'micarmst/vim-spellsync'
 Plug 'davidhalter/jedi-vim'
 Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,6 +50,10 @@ set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
 set splitright              " splits appear right
+
+" Does some magic with relative and absolute line numbers via the
+" vim-numbertoggle plugin.
+set number relativenumber
 
 set noscrollbind " for oni; should be fixed in next release
 
