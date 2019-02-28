@@ -78,7 +78,7 @@
                     "percent": 0.5,
                     "swallows": [
                        {
-                          "class": "^whats-app-nativifier$"
+                          "class": "^whats-app-nativefier-d52542$"
                        }
                     ],
                     "type": "con"
