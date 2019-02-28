@@ -21,7 +21,8 @@
             "percent": 1,
             "swallows": [
                {
-                  "class": "^discord$"
+                  "class": "^discord$",
+                  "window_role": "browser-window"
                }
             ],
             "type": "con"
