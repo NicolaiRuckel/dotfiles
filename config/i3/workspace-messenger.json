@@ -21,7 +21,7 @@
             "percent": 1,
             "swallows": [
                {
-                  "class": "^discord$",
+                  "title": "^Discord$",
                   "window_role": "browser-window"
                }
             ],
