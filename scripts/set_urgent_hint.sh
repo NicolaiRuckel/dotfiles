@@ -12,6 +12,12 @@ fi
 if [[ "$1" == whats-app-nativefier-* ]]; then
   wmctrl -r WhatsApp -b add,demands_attention
 fi
+# thunderbird
+if [[ "$1" == Thunderbird ]]; then
+  wmctrl -xF -r Thunderbird -b add,demands_attention
+fi
+
+# debug output
 echo $1
 echo $@
 
