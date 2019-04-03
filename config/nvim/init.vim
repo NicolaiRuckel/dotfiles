@@ -32,6 +32,7 @@ Plug 'micarmst/vim-spellsync'
 Plug 'davidhalter/jedi-vim'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
+Plug 'lervag/vimtex'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -216,6 +217,13 @@ let g:grammarous#default_comments_only_filetypes = {
 
 " " use location list
 " let g:grammarous#use_location_list = 1
+
+"vimtex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
