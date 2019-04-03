@@ -82,6 +82,9 @@ set dictionary+=/usr/share/dict/ngerman
 " Spell
 set spelllang=en,de_20
 
+" use <C-l> to correct previous spelling mistake
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 " Colors
 set t_Co=256                " more colors for more fun!
 colorscheme lucius
