@@ -304,7 +304,7 @@ augroup configgroup
     autocmd FileType cpp setlocal ts=2 sw=2 sts=2 et
     autocmd FileType java setlocal ts=4 sw=4 sts=4 et tw=100
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
-    autocmd FileType tex setlocal ts=2 sw=2 et spell
+    autocmd FileType tex setlocal ts=2 sw=2 et spell conceallevel=1
          \| syntax spell toplevel
          \| set conceallevel=1
     autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
