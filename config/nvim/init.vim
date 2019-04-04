@@ -226,7 +226,6 @@ let g:grammarous#default_comments_only_filetypes = {
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
 let g:tex_conceal='abdmg'
 
 " UltiSnips
@@ -307,6 +306,7 @@ augroup configgroup
     autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et spell
          \| syntax spell toplevel
+         \| set conceallevel=1
     autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
