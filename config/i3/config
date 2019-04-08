@@ -294,8 +294,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id ~/dotfiles/scripts/backlight.sh
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/dotfiles/scripts/backlight.sh 0.66
 
 # screenshots
-bindsym $mod+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh
-bindsym $mod+Shift+Print exec --no-startup-id ~/dotfiles/scripts/screenshot.sh -s
+bindsym Print exec --no-startup-id flameshot gui
 
 # rename workspace
 bindsym $mod+n exec --no-startup-id ~/dotfiles/scripts/i3-rename-workspace.sh
