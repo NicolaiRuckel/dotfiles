@@ -45,7 +45,7 @@ case $HOSTNAME in
       i3-msg "exec whatsapp-nativefier"
 
       i3-msg "exec firefox"
-      i3-msg "exec thunderbird"
+      i3-msg "exec evolution"
 
       # displays
       ~/dotfiles/scripts/dbl.sh;;
