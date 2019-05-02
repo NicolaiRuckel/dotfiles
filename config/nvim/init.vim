@@ -162,9 +162,20 @@ vnoremap <leader>P "*P
 " nnoremap <Leader>/ :w<CR>:Neomake<CR>
 
 nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
-nnoremap <Leader>/ :wa<CR>:RunAsync 
+nnoremap <Leader>/ :wa<CR>:RunAsync
 
 nnoremap <Leader>s :set spell!<CR>
+
+fun! StripTrailingWhitespace()
+    " Only strip if the b:noStripeWhitespace variable isn't set
+    if exists('b:noStripWhitespace')
+        return
+    endif
+    %s/\s\+$//e
+endfun
+
+autocmd BufWritePre * call StripTrailingWhitespace()
+autocmd FileType markdown let b:noStripWhitespace=1
 
 " ------------------------------------------------------------------------------
 " Plugins
@@ -284,7 +295,7 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding} " File encoding
 set statusline+=\[%{&fileformat}\]    " File format
 set statusline+=\ %p%%                " Percentage through file
 set statusline+=\ %l:%c               " Line number:Column number
-set statusline+=\ 
+set statusline+=\
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
