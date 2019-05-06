@@ -34,6 +34,7 @@ Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
+Plug 'rhysd/git-messenger.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
