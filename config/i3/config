@@ -193,6 +193,9 @@ bindsym $mod+Mod1+shift+Right move workspace to output right
 bindsym $mod+o move container to output left, focus output left
 bindsym $mod+p move container to output right, focus output right
 
+# go up and down in the container tree
+bindsym $mod+x                focus parent
+bindsym $mod+c                focus child
 
 # workspace assignments
 assign [class="Nextcloud"] → $ws1
