@@ -11,3 +11,5 @@ scripts/battery/uevent
 config/gtk-3.0/bookmarks
 config/nvim/spell/.gitignore
 config/nvim/spell/.gitattributes
+emacs.d/*
+\#emacs#
