@@ -320,7 +320,7 @@ augroup configgroup
          \| endif
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
     autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
+    autocmd BufEnter *.sh setlocal ts=4 sw=4 sts=4
     autocmd FileType bib setlocal ts=2 sw=2 sts=2 et tw=0
     autocmd FileType json setlocal ts=2 sw=2 sts=2
     autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
