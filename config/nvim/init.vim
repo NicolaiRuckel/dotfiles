@@ -27,7 +27,7 @@ Plug 'autozimu/LanguageClient-neovim', {
                         \ 'do': 'bash install.sh',
                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'micarmst/vim-spellsync'
 Plug 'davidhalter/jedi-vim'
 Plug 'https://github.com/tpope/vim-surround'
