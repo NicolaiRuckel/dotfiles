@@ -28,7 +28,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'micarmst/vim-spellsync'
-Plug 'davidhalter/jedi-vim'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
