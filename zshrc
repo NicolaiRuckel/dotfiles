@@ -11,7 +11,7 @@
 # set PATH
 export PATH_LOCAL=/home/nicolai/bin
 export PATH_DOTFILES=/home/nicolai/dotfiles/bin
-export PATH_RUBY=/home/nicolai/.gem/ruby/2.4.0/bin
+export PATH_RUBY=/home/nicolai/.gem/ruby/2.6.0/bin
 export PATH_RUST=$HOME/.cargo/bin
 export GOPATH=$HOME/dev/go
 
@@ -134,3 +134,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # git completion
 autoload -Uz compinit && compinit
+
+# added by travis gem
+[ -f /home/nicolai/.travis/travis.sh ] && source /home/nicolai/.travis/travis.sh
