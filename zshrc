@@ -21,6 +21,12 @@ if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
 
+# Gnome Keyring
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/nicolai/.oh-my-zsh
 
