@@ -33,7 +33,7 @@ Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'rhysd/git-messenger.vim'
-Plug 'https://github.com/EinfachToll/DidYouMean'
+Plug 'https://github.com/ludovicchabant/vim-gutentags'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,6 +186,13 @@ let g:jedi#use_splits_not_buffers = "right"
 nnoremap <C-g> :Rg<Cr>
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-f> :GFiles<CR>
+
+nmap <Leader>g :Rg<Cr>
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
 
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
