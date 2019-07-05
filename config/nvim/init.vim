@@ -182,6 +182,10 @@ let g:deoplete#enable_at_startup = 1
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
 
+" gutentags
+" Don't pollute project directories
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
 " FZF.vim
 nnoremap <C-g> :Rg<Cr>
 nnoremap <C-f> :Files<Cr>
