@@ -33,6 +33,7 @@ Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'rhysd/git-messenger.vim'
+Plug 'https://github.com/EinfachToll/DidYouMean'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
