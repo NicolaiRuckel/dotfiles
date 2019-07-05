@@ -184,8 +184,8 @@ let g:jedi#use_splits_not_buffers = "right"
 
 " FZF.vim
 nnoremap <C-g> :Rg<Cr>
-nnoremap <C-p> :Files<Cr>
-nnoremap <C-f> :GFiles<CR>
+nnoremap <C-f> :Files<Cr>
+nnoremap <C-p> :GFiles<CR>
 
 nmap <Leader>g :Rg<Cr>
 nmap <Leader>f :GFiles<CR>
