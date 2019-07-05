@@ -174,6 +174,9 @@ autocmd FileType markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
+"  DidYouMean
+let g:dym_use_fzf = 1
+
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
