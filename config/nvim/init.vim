@@ -34,6 +34,7 @@ Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'rhysd/git-messenger.vim'
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
+Plug 'https://github.com/skywind3000/gutentags_plus'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
