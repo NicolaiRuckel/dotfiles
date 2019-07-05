@@ -7,7 +7,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'junegunn/fzf.vim' " needs fzf installed on the system
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
@@ -181,15 +181,10 @@ let g:deoplete#enable_at_startup = 1
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
 
-" CtrlP
-nnoremap <Leader>e :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>m :CtrlPMRUFiles<CR>
-nnoremap <Leader>c :CtrlP %:h<CR>
-
-"let g:ctrlp_match_window = 'max:50,results:50'
-let g:ctrlp_reuse_window = 'help'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+" FZF.vim
+nnoremap <C-g> :Rg<Cr>
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-f> :GFiles<CR>
 
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
