@@ -136,9 +136,6 @@ set foldmethod=indent       " fold based on indent level
 " Leader Shortcuts
 let mapleader=" "
 
-" f open/closes folds
-nnoremap <leader>f za
-
 nnoremap <leader>v :vsplit<cr>
 
 " Copy to primary
