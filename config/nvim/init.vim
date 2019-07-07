@@ -192,10 +192,14 @@ nnoremap <C-g> :Rg<Cr>
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-t> :BTags<CR>
+nnoremap <C-l> :BLines<CR>
+
 
 nmap <Leader>g :Rg<Cr>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
+
+nmap <Leader>l :BLines<CR>
 
 nmap <Leader>t :BTags<CR>
 nmap <Leader>T :Tags<CR>
