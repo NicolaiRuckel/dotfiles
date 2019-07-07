@@ -4,6 +4,23 @@ let s:default_fontsize = 10
 let s:fontsize = s:default_fontsize
 let s:font = "Source Code Pro Light"
 
+let g:terminal_color_0  = '#303030'
+let g:terminal_color_1  = '#ff5f5f'
+let g:terminal_color_2  = '#afd787'
+let g:terminal_color_3  = '#d7d7af'
+let g:terminal_color_4  = '#87d7ff'
+let g:terminal_color_5  = '#d7afd7'
+let g:terminal_color_6  = '#87d7af'
+let g:terminal_color_7  = '#d7d7d7'
+let g:terminal_color_8  = '#303030'
+let g:terminal_color_9  = '#ff5f5f'
+let g:terminal_color_10 = '#afd787'
+let g:terminal_color_11 = '#d7d7af'
+let g:terminal_color_12 = '#87d7ff'
+let g:terminal_color_13 = '#d7afd7'
+let g:terminal_color_14 = '#87d7af'
+let g:terminal_color_15 = '#d7d7d7'
+
 function! SetFont() abort
   if exists('g:GtkGuiLoaded')
     let s:font = "Source Code Pro Regular"
