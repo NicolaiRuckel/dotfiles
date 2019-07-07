@@ -35,6 +35,7 @@ Plug 'sirver/ultisnips'
 Plug 'rhysd/git-messenger.vim'
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
 Plug 'https://github.com/skywind3000/gutentags_plus'
+Plug 'https://github.com/EinfachToll/DidYouMean'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -188,7 +189,7 @@ let g:jedi#use_splits_not_buffers = "right"
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 " FZF.vim
-nnoremap <C-g> :Rg<Cr>
+nnoremap <C-g> :Ag<Cr>
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-t> :BTags<CR>
