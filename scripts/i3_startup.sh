@@ -42,7 +42,6 @@ case $HOSTNAME in
       i3-msg "exec com.discordapp.Discord"
       i3-msg "exec com.skype.Client"
       i3-msg "exec pidgin"
-      i3-msg "exec whatsapp-nativefier"
 
       i3-msg "exec firefox"
       i3-msg "exec thunderbird"
