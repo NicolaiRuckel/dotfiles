@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 case `uname` in
     Darwin)
