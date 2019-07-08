@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-case `uname` in
+case $(uname) in
     Darwin)
         echo "This does not work on a Mac. Please use mac_deploy.sh" 1>&2
         exit 1
