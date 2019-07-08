@@ -23,3 +23,15 @@ To get all Neovim plugins, start `nvim` and run
 ```
 :PlugInstall
 ```
+
+## Dependencies
+
+Software I use, that may need to be present for some configurations to work
+properly.
+
+### ZSH
+* [oh-my-zsh](https://ohmyz.sh/)
+
+### Neovim
+* [fzf](https://github.com/junegunn/fzf)
+* [ag](https://github.com/ggreer/the_silver_searcher)
