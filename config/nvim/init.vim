@@ -196,7 +196,7 @@ nnoremap <C-t> :BTags<CR>
 nnoremap <C-l> :BLines<CR>
 
 
-nmap <Leader>g :Rg<Cr>
+nmap <Leader>g :Ag<Cr>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 
