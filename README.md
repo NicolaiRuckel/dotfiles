@@ -1,7 +1,6 @@
-Here are my dotfiles.  I made them for my machines, but they should work on any
-other Linux machine or Mac.  Feel free to look and copy anything from these
-files.  Sometimes I copied snippets from other resources.  Most of the time I
-have referenced the source.  Check them if you want to use those.
+These are my dotfiles.  I made them for my machines, but they should work on any
+other Linux or macOS machine.  Feel free to look and copy anything from these
+files.
 
 ## Setup
 
