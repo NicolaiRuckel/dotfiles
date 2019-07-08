@@ -1,9 +1,9 @@
+# [Dotfiles](https://github.com/NicolaiRuckel/dotfiles)
 These are my dotfiles.  I made them for my machines, but they should work on any
 other Linux or macOS machine.  Feel free to look and copy anything from these
 files.
 
 ## Setup
-
 I use various submodules, so you should either clone the repository recursively
 with
 
@@ -24,7 +24,6 @@ To get all Neovim plugins, start `nvim` and run
 ```
 
 ## Dependencies
-
 Software I use, that may need to be present for some configurations to work
 properly.
 
