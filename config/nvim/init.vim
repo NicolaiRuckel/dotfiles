@@ -213,12 +213,6 @@ let g:jedi#use_splits_not_buffers = "right"
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 " FZF.vim
-nnoremap <C-g> :Ag<Cr>
-nnoremap <C-f> :Files<Cr>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <C-t> :BTags<CR>
-nnoremap <C-l> :BLines<CR>
-
 
 nmap <Leader>g :Ag<Cr>
 nmap <Leader>f :GFiles<CR>
