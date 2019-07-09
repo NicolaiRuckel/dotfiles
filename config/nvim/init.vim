@@ -57,13 +57,13 @@ set noscrollbind " for oni; should be fixed in next release
 
 filetype plugin on
 
-" Backup, Swap and Undo
+""" Backup, Swap and Undo
 set undofile                " persistent undo
 set directory=~/.config/nvim/swap,/tmp
 set backupdir=~/.config/nvim/backup,/tmp
 set undodir=~/.config/nvim/undo,/tmp
 
-" NetRW
+""" NetRW
 let g:netrw_liststyle = 1 " Detail View
 let g:netrw_sizestyle = "H" " Human-readable file sizes
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " hide dotfiles
@@ -71,17 +71,17 @@ let g:netrw_hide = 1 " hide dotfiles by default
 let g:netrw_banner = 0 " Turn off banner
 
 
-" Dictionary
+""" Dictionary
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 
-" Spell
+""" Spell
 set spelllang=en,de_20
 
 " use <C-l> to correct previous spelling mistake
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-" Colors
+""" Colors
 set t_Co=256                " more colors for more fun!
 colorscheme lucius
 LuciusDark
@@ -89,12 +89,12 @@ set background=dark        " dark background
 " colorscheme plain
 syntax enable               " enable syntax processing
 
-" Spaces and Tabs
+""" Spaces and Tabs
 set tabstop=4               " number of visual spaces per TAB
 set softtabstop=4           " number of spaces in tab when editing
 set expandtab               " tabs are spaces
 
-" UI Config
+""" UI Config
 set number                  " show line numbers
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
@@ -135,7 +135,7 @@ set foldlevelstart=10       " open most folds by default
 set foldnestmax=10          " 10 nested fold max
 set foldmethod=indent       " fold based on indent level
 
-" Leader Shortcuts
+""" Leader Shortcuts
 let mapleader=" "
 
 nnoremap <leader>v :vsplit<cr>
@@ -173,6 +173,7 @@ autocmd FileType markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 " Terminal
 " ------------------------------------------------------------------------------
+
 " Esc to exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
@@ -197,23 +198,22 @@ let g:terminal_color_15 = '#d7d7d7'
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
-"  DidYouMean
+
+"""  DidYouMean
 let g:dym_use_fzf = 1
 
-" Deoplete
+""" Deoplete
 let g:deoplete#enable_at_startup = 1
 
-" jedi-vim
-
+""" jedi-vim
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
 
-" gutentags
+""" gutentags
 " Don't pollute project directories
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 
-" FZF.vim
-
+""" fzf
 nmap <Leader>g :Ag<Cr>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
@@ -225,17 +225,17 @@ nmap <Leader>T :Tags<CR>
 
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
-" Y U NO COMMIT AFTER 20 LINES???!?!
+""" Y U NO COMMIT
+" ...AFTER 20 LINES???!?!
 let g:YUNOcommit_after = 20
 
-" Taglist
+""" Taglist
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
 
 
-" Language Client
-
+""" Language Client
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
 
@@ -249,22 +249,18 @@ nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
 
 set omnifunc=LanguageClient#omniComplete
 
-" Grammarous
-
+""" Grammarous
 let g:grammarous#default_comments_only_filetypes = {
             \ '*' : 1, 'tex' : 0, 'markdown' : 0,
             \ }
 
-" " use location list
-" let g:grammarous#use_location_list = 1
-
-"vimtex
+""" vimtex
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 let g:tex_conceal='abdmg'
 
-" UltiSnips
+""" UltiSnips
 let g:UltiSnipsExpandTrigger = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
@@ -272,6 +268,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set laststatus=2            " enable statusline all the time
 
 function! GitBranch()
