@@ -36,6 +36,8 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
 Plug 'https://github.com/skywind3000/gutentags_plus'
 Plug 'https://github.com/EinfachToll/DidYouMean'
+Plug 'Avi-D-coder/fzf-wordnet.vim'
+Plug 'https://github.com/thiagoalessio/rainbow_levels.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -226,6 +228,10 @@ nmap <Leader>L :Lines<CR>
 nmap <Leader>t :BTags<CR>
 nmap <Leader>T :Tags<CR>
 
+""" fzf-wordnet
+imap <C-S> <Plug>(fzf-complete-wordnet)
+
+""" netrw
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
 """ Y U NO COMMIT
