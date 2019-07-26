@@ -200,7 +200,7 @@ bindsym $mod+c                focus child
 # workspace assignments
 assign [class="Nextcloud"] → $ws1
 
-assign [class="Firefox"] → $ws2
+assign [class="firefox"] → $ws2
 assign [class="Chromium"] → $ws2
 assign [class="google-chrome"] → $ws2
 
