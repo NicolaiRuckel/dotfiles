@@ -23,5 +23,5 @@
 	path = texmf/tex/latex/beamer/issdark-beamer-theme
 	url = https://github.com/NicolaiRuckel/issdark-beamer-theme
 [submodule "oh-my-zsh-custom/plugins/zsh-you-should-use"]
-	path = oh-my-zsh-custom/plugins/zsh-you-should-use
+	path = oh-my-zsh-custom/plugins/you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
