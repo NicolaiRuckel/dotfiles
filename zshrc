@@ -22,7 +22,7 @@ if [ -d ~/.texmf ] ; then
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/nicolai/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 ZSH_CUSTOM=~/dotfiles/oh-my-zsh-custom
 # Set name of the theme to load. Optionally, if you set this to "random"
