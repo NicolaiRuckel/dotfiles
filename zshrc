@@ -49,11 +49,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   gitfast
-  aws
-  mvn
-  gradle
   compleat
-  z
   you-should-use
 )
 
