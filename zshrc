@@ -59,6 +59,9 @@ source $ZSH/oh-my-zsh.sh
 ### User configuration ###
 ##########################
 
+# disable built-in oh-my-zsh alias
+unalias _
+
 # ZSH options
 # ###########
 
