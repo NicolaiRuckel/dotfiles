@@ -109,7 +109,6 @@ alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias f="files . &"
 alias l="ls -lh"
 alias o=open
-alias vim=nvim
 
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
@@ -120,7 +119,7 @@ fi
 ## FUNCTIONS ##
 ###############
 
-v() {
+vim() {
     "${VISUAL-vi}" "$@"
 }
 
