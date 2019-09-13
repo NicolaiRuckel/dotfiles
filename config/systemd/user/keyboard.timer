@@ -1,0 +1,8 @@
+[Unit]
+Description=Update keyboard settings after startup
+
+[Timer]
+OnStartupSec=10seconds
+
+[Install]
+WantedBy=timers.target

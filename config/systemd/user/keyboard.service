@@ -1,0 +1,6 @@
+[Unit]
+Description=Update keyboard settings after startup
+
+[Service]
+Type=oneshot
+ExecStart=/home/nicolai/dotfiles/scripts/keyboard.sh
