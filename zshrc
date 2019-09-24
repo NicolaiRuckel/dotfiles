@@ -106,10 +106,10 @@ export NVIM_GTK_NO_HEADERBAR=1
 
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
-# alias v=nvim-gtk
 alias f="files . &"
 alias l="ls -lh"
 alias o=open
+alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip setuptools > /dev/null'
 
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
