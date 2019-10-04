@@ -16,12 +16,6 @@
 [submodule "oh-my-zsh-themes/nidoranarion"]
 	path = oh-my-zsh-custom/nidoranarion
 	url = git@github.com:NicolaiRuckel/nidoranarion.git
-[submodule "texmf/bibtex/bib/bibliography"]
-	path = texmf/bibtex/bib/bibliography
-	url = git@github.com:NicolaiRuckel/bibliography
-[submodule "texmf/tex/latex/beamer/issdark-beamer-theme"]
-	path = texmf/tex/latex/beamer/issdark-beamer-theme
-	url = https://github.com/NicolaiRuckel/issdark-beamer-theme
 [submodule "oh-my-zsh-custom/plugins/zsh-you-should-use"]
 	path = oh-my-zsh-custom/plugins/you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
