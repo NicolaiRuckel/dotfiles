@@ -111,6 +111,12 @@ alias l="ls -lh"
 alias o=open
 alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip setuptools > /dev/null'
 
+# cd with ranger
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# open ranger with ctrl o; clear line first
+bindkey -s '^o' '^l\nranger\n'
+
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
