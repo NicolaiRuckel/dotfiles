@@ -344,7 +344,7 @@ exec --no-startup-id hsetroot -solid "#303030"
 client.focused		        #2C313D     #2e3440 $blue       $background
 client.focused_inactive	    #2C313D     #303743 $background $background
 client.unfocused	        #2C313D     #303743 $background $background
-client.urgent		        $red        #282d37 $red        $background
+client.urgent		        #2C313D     #282d37 $red        $background
 client.placeholder	        $background #282D37 $background $background
 
 # general config
@@ -364,7 +364,7 @@ bar {
             focused_workspace   $blue   $blue   #eeeeee
             active_workspace    #444444 #444444 #eeeeee
             inactive_workspace  #222222 #222222 #eeeeee
-            urgent_workspace    $red    $red    #eeeeee
+            urgent_workspace    #444444 #444444 $red
 
             background #222222
             statusline #eeeeee
