@@ -38,6 +38,7 @@ Plug 'https://github.com/skywind3000/gutentags_plus'
 Plug 'https://github.com/EinfachToll/DidYouMean'
 Plug 'Avi-D-coder/fzf-wordnet.vim'
 Plug 'https://github.com/thiagoalessio/rainbow_levels.vim'
+Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -383,6 +384,11 @@ augroup nvim_term
   au TermClose * stopinsert
 augroup END
 
+" i3 config detection
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
+aug end
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
