@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim' " needs fzf installed on the system
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
+Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/andreypopp/vim-colors-plain'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
@@ -86,8 +87,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 """ Colors
 set t_Co=256                " more colors for more fun!
-colorscheme lucius
-LuciusDark
+colorscheme nord
 set background=dark        " dark background
 " colorscheme plain
 syntax enable               " enable syntax processing
