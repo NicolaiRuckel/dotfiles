@@ -341,7 +341,7 @@ client.focused              $blue       #3b4252 $background $background
 client.focused_inactive     #2e3440     #2e3440 $background $background
 client.unfocused            #2e3440     #2e3440 $background $background
 client.urgent               #2e3440     #2e3440 $red        $background
-client.placeholder          $background #2e3440 $background $background
+client.placeholder          $background #002b36 $background $background
 
 # general config
 bindsym $mod+b border toggle
