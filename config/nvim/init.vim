@@ -114,6 +114,7 @@ set lazyredraw              " redraw only when we need to
 set showmatch               " highlight matching [{()}]
 " Highlight all columns after current textwidth
 let &colorcolumn=join(map(range(1,999), '"+".v:val'), ",")
+highlight ColorColumn guibg=#002b36
 set textwidth=80
 set history=10000           " vim has to remember a lot of commands
 set mouse=nv                " allows usage of mouse
