@@ -2,7 +2,6 @@
 
 set $mod Mod4
 
-# bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Source Sans Pro Semibold-13'"
 bindsym Mod1+space exec rofi -show drun
 
 # Font for window titles.
@@ -299,8 +298,6 @@ bindsym $mod+z exec --no-startup-id ~/dotfiles/scripts/lock_screen.sh
 
 # toggle 2nd monitor to the right with Fn+F11
 bindsym XF86Display exec ~/dotfiles/scripts/x-toggle-2nd.sh
-#bindsym Mod1+XF86Display exec x-mirror.sh
-#bindsym Shift+XF86Display exec x-switch-display.sh
 
 # touchpad
 bindsym XF86Tools exec ~/dotfiles/scripts/toggletouchpad.sh
@@ -316,7 +313,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ~/dotfiles/scripts/volume.sh 5
 bindsym XF86AudioPlay exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioNext exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-# bindsym $mod+Up exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
 
 # screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/dotfiles/scripts/backlight.sh 1.5
