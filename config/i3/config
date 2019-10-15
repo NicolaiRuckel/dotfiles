@@ -341,11 +341,11 @@ exec --no-startup-id dunst
 exec --no-startup-id hsetroot -solid "#303030"
 
 # class                     border      backgr. text        indicator
-client.focused		        #2C313D     #2e3440 $blue       $background
-client.focused_inactive	    #2C313D     #3b4252 $background $background
-client.unfocused	        #2C313D     #3b4252 $background $background
-client.urgent		        #2C313D     #3b4252 $red        $background
-client.placeholder	        $background #3b4252 $background $background
+client.focused              #3b4252     #3b4252 $blue       $background
+client.focused_inactive     #2e3440     #2e3440 $background $background
+client.unfocused            #2e3440     #2e3440 $background $background
+client.urgent               #2e3440     #2e3440 $red        $background
+client.placeholder          $background #2e3440 $background $background
 
 # general config
 bindsym $mod+b border toggle
@@ -362,12 +362,12 @@ bar {
         colors {
             ## class            border  backgr. text
             focused_workspace   $blue   $blue   #222222
-            active_workspace    #444444 #444444 #eeeeee
-            inactive_workspace  #222222 #222222 #eeeeee
+            active_workspace    #002b36 #002b36 #eeeeee
+            inactive_workspace  #002b36 #002b36 #eeeeee
             urgent_workspace    #ff0000 #ff0000 #222222
 
-            background #222222
+            background #002b36
             statusline #eeeeee
-            separator  #222222
+            separator  #002b36
         }
 }
