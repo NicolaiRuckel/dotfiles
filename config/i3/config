@@ -364,7 +364,7 @@ bar {
             focused_workspace   $blue   $blue   #eeeeee
             active_workspace    #444444 #444444 #eeeeee
             inactive_workspace  #222222 #222222 #eeeeee
-            urgent_workspace    #222222 #222222 $red
+            urgent_workspace    $red    $red    #222222
 
             background #222222
             statusline #eeeeee
