@@ -23,6 +23,10 @@ To get all Neovim plugins, start `nvim` and run
 :PlugInstall
 ```
 
+### Gnome Terminal Theme
+Gnome Terminal does not have a configuration file for its themes, so the theme
+has to be installed manually as shown [here](https://github.com/arcticicestudio/nord-gnome-terminal).
+
 ## Dependencies
 Software I use, that may need to be present for some configurations to work
 properly.
