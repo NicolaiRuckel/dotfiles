@@ -24,14 +24,12 @@
     scrollbar: true;
     margin: 0;
     dynamic: true;
-
 }
 
 #window {
     background-color: @backgroundcolor;
     border-color: @separatorcolor;
     border: 1;
-    border-radius: 2px;
 }
 
 #mainbox {
