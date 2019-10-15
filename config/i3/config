@@ -20,7 +20,7 @@ set_from_resource $base3    i3wm.color15    #fdf6e3
 
 set_from_resource $yellow   i3wm.color3     #b58900
 set_from_resource $orange   i3wm.color9     #cb4b16
-set_from_resource $red      i3wm.color1     #dc322f
+set_from_resource $red      i3wm.color1     #bf616a
 set_from_resource $magenta  i3wm.color5     #d33682
 set_from_resource $violet   i3wm.color13    #6c71c4
 set_from_resource $blue     i3wm.color4     #268bd2
@@ -342,10 +342,10 @@ exec --no-startup-id hsetroot -solid "#303030"
 
 # class                     border      backgr. text        indicator
 client.focused		        #2C313D     #2e3440 $blue       $background
-client.focused_inactive	    #2C313D     #303743 $background $background
-client.unfocused	        #2C313D     #303743 $background $background
-client.urgent		        #2C313D     #282d37 $red        $background
-client.placeholder	        $background #282D37 $background $background
+client.focused_inactive	    #2C313D     #3b4252 $background       $background
+client.unfocused	        #2C313D     #3b4252 $background $background
+client.urgent		        #2C313D     #3b4252 $red        $background
+client.placeholder	        $background #3b4252 $background $background
 
 # general config
 bindsym $mod+b border toggle
@@ -364,7 +364,7 @@ bar {
             focused_workspace   $blue   $blue   #eeeeee
             active_workspace    #444444 #444444 #eeeeee
             inactive_workspace  #222222 #222222 #eeeeee
-            urgent_workspace    $red    $red    #222222
+            urgent_workspace    $red    $red    #eeeeee
 
             background #222222
             statusline #eeeeee
