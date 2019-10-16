@@ -336,12 +336,12 @@ exec --no-startup-id dunst
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
 
-# class                     border  backgr. text    indicator
-client.focused              #268bd2 #3b4252 #eeeeee #002b36
-client.focused_inactive     #2e3440 #2e3440 #eeeeee #002b36
-client.unfocused            #2e3440 #2e3440 #eeeeee #002b36
-client.urgent               #2e3440 #2e3440 #bf616a #002b36
-client.placeholder          #002b36 #002b36 #002b36 #002b36
+# class                     border      background  text        indicator
+client.focused              #268bd2     #3b4252     #eeeeee     #002b36
+client.focused_inactive     #2e3440     #2e3440     #4c566a     #002b36
+client.unfocused            #2e3440     #2e3440     #4c566a     #002b36
+client.urgent               #2e3440     #2e3440     #bf616a     #002b36
+client.placeholder          #002b36     #002b36     #002b36     #002b36
 
 # general config
 bindsym $mod+b border toggle
