@@ -336,12 +336,12 @@ exec --no-startup-id dunst
 # set wallpaper color
 exec --no-startup-id hsetroot -solid "#303030"
 
-# class                     border      backgr. text        indicator
-client.focused              $blue       #3b4252 $background $background
-client.focused_inactive     #2e3440     #2e3440 $background $background
-client.unfocused            #2e3440     #2e3440 $background $background
-client.urgent               #2e3440     #2e3440 $red        $background
-client.placeholder          $background #002b36 $background $background
+# class                     border  backgr. text    indicator
+client.focused              #268bd2 #3b4252 #eeeeee #002b36
+client.focused_inactive     #2e3440 #2e3440 #eeeeee #002b36
+client.unfocused            #2e3440 #2e3440 #eeeeee #002b36
+client.urgent               #2e3440 #2e3440 #bf616a #002b36
+client.placeholder          #002b36 #002b36 #002b36 #002b36
 
 # general config
 bindsym $mod+b border toggle
@@ -357,7 +357,7 @@ bar {
     tray_output LVDS1
         colors {
             ## class            border  backgr. text
-            focused_workspace   $blue   #002b36 #eeeeee
+            focused_workspace   #268bd2 #002b36 #eeeeee
             active_workspace    #002b36 #002b36 #eeeeee
             inactive_workspace  #002b36 #002b36 #eeeeee
             urgent_workspace    #ff0000 #002b36 #eeeeee
