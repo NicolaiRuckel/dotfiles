@@ -37,6 +37,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
+bindsym $mod+r exec gnome-terminal -e ranger
 
 # kill focused window
 bindsym $mod+q kill
