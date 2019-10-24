@@ -95,7 +95,7 @@ else
   export EDITOR='nvim'
 fi
 
-export VISUAL='nvim-qt'
+export VISUAL='nvim'
 
 export TERMINAL=gnome-terminal
 
