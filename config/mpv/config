@@ -1,4 +1,4 @@
-cache=500000
+cache=yes
 
 fs
 ytdl
