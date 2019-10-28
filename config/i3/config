@@ -5,7 +5,7 @@ set $mod Mod4
 bindsym Mod1+space exec rofi -show drun
 
 # Font for window titles.
-font xft:Source Sans Pro Semibold 11
+font xft:Source Sans Pro 11
 
 # Colors
 set_from_resource $base03   i3wm.color8     #002b36
