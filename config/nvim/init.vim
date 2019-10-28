@@ -22,10 +22,10 @@ Plug 'https://github.com/cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'skywind3000/asyncrun.vim'
-Plug 'autozimu/LanguageClient-neovim', {
-                        \ 'branch': 'next',
-                        \ 'do': 'bash install.sh',
-                        \ }
+" Plug 'autozimu/LanguageClient-neovim', {
+"                         \ 'branch': 'next',
+"                         \ 'do': 'bash install.sh',
+"                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'micarmst/vim-spellsync'
@@ -246,19 +246,19 @@ let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
 
 
-""" Language Client
-" Automatically start language servers.
-let g:LanguageClient_autoStart = 1
+" """ Language Client
+" " Automatically start language servers.
+" let g:LanguageClient_autoStart = 1
 
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'python': ['/bin/pyls'],
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"     \ 'python': ['/bin/pyls'],
+"     \ }
 
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
+" " nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" " nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
 
-set omnifunc=LanguageClient#omniComplete
+" set omnifunc=LanguageClient#omniComplete
 
 """ Grammarous
 let g:grammarous#default_comments_only_filetypes = {
@@ -330,6 +330,46 @@ set statusline+=\ %p%%                " Percentage through file
 set statusline+=\ %l:%c               " Line number:Column number
 set statusline+=\
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" coc.nvim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+let g:coc_global_extensions = ['coc-python', 'coc-java', 'coc-texlab', 'coc-html', 'coc-css', 'coc-rls', 'coc-rust-analyzer']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
