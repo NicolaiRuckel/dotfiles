@@ -7,6 +7,8 @@
       "ignoredRootPaths": ["~"]
     },
   },
-  "python.jediEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
   "python.formatting.provider": "black",
 }
