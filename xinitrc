@@ -1,18 +1,11 @@
+# Set keyboard to US international
 setxkbmap us altgr-intl
-# setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
-#run systemd as user instance
-systemd --user &
+
+# Change keyboard repeat rate
 xset r rate 250 50
 
-
-# xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
-# xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
-
-#scrolling with Thinkpad TrackPoint
-# xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-# xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-# xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-# xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+# Run systemd as user instance
+systemd --user &
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -23,11 +16,16 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xrdb ~/.Xresources &
-#xsetroot -cursor_name left_ptr
 
 export DE="kde"
 export KDE_FULL_SESSION=true
 export KDE_SESSION_VERSION="5"
+
+# Start Gnome Keyring
+# See: https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
 # start i3
 # case `uname -n` in
