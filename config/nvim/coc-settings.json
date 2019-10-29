@@ -5,6 +5,8 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
-    }
-  }
+    },
+  },
+  "python.jediEnabled": false,
+  "python.formatting.provider": "black",
 }

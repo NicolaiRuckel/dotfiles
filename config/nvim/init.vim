@@ -333,6 +333,8 @@ set statusline+=\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " coc.nvim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Better display for messages
 set cmdheight=2
 
@@ -358,8 +360,12 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" Remap for format selected region
+xmap <leader>ff  <Plug>(coc-format-selected)
+nmap <leader>ff  <Plug>(coc-format-selected)
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -369,7 +375,26 @@ function! s:show_documentation()
   endif
 endfunction
 
-let g:coc_global_extensions = ['coc-python', 'coc-java', 'coc-texlab', 'coc-html', 'coc-css', 'coc-rls', 'coc-rust-analyzer']
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-python',
+      \ 'coc-java',
+      \ 'coc-texlab',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-rls',
+      \ 'coc-rust-analyzer',
+      \ 'coc-vimlsp',
+      \ 'coc-highlight',
+      \ 'coc-github',
+      \ 'coc-docker',
+      \ 'coc-sh',
+      \ 'coc-markdownlint',
+      \ 'coc-dictionary',
+      \ 'coc-tag',
+      \ 'coc-word',
+      \ 'coc-emoji',
+      \]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
