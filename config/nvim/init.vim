@@ -40,6 +40,7 @@ Plug 'https://github.com/EinfachToll/DidYouMean'
 Plug 'Avi-D-coder/fzf-wordnet.vim'
 Plug 'https://github.com/thiagoalessio/rainbow_levels.vim'
 Plug 'mboughaba/i3config.vim'
+Plug 'https://github.com/simnalamburt/vim-mundo'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
