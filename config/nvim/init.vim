@@ -41,6 +41,7 @@ Plug 'Avi-D-coder/fzf-wordnet.vim'
 Plug 'https://github.com/thiagoalessio/rainbow_levels.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
+Plug 'https://github.com/fisadev/vim-isort'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -442,6 +443,9 @@ augroup configgroup
                                         " line length but 100 seems reasonable.
     autocmd Filetype dockerfile setlocal tw=0
 augroup END
+
+" automatically sort Python imports on write
+autocmd BufWritePre *.py :Isort
 
 " fix a problem with the interactive terminal and vim-fugitive
 " see: https://github.com/tpope/vim-fugitive/issues/957
