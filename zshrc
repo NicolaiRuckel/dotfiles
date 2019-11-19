@@ -140,3 +140,21 @@ autoload -Uz compinit && compinit
 
 # added by travis gem
 [ -f /home/nicolai/.travis/travis.sh ] && source /home/nicolai/.travis/travis.sh
+
+# On demand reshash
+# See https://wiki.archlinux.org/index.php/Zsh#On-demand_rehash
+zshcache_time="$(date +%s%N)"
+
+autoload -Uz add-zsh-hook
+
+rehash_precmd() {
+  if [[ -a /var/cache/zsh/pacman ]]; then
+    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+    if (( zshcache_time < paccache_time )); then
+      rehash
+      zshcache_time="$paccache_time"
+    fi
+  fi
+}
+
+add-zsh-hook -Uz precmd rehash_precmd
