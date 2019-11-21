@@ -392,9 +392,7 @@ let g:coc_global_extensions = [
       \ 'coc-docker',
       \ 'coc-sh',
       \ 'coc-markdownlint',
-      \ 'coc-dictionary',
       \ 'coc-tag',
-      \ 'coc-word',
       \ 'coc-emoji',
       \]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
