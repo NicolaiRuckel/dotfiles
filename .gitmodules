@@ -24,4 +24,4 @@
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
-	url = https://github.com/rpieja/i3spotifystatus
+	url = https://github.com/NicolaiRuckel/i3spotifystatus
