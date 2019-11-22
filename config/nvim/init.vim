@@ -1,6 +1,3 @@
-" most settings and comments are taken from
-" http://dougblack.io/words/a-good-vimrc.html
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Plug
 " https://github.com/junegunn/vim-plug
@@ -22,10 +19,6 @@ Plug 'https://github.com/cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'skywind3000/asyncrun.vim'
-" Plug 'autozimu/LanguageClient-neovim', {
-"                         \ 'branch': 'next',
-"                         \ 'do': 'bash install.sh',
-"                         \ }
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'micarmst/vim-spellsync'
@@ -38,7 +31,6 @@ Plug 'https://github.com/ludovicchabant/vim-gutentags'
 Plug 'https://github.com/skywind3000/gutentags_plus'
 Plug 'https://github.com/EinfachToll/DidYouMean'
 Plug 'Avi-D-coder/fzf-wordnet.vim'
-Plug 'https://github.com/thiagoalessio/rainbow_levels.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
@@ -91,7 +83,6 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 set t_Co=256                " more colors for more fun!
 colorscheme nord
 set background=dark        " dark background
-" colorscheme plain
 syntax enable               " enable syntax processing
 
 """ Spaces and Tabs
@@ -156,9 +147,6 @@ nnoremap <leader>p "*p
 nnoremap <leader>P "*P
 vnoremap <leader>p "*p
 vnoremap <leader>P "*P
-
-" nnoremap <Leader>. :wa<CR>:Neomake!<CR>
-" nnoremap <Leader>/ :w<CR>:Neomake<CR>
 
 nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
 nnoremap <Leader>/ :wa<CR>:RunAsync
@@ -247,21 +235,6 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
 
-
-" """ Language Client
-" " Automatically start language servers.
-" let g:LanguageClient_autoStart = 1
-
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"     \ 'python': ['/bin/pyls'],
-"     \ }
-
-" " nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-" " nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
-
-" set omnifunc=LanguageClient#omniComplete
-
 """ Grammarous
 let g:grammarous#default_comments_only_filetypes = {
             \ '*' : 1, 'tex' : 0, 'markdown' : 0,
@@ -282,7 +255,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
 " Statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set laststatus=2            " enable statusline all the time
+" enable statusline all the time
+set laststatus=2
 
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -395,6 +369,7 @@ let g:coc_global_extensions = [
       \ 'coc-tag',
       \ 'coc-emoji',
       \]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -467,4 +442,3 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
-"set undofile
