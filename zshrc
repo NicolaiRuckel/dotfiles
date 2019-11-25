@@ -13,9 +13,9 @@ export PATH_LOCAL=/home/nicolai/bin
 export PATH_DOTFILES=/home/nicolai/dotfiles/bin
 export PATH_RUBY=/home/nicolai/.gem/ruby/2.6.0/bin
 export PATH_RUST=$HOME/.cargo/bin
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/go
 
-export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$PATH
+export PATH=$PATH_LOCAL:$PATH_DOTFILES:$PATH_RUBY:$PATH_RUST:$GOPATH/bin:$PATH
 
 if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
