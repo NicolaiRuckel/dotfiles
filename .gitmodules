@@ -10,3 +10,6 @@
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
 	url = git@github.com:NicolaiRuckel/i3spotifystatus.git
+[submodule "oh-my-zsh-custom/themes/nidoranarion"]
+	path = oh-my-zsh-custom/themes/nidoranarion
+	url = https://github.com/NicolaiRuckel/nidoranarion.git
