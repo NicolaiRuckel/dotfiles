@@ -1,12 +1,12 @@
 [submodule "scripts/i3-battery-popup"]
 	path = scripts/i3-battery-popup
-	url = https://github.com/rjekker/i3-battery-popup
+	url = .
 [submodule "oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
 	path = oh-my-zsh-custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+    url = .
 [submodule "oh-my-zsh-custom/themes/nidoranarion"]
 	path = oh-my-zsh-custom/themes/nidoranarion
-	url = git@github.com/NicolaiRuckel/nidoranarion.git
+	url = .
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
-	url = git@github.com:rpieja/i3spotifystatus.git
+	url = .
