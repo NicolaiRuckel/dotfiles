@@ -1,24 +1,9 @@
-[submodule "vim/bundle/vim-markdown-preview"]
-	path = vim/bundle/vim-markdown-preview
-	url = https://github.com/nelstrom/vim-markdown-preview.git
 [submodule "scripts/i3-battery-popup"]
 	path = scripts/i3-battery-popup
 	url = https://github.com/rjekker/i3-battery-popup
-[submodule "oh-my-zsh/custom/oh-my-zsh-candy-light"]
-	path = oh-my-zsh/custom/oh-my-zsh-candy-light
-	url = https://github.com/RanaExMachina/oh-my-zsh-candy-light.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "oh-my-zsh-themes/oh-my-zsh-candy-light"]
-	path = oh-my-zsh-custom/oh-my-zsh-candy-light
-	url = https://github.com/RanaExMachina/oh-my-zsh-candy-light
 [submodule "oh-my-zsh-themes/nidoranarion"]
 	path = oh-my-zsh-custom/nidoranarion
 	url = git@github.com:NicolaiRuckel/nidoranarion.git
-[submodule "oh-my-zsh-custom/plugins/zsh-you-should-use"]
-	path = oh-my-zsh-custom/plugins/you-should-use
-	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
 [submodule "oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
 	path = oh-my-zsh-custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
