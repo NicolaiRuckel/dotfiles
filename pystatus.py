@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 import json
-import subprocess
 import os
+import subprocess
+import sys
 
 if sys.version_info[0] == 2:
     reload(sys)
@@ -73,7 +73,7 @@ if __name__ == '__main__':
             j = json.loads(line)
             # insert information into the start of the json, but could be anywhere
             # CHANGE THIS LINE TO INSERT SOMETHING ELSE
-            j.insert(0, {'color' : '#9ec600', 'full_text' : ' %s - %s' % (get_artist(), get_song()) , 'name' : 'spotify'})
+            j.insert(0, {'color' : '#9ec600', 'full_text' : ' %s — %s' % (get_artist(), get_song()) , 'name' : 'spotify'})
             # and echo back new encoded json
             print_line(prefix+json.dumps(j))
         else:
