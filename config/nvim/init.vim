@@ -41,6 +41,7 @@ Plug 'Avi-D-coder/fzf-wordnet.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
+Plug 'https://gitlab.com/protesilaos/tempus-themes-vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,8 +91,8 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 """ Colors
 set t_Co=256                " more colors for more fun!
-colorscheme nord
-set background=dark        " dark background
+colorscheme tempus_totus
+set background=light
 syntax enable               " enable syntax processing
 
 """ Spaces and Tabs
@@ -116,7 +117,7 @@ set lazyredraw              " redraw only when we need to
 set showmatch               " highlight matching [{()}]
 " Highlight all columns after current textwidth
 let &colorcolumn=join(map(range(1,999), '"+".v:val'), ",")
-highlight ColorColumn guibg=#002b36
+" highlight ColorColumn guibg=#002b36
 set textwidth=80
 set history=10000           " vim has to remember a lot of commands
 set mouse=nv                " allows usage of mouse
