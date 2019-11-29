@@ -48,6 +48,8 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set exrc                    " run .exrc files if present
+set secure
+
 set fileformat=unix         " set fileformat to unix
 set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
