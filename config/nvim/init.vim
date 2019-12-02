@@ -198,6 +198,13 @@ let g:terminal_color_15 = '#d7d7d7'
 """  DidYouMean
 let g:dym_use_fzf = 1
 
+""" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+""" jedi-vim
+" open the go-to function in split, not another buffer
+let g:jedi#use_splits_not_buffers = "right"
+
 """ gutentags
 " Don't pollute project directories
 let g:gutentags_cache_dir = expand('~/.cache/tags')
@@ -328,9 +335,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 " Remap for format selected region
 xmap <leader>ff  <Plug>(coc-format-selected)
 nmap <leader>ff  <Plug>(coc-format-selected)
@@ -365,6 +369,8 @@ let g:coc_global_extensions = [
       \ 'coc-emoji',
       \]
 
+" Always show documentation
+autocmd CursorHold * silent call <SID>show_documentation()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autogroups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
