@@ -11,4 +11,5 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pydocstyleEnabled": true,
   "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["-l", "79"]
 }
