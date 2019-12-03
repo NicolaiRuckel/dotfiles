@@ -163,9 +163,15 @@ nnoremap <Leader>/ :wa<CR>:RunAsync
 nnoremap <Leader>s :set spell!<CR>
 
 fun! StripTrailingWhitespace()
+    " Only strip if the b:noStripeWhitespace variable isn't set
+    if exists('b:noStripWhitespace')
+        return
+    endif
     %s/\s\+$//e
 endfun
 
+autocmd BufWritePre * call StripTrailingWhitespace()
+autocmd FileType vim, markdown let b:noStripWhitespace=1
 " ------------------------------------------------------------------------------
 " Terminal
 " ------------------------------------------------------------------------------
