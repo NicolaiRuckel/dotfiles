@@ -198,13 +198,6 @@ let g:terminal_color_15 = '#d7d7d7'
 """  DidYouMean
 let g:dym_use_fzf = 1
 
-""" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-""" jedi-vim
-" open the go-to function in split, not another buffer
-let g:jedi#use_splits_not_buffers = "right"
-
 """ gutentags
 " Don't pollute project directories
 let g:gutentags_cache_dir = expand('~/.cache/tags')
