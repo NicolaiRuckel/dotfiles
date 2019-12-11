@@ -158,7 +158,7 @@ vnoremap <leader>p "*p
 vnoremap <leader>P "*P
 
 nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
-nnoremap <Leader>/ :wa<CR>:RunAsync 
+nnoremap <Leader>/ :wa<CR>:RunAsync
 
 nnoremap <Leader>s :set spell!<CR>
 
@@ -349,9 +349,6 @@ nmap <leader>ff  <Plug>(coc-format-selected)
 command! -nargs=0 Format :call CocAction('format')
 
 function! s:show_documentation()
-  " Don’t do this automatically for certain filetypes. E.g. in init.vim
-  " it opens the help window and prevents you from doing anything. Instead
-  " open documentation with K.
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
@@ -380,7 +377,9 @@ let g:coc_global_extensions = [
 
 autocmd FileType vim let b:noAutoDocumentation=1
 
-" Always show documentation
+" Always show documentation except for certain filetypes. E.g. in init.vim
+" it opens the help window and prevents you from doing anything. Instead
+" open documentation with K.
 if exists('b:noAutoDocumentation')
   autocmd CursorHold * silent call <SID>show_documentation()
 endif
