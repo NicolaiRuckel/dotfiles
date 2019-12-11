@@ -375,15 +375,6 @@ let g:coc_global_extensions = [
       \ 'coc-emoji',
       \]
 
-autocmd FileType vim let b:noAutoDocumentation=1
-
-" Always show documentation except for certain filetypes. E.g. in init.vim
-" it opens the help window and prevents you from doing anything. Instead
-" open documentation with K.
-if exists('b:noAutoDocumentation')
-  autocmd CursorHold * silent call <SID>show_documentation()
-endif
-
 " Show documentation with K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
