@@ -37,10 +37,10 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
 Plug 'https://github.com/skywind3000/gutentags_plus'
 Plug 'https://github.com/EinfachToll/DidYouMean'
-Plug 'Avi-D-coder/fzf-wordnet.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -258,6 +258,10 @@ let g:tex_conceal='abdmg'
 let g:UltiSnipsExpandTrigger = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
+
+
+""" vista
+let g:vista_default_executive = 'ctags'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
