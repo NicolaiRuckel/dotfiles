@@ -129,8 +129,6 @@ vim() {
     "${VISUAL-vi}" "$@"
 }
 
-source /etc/profile.d/autojump.sh
-
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
