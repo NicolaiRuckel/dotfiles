@@ -2,7 +2,7 @@ set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,a:blinkwait9999999999999
 
 let s:default_fontsize = 10
 let s:fontsize = s:default_fontsize
-let s:font = "Source Code Pro Light"
+let s:font = "Source Code Pro"
 
 function! SetFont() abort
   if exists('g:GtkGuiLoaded')
