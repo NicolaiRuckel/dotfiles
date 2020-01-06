@@ -1,6 +1,3 @@
-[submodule "scripts/i3-battery-popup"]
-	path = scripts/i3-battery-popup
-	url = .
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
 	url = .
