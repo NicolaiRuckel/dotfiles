@@ -1,9 +1,6 @@
 [submodule "scripts/i3-battery-popup"]
 	path = scripts/i3-battery-popup
 	url = .
-[submodule "oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
-	path = oh-my-zsh-custom/plugins/zsh-syntax-highlighting
-    url = .
 [submodule "scripts/i3spotifystatus"]
 	path = scripts/i3spotifystatus
 	url = .
