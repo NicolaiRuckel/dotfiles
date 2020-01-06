@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:NicolaiRuckel/i3spotifystatus.git
+	branch = master
+	commit = d39848943f8e185847db67eb73a59ed9b35301da
+	parent = 98a348fff460cf057b030976ccb98055bbe5d497
+	method = merge
+	update = auto
+	cmdver = 0.4.1
