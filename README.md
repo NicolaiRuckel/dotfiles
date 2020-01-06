@@ -6,18 +6,13 @@ files.
 
 ## Setup
 
-I use various submodules, managed with [git-subtrac][git-subtrac].
-You can either clone the repository recursively with
+I use various submodules, managed with [git-subrepo][git-subrepo].
 
-    git clone --recursive git@github.com:NicolaiRuckel/dotfiles.git
+Cloning the repository with
 
-or initialize the submodules after cloning the repository with
+    git clone git@github.com:NicolaiRuckel/dotfiles.git
 
-    git submodule init
-
-and update the submodules with
-
-    git submodule update
+should give you all the necessary submodules.
 
 ### Symlinks
 
@@ -32,17 +27,24 @@ To get all Neovim plugins, start `nvim` and run
 
 ### Gnome Terminal Theme
 
-Gnome Terminal does not have a configuration file for its themes, so the theme
-has to be installed manually as shown [here][nord-gnome-terminal].
+Gnome Terminal does not have a configuration file for its themes so I still have to find a good way to add it here.
 
 ## Dependencies
 
 Software I use, that may need to be present for some configurations to work
-properly.
+properly. This list is probably incomplete.
 
 ### ZSH
 
 * [oh-my-zsh](https://ohmyz.sh/)
+
+#### ZSH Functions
+
+* highlight
+* fast-p
+* pdftotext
+* nvim
+* nvim-qt
 
 ### Neovim
 
@@ -50,6 +52,6 @@ properly.
 * [ag](https://github.com/ggreer/the_silver_searcher)
 
 [dotfiles]: https://github.com/NicolaiRuckel/dotfiles
-[git-subtrac]: https://github.com/apenwarr/git-subtrac
+[git-subrepo]: https://github.com/ingydotnet/git-subrepo
 [christopher-l-dotfiles]: https://github.com/christopher-l/dotfiles/blob/master/deploy.sh
-[nord-gnome-terminal]: https://github.com/arcticicestudio/nord-gnome-terminal 
+[nord-gnome-terminal]: https://github.com/arcticicestudio/nord-gnome-terminal
