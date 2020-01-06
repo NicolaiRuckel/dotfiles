@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:rjekker/i3-battery-popup.git
+	branch = master
+	commit = d894a102a1ff95019fc59d0a19c89687d502cd1a
+	parent = 97df24a4a0fddd89fd49e3ac8262439b2750515a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
