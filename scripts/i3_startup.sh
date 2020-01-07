@@ -10,8 +10,6 @@ xset -dpms s off
 # set menu to be the compose key
 setxkbmap -option compose:menu
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
-
 # keyboard settings
 ~/dotfiles/scripts/keyboard.sh
 
@@ -41,7 +39,6 @@ case $HOSTNAME in
       # start applications
       i3-msg "exec com.discordapp.Discord"
       i3-msg "exec com.skype.Client"
-      i3-msg "exec pidgin"
 
       i3-msg "exec firefox"
       i3-msg "exec thunderbird"
