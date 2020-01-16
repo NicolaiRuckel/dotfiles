@@ -405,7 +405,7 @@ augroup configgroup
     autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
     autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t tw=80 spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100 tw=100
+    autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100
          \| if !exists("g:async_command") | let g:async_command = 'cargo build'
          \| endif
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
