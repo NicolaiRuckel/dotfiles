@@ -173,6 +173,12 @@ endfun
 
 autocmd BufWritePre * call StripTrailingWhitespace()
 autocmd FileType vim, markdown let b:noStripWhitespace=1
+
+" Automatically check if opened file has changed on focus gain like gvim does.
+" see https://github.com/neovim/neovim/issues/1936
+set autoread
+au FocusGained * :checktime
+
 " ------------------------------------------------------------------------------
 " Terminal
 " ------------------------------------------------------------------------------
