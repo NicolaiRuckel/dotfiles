@@ -103,6 +103,8 @@ export JAVA_HOME=/usr/lib/jvm/default
 export GIT_EDITOR=nvim
 export NVIM_GTK_NO_HEADERBAR=1
 
+export BAT_THEME='GitHub'
+
 # aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias f="files . &"
