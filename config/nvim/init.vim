@@ -132,6 +132,10 @@ set hlsearch                " highlight matches
 set smartcase
 set ignorecase
 
+" Substition
+"get an incremental visual feedback when doing the substitude command.
+set inccommand=split
+
 " turn of search highlight
 " this did strange things in vim but hopefully works in nvim
 nnoremap <silent> <ESC> :noh<CR><ESC>
