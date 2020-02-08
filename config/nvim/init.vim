@@ -223,11 +223,11 @@ let g:jedi#use_splits_not_buffers = "right"
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 """ fzf
-nmap <Leader>a :Ag<Cr>
+nmap <Leader>G :Ag<Cr>
 nmap <Leader>g :Rg<Cr>
 
 nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :Files<CR>
+nmap <Leader>a :Files<CR>
 
 nmap <Leader>l :BLines<CR>
 nmap <Leader>L :Lines<CR>
