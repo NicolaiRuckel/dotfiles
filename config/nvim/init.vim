@@ -12,8 +12,6 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf.vim' " needs fzf installed on the system
-Plug 'yuki-ycino/fzf-preview.vim'
-Plug 'bogado/file-line' " needed for fzf-preview
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
@@ -94,7 +92,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 set t_Co=256                " more colors for more fun!
 
 colorscheme lucius
-set background=light        " light background
+set background=light        " dark background
 syntax enable               " enable syntax processing
 
 """ Spaces and Tabs
@@ -189,22 +187,23 @@ au FocusGained * :checktime
 tnoremap <Esc> <C-\><C-n>
 
 " Set terminal colorscheme
-let g:terminal_color_0 = '#444444'
-let g:terminal_color_8 = '#444444'
-let g:terminal_color_1 = '#af0000'
-let g:terminal_color_9 = '#af0000'
-let g:terminal_color_2 = '#008700'
-let g:terminal_color_10= '#008700'
-let g:terminal_color_3 = '#af5f00'
-let g:terminal_color_11= '#af5f00'
-let g:terminal_color_4 = '#005faf'
-let g:terminal_color_12= '#005faf'
-let g:terminal_color_5 = '#870087'
-let g:terminal_color_13= '#870087'
-let g:terminal_color_6 = '#008787'
-let g:terminal_color_14= '#008787'
-let g:terminal_color_7 = '#eeeeee'
-let g:terminal_color_15= '#eeeeee'
+let g:terminal_color_0  = '#303030'
+let g:terminal_color_1  = '#ff5f5f'
+let g:terminal_color_2  = '#afd787'
+let g:terminal_color_3  = '#d7d7af'
+let g:terminal_color_4  = '#87d7ff'
+let g:terminal_color_5  = '#d7afd7'
+let g:terminal_color_6  = '#87d7af'
+let g:terminal_color_7  = '#d7d7d7'
+let g:terminal_color_8  = '#303030'
+let g:terminal_color_9  = '#ff5f5f'
+let g:terminal_color_10 = '#afd787'
+let g:terminal_color_11 = '#d7d7af'
+let g:terminal_color_12 = '#87d7ff'
+let g:terminal_color_13 = '#d7afd7'
+let g:terminal_color_14 = '#87d7af'
+let g:terminal_color_15 = '#d7d7d7'
+
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
@@ -223,19 +222,21 @@ let g:jedi#use_splits_not_buffers = "right"
 " Don't pollute project directories
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 
-""" fzf.vim
+""" fzf
+nmap <Leader>a :Ag<Cr>
+nmap <Leader>g :Rg<Cr>
+
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+
 nmap <Leader>l :BLines<CR>
 nmap <Leader>L :Lines<CR>
 
 nmap <Leader>t :BTags<CR>
 nmap <Leader>T :Tags<CR>
 
-""" fzf-preview.vim
-let g:fzf_preview_command = 'bat --color=always --theme=GitHub --style=grid {-1}'
-let g:fzf_preview_filelist_command = 'rg --files --hidden --follow --no-messages -g \!"* *"'
-nmap <Leader>g :FzfPreviewProjectGrep<Cr>
-nmap <Leader>f :FzfPreviewGitFiles<CR>
-nmap <Leader>a :FzfPreviewProjectFiles<CR>
+""" fzf-wordnet
+imap <C-S> <Plug>(fzf-complete-wordnet)
 
 """ netrw
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
