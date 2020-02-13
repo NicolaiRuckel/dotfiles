@@ -143,7 +143,7 @@ fi
 ###############
 
 vim() {
-    "${VISUAL-vi}" "$@"
+    "${VISUAL-vi}" "$@" 2> /dev/null
 }
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
