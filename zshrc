@@ -79,6 +79,9 @@ unalias rd
 # ZSH options
 # ###########
 
+# Don’t suggest dotfiles for correction
+export CORRECT_IGNORE_FILE='.*'
+
 bindkey "^R" history-incremental-pattern-search-backward
 
 # reduce key timeout from 0.4 seconds to 0.1 seconds
