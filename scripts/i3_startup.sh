@@ -31,13 +31,14 @@ case $HOSTNAME in
     ~/dotfiles/scripts/desktop_monitor.sh;;
 
     ("curie")
-      picom -b --unredir-if-possible --backend xr_glx_hybrid --vsync --use-damage --glx-no-stencil
+      picom -b
 
       # logitech mouse
       xinput set-button-map 11 1 6 3 4 5 2 7 8 9 10 11 12;
 
       # start applications
       i3-msg "exec com.discordapp.Discord"
+      i3-msg "exec riot-desktop"
       i3-msg "exec com.skype.Client"
 
       i3-msg "exec firefox"
