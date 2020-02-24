@@ -31,7 +31,7 @@ case $HOSTNAME in
     ~/dotfiles/scripts/desktop_monitor.sh;;
 
     ("curie")
-      picom -b
+      picom -b --vsync --use-damage --glx-no-stencil --backend xr_glx_hybrid
 
       # logitech mouse
       xinput set-button-map 11 1 6 3 4 5 2 7 8 9 10 11 12;
