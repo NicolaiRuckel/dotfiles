@@ -349,7 +349,7 @@ function! Bibtex_ls()
 endfunction
 
 function! s:bibtex_cite_sink_insert(lines)
-    let r=system("bibtex-cite -prefix ''", a:lines)
+    let r=system('bibtex-cite -prefix="\cite{" -postfix="}" -separator=", " ', a:lines)
     execute ':normal! a' . r
     call feedkeys('a', 'n')
 endfunction
