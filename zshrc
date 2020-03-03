@@ -174,7 +174,7 @@ rehash_precmd() {
 }
 
 # taken from https://github.com/bellecp/fast-p
-p () {
+p() {
     open=xdg-open
     ag -U -g ".pdf$" \
     | fast-p \
