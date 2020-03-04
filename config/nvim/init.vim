@@ -42,6 +42,7 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
+" Plug 'unblevable/quick-scope'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -164,7 +165,7 @@ vnoremap <leader>p "*p
 vnoremap <leader>P "*P
 
 nnoremap <silent> <Leader><space> :wa<CR>:RunAsync<CR>
-nnoremap <Leader>/ :wa<CR>:RunAsync
+nnoremap <Leader>/ :wa<CR>:RunAsync 
 
 nnoremap <Leader>s :set spell!<CR>
 
@@ -176,8 +177,8 @@ fun! StripTrailingWhitespace()
     %s/\s\+$//e
 endfun
 
+autocmd FileType diff,vim,markdown let b:noStripWhitespace=1
 autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd FileType vim, markdown let b:noStripWhitespace=1
 
 " Automatically check if opened file has changed on focus gain like gvim does.
 " see https://github.com/neovim/neovim/issues/1936
