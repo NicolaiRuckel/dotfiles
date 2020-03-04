@@ -42,7 +42,8 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
-" Plug 'unblevable/quick-scope'
+Plug 'unblevable/quick-scope'
+Plug 'https://github.com/NLKNguyen/papercolor-theme'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,7 +94,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 """ Colors
 set t_Co=256                " more colors for more fun!
 
-colorscheme lucius
+colorscheme PaperColor
 set background=light        " dark background
 syntax enable               " enable syntax processing
 
