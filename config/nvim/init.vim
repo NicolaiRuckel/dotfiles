@@ -42,7 +42,6 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
-Plug 'unblevable/quick-scope'
 Plug 'https://github.com/NLKNguyen/papercolor-theme'
 call plug#end()
 
