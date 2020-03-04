@@ -94,7 +94,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 """ Colors
 set t_Co=256                " more colors for more fun!
 
-colorscheme PaperColor
+colorscheme lucius
 set background=light        " dark background
 syntax enable               " enable syntax processing
 
