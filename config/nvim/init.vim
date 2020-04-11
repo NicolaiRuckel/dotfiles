@@ -14,8 +14,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf.vim' " needs fzf installed on the system
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/jonathanfilip/vim-lucius'
-Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/andreypopp/vim-colors-plain'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
@@ -42,7 +40,11 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
+Plug 'https://github.com/Yggdroot/indentLine'
+Plug 'https://github.com/jonathanfilip/vim-lucius'
+Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/NLKNguyen/papercolor-theme'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,6 +94,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 """ Colors
 set t_Co=256                " more colors for more fun!
+set termguicolors
 
 colorscheme lucius
 set background=light        " dark background
@@ -171,7 +174,7 @@ nnoremap <Leader>s :set spell!<CR>
 fun! StripTrailingWhitespace()
     " Only strip if the b:noStripeWhitespace variable isn't set
     if exists('b:noStripWhitespace')
-        return
+      return
     endif
     %s/\s\+$//e
 endfun
@@ -275,6 +278,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
 """ vista
 let g:vista_default_executive = 'ctags'
 
+""" IndentLine
+let g:indentLine_char = '▏'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -283,36 +289,36 @@ let g:vista_default_executive = 'ctags'
 set laststatus=2
 
 function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
 
 function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+    let l:branchname = GitBranch()
+    return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
 " AsyncRun
 function! RunAsync(...)
-  if a:0 == 1
-    let g:async_command = a:1
-  elseif !exists("g:async_command")
-    let g:async_command = 'make'
-  endif
-  exec "AsyncRun " . g:async_command
+    if a:0 == 1
+        let g:async_command = a:1
+    elseif !exists("g:async_command")
+        let g:async_command = 'make'
+    endif
+    exec "AsyncRun " . g:async_command
 endfunction
 command! -nargs=? RunAsync :call RunAsync(<f-args>)
 
 function! Get_asyncrun_status()
-  let async_status = g:asyncrun_status
-  if async_status == 'running'
-    return g:async_command . ' •'
-  elseif async_status == 'success'
-    return g:async_command . ' ✔'
-  elseif async_status == 'failure'
-    return g:async_command . ' ✘'
-  else
-    return ''
-  endif
+    let async_status = g:asyncrun_status
+    if async_status == 'running'
+        return g:async_command . ' •'
+    elseif async_status == 'success'
+        return g:async_command . ' ✔'
+    elseif async_status == 'failure'
+        return g:async_command . ' ✘'
+    else
+        return ''
+    endif
 endfunction
 
 set statusline=                       " Custom status line
@@ -338,14 +344,14 @@ set statusline+=\
 "   go install github.com/msprev/fzf-bibtex/cmd/bibtex-markdown
 "   go install github.com/msprev/fzf-bibtex/cmd/bibtex-cite
 function! Bibtex_ls()
-  let bibfiles = (
-      \ globpath('.', '*.bib', v:true, v:true) +
-      \ globpath('$TEXMFHOME/bibtex/bib/bibliography/', '*.bib', v:true, v:true) +
-      \ globpath('*/', '*.bib', v:true, v:true)
-      \ )
-  let bibfiles = join(bibfiles, ' ')
-  let source_cmd = 'bibtex-ls '.bibfiles
-  return source_cmd
+    let bibfiles = (
+                \ globpath('.', '*.bib', v:true, v:true) +
+                \ globpath('$TEXMFHOME/bibtex/bib/bibliography/', '*.bib', v:true, v:true) +
+                \ globpath('*/', '*.bib', v:true, v:true)
+                \ )
+    let bibfiles = join(bibfiles, ' ')
+    let source_cmd = 'bibtex-ls '.bibfiles
+    return source_cmd
 endfunction
 
 function! s:bibtex_cite_sink_insert(lines)
@@ -392,11 +398,11 @@ nmap <leader>ff  <Plug>(coc-format-selected)
 command! -nargs=0 Format :call CocAction('format')
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction
 
 let g:coc_global_extensions = [
@@ -454,7 +460,7 @@ augroup configgroup
     autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
          \| nnoremap <Leader>. :wa<CR>:!love .<CR>
     autocmd FileType help setlocal nospell
-    autocmd FileType vim setlocal ts=2 sw=2 sts=2 et
+    autocmd FileType vim setlocal ts=4 sw=4 sts=4 et
     autocmd FileType gtkrc setlocal commentstring=#\ %s
     autocmd FileType matlab setlocal commentstring=%\ %s
     autocmd FileType desktop setlocal commentstring=#\ %s
@@ -473,16 +479,17 @@ autocmd BufWritePre *.py :Isort
 " fix a problem with the interactive terminal and vim-fugitive
 " see: https://github.com/tpope/vim-fugitive/issues/957
 augroup nvim_term
-  au!
-  au TermOpen * startinsert
-  au TermClose * stopinsert
+    au!
+    au TermOpen * startinsert
+    au TermClose * stopinsert
 augroup END
 
 " i3 config detection
 aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
+    au!
+    au BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
 aug end
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
