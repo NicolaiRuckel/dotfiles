@@ -66,6 +66,12 @@ set number relativenumber
 
 set noscrollbind " for oni; should be fixed in next release
 
+" Set the terminal's title
+set title
+
+" Minimal width of split windows
+set winwidth=82
+
 filetype plugin on
 
 """ Backup, Swap and Undo
@@ -112,15 +118,20 @@ set cursorline              " highlight current line
 set autoindent
 set smartindent
 filetype plugin indent on   " load filetype-specific indent files and plugins
+
+" Bash-like completion in wild menu
+" see https://stackoverflow.com/questions/526858/how-do-i-make-vim-do-normal-bash-like-tab-completion-for-file-names
+set wildmode=longest,list,full
 set wildmenu                " visual autocomplete for command menu
-set wildmode=full
 set wildignore+=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out,*.ali,*.zip,*/obj/*,*.gcno
 set wildignore+=*.git/*,*.pyc
 set wildignorecase
 set wildcharm=<Tab>
+
 set lazyredraw              " redraw only when we need to
 set showmatch               " highlight matching [{()}]
-" Highlight column after current textwidth
+
+" Highlight column *after* current textwidth
 set colorcolumn=+1
 set textwidth=80
 set history=10000           " vim has to remember a lot of commands
