@@ -40,7 +40,6 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
-Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/NLKNguyen/papercolor-theme'
@@ -276,9 +275,8 @@ let g:grammarous#default_comments_only_filetypes = {
 
 """ vimtex
 let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-let g:tex_conceal='abdmg'
+set conceallevel=0
 
 """ UltiSnips
 let g:UltiSnipsExpandTrigger = '<Tab>'
@@ -288,9 +286,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-Tab>'
 
 """ vista
 let g:vista_default_executive = 'ctags'
-
-""" IndentLine
-let g:indentLine_char = '▏'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
