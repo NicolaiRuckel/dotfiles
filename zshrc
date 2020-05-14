@@ -237,6 +237,17 @@ function expand-multiple-dots-then-accept-line() {
     zle accept-line
 }
 
+# Copy slide template in current directory
+function slides() {
+rsync -av --progress $TEXMFHOME/tex/latex/beamer/issdark-beamer-theme/ .\
+        --include='*.tex' \
+        --include='*.sty' \
+        --include='Makefile' \
+        --include='latexmkrc' \
+        --include='.gitignore' \
+        --exclude='*'
+}
+
 zle -N expand-multiple-dots
 zle -N expand-multiple-dots-then-expand-or-complete
 zle -N expand-multiple-dots-then-accept-line
