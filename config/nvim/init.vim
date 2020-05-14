@@ -38,7 +38,6 @@ Plug 'https://github.com/skywind3000/gutentags_plus'
 Plug 'https://github.com/EinfachToll/DidYouMean'
 Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
-Plug 'https://github.com/fisadev/vim-isort'
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'arcticicestudio/nord-vim'
@@ -478,9 +477,6 @@ augroup configgroup
                                         " line length but 100 seems reasonable.
     autocmd Filetype dockerfile setlocal tw=0
 augroup END
-
-" automatically sort Python imports on write
-autocmd BufWritePre *.py :Isort
 
 " fix a problem with the interactive terminal and vim-fugitive
 " see: https://github.com/tpope/vim-fugitive/issues/957
