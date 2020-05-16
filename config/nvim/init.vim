@@ -74,8 +74,11 @@ filetype plugin on
 """ Backup, Swap and Undo
 set undofile                " persistent undo
 set directory=~/.config/nvim/swap,/tmp
-set backupdir=~/.config/nvim/backup,/tmp
 set undodir=~/.config/nvim/undo,/tmp
+set backup
+set backupskip=/tmp/*,/private/tmp/*
+set backupdir=~/.config/nvim/backup,/tmp
+set writebackup
 
 """ NetRW
 let g:netrw_liststyle = 1 " Detail View
@@ -492,13 +495,3 @@ aug i3config_ft_detection
     au!
     au BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
 aug end
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Backups
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
