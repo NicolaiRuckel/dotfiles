@@ -3,13 +3,6 @@
 " https://github.com/junegunn/vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Automatically install plugins
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
-endif
-
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf.vim' " needs fzf installed on the system
 Plug 'https://github.com/scrooloose/syntastic'
@@ -44,6 +37,12 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/NLKNguyen/papercolor-theme'
 Plug 'ayu-theme/ayu-vim'
 call plug#end()
+
+" Automatically install plugins
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
