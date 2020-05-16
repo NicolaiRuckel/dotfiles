@@ -255,6 +255,9 @@ nmap <Leader>T :Tags<CR>
 """ fzf-wordnet
 imap <C-S> <Plug>(fzf-complete-wordnet)
 
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+
 """ netrw
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
