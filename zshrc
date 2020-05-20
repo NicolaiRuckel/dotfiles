@@ -104,6 +104,29 @@ setopt noglobdots
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# vim mode
+# ########
+
+# change cursor depending on mode
+zle-keymap-select () {
+if [ $KEYMAP = vicmd ]; then
+        printf "\033[2 q"
+else
+        printf "\033[6 q"
+fi
+}
+zle -N zle-keymap-select
+zle-line-init () {
+        zle -K viins
+        printf "\033[6 q"
+}
+zle -N zle-line-init
+
+bindkey -v
+
+# fix delete key behaviour
+bindkey '^[[3~' delete-char
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
