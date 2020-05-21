@@ -76,26 +76,6 @@ unalias 9
 unalias md
 unalias rd
 
-# ZSH options
-# ###########
-
-# Don’t suggest dotfiles for correction
-export CORRECT_IGNORE_FILE='.*'
-
-bindkey "^R" history-incremental-pattern-search-backward
-
-# reduce key timeout from 0.4 seconds to 0.1 seconds
-export KEYTIMEOUT=1
-
-# execute history expansion immediately
-unsetopt HIST_VERIFY
-
-# share history between sessions
-setopt SHARE_HISTORY
-
-# don't match dotfiles
-setopt noglobdots
-
 # Variables
 # #########
 
@@ -123,6 +103,26 @@ zle-line-init () {
 zle -N zle-line-init
 
 bindkey -v
+
+# ZSH options
+# ###########
+
+# Don’t suggest dotfiles for correction
+export CORRECT_IGNORE_FILE='.*'
+
+bindkey "^R" history-incremental-pattern-search-backward
+
+# reduce key timeout from 0.4 seconds to 0.1 seconds
+export KEYTIMEOUT=1
+
+# execute history expansion immediately
+unsetopt HIST_VERIFY
+
+# share history between sessions
+setopt SHARE_HISTORY
+
+# don't match dotfiles
+setopt noglobdots
 
 # fix delete key behaviour
 bindkey '^[[3~' delete-char
