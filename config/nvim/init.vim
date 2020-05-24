@@ -7,7 +7,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf.vim' " needs fzf installed on the system
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/andreypopp/vim-colors-plain'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'https://github.com/tpope/vim-commentary'
@@ -33,9 +32,7 @@ Plug 'mboughaba/i3config.vim'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
-Plug 'arcticicestudio/nord-vim'
-Plug 'https://github.com/NLKNguyen/papercolor-theme'
-Plug 'ayu-theme/ayu-vim'
+Plug 'https://github.com/sheerun/vim-polyglot'
 call plug#end()
 
 " Automatically install plugins
@@ -56,6 +53,10 @@ set encoding=utf-8          " because other encodings are stupid
 set bs=2                    " make backspace working in vim 7.3
 set tm=500                  " set timeoutlen to 500
 set splitright              " splits appear right
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
 
 " Does some magic with relative and absolute line numbers via the
 " vim-numbertoggle plugin.
@@ -243,10 +244,19 @@ let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 """ fzf
 nmap <Leader>G :Ag<Cr>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 nmap <Leader>g :Rg<Cr>
 
-nmap <Leader>f :GFiles<CR>
+nmap <Leader>f :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
+" nmap <Leader>f :GFiles<CR>
+
 nmap <Leader>a :Files<CR>
+let g:fzf_files_options =
+\ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 
 nmap <Leader>l :BLines<CR>
 nmap <Leader>L :Lines<CR>
@@ -259,6 +269,9 @@ imap <C-S> <Plug>(fzf-complete-wordnet)
 
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
 
 """ netrw
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
