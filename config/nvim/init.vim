@@ -4,7 +4,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'junegunn/fzf.vim' " needs fzf installed on the system
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
@@ -21,7 +22,6 @@ Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'micarmst/vim-spellsync'
 Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'rhysd/git-messenger.vim'
@@ -58,16 +58,11 @@ set splitright              " splits appear right
 " delays and poor user experience.
 set updatetime=50
 
-" Does some magic with relative and absolute line numbers via the
-" vim-numbertoggle plugin.
-set number relativenumber
-
-set noscrollbind " for oni; should be fixed in next release
-
 " Set the terminal's title
 set title
 
-" Minimal width of split windows
+" Minimal width of split windows. This should be enough for 80 characters and
+" Git indicators.
 set winwidth=82
 
 filetype plugin on
@@ -104,7 +99,7 @@ set t_Co=256                " more colors for more fun!
 set termguicolors
 
 colorscheme lucius
-set background=light        " dark background
+set background=light        " light background
 syntax enable               " enable syntax processing
 
 """ Spaces and Tabs
@@ -227,6 +222,10 @@ let g:terminal_color_15 = '#d7d7d7'
 " ------------------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------------------
+
+""" Fugitive
+
+nmap <C-s> :Gstatus<CR>
 
 """  DidYouMean
 let g:dym_use_fzf = 1
