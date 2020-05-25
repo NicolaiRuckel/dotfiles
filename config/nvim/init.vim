@@ -225,7 +225,7 @@ let g:terminal_color_15 = '#d7d7d7'
 
 """ Fugitive
 
-nmap <C-s> :Gstatus<CR>
+nmap <C-s> :Git<CR>
 
 """  DidYouMean
 let g:dym_use_fzf = 1
