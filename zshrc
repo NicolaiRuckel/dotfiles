@@ -112,9 +112,10 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='nvim'
+  alias vim=nvim
 fi
 
-export VISUAL='nvim-qt'
+export VISUAL='nvim'
 
 export TERMINAL=gnome-terminal
 
@@ -147,9 +148,9 @@ fi
 ## FUNCTIONS ##
 ###############
 
-vim() {
-    "${VISUAL-vi}" "$@" 2> /dev/null
-}
+# vim() {
+#     "${VISUAL-vi}" "$@" 2> /dev/null
+# }
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
