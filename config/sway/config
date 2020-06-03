@@ -55,6 +55,7 @@ input "1739:30383:CUST0001:00_06CB:76AF_Touchpad" {
 input type:keyboard {
         xkb_layout us-german-umlaut
         xkb_options ctrl:nocaps
+        xkb_options compose:rctrl
         repeat_rate 50
         repeat_delay 350
 }
