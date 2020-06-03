@@ -9,4 +9,4 @@ rofi.separator-style:       none
 rofi.hide-scrollbar:        true
 rofi.line-margin:           0
 rofi.font:                  Source Sans Pro 12
-rofi.theme: ~/dotfiles/config/rofi/rofi-nord.rasi
+rofi.theme: ~/dotfiles/config/rofi/rofi-color.rasi
