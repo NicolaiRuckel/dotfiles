@@ -16,6 +16,10 @@ set $menu rofi -show drun | xargs swaymsg exec --
 
 font pango:SourceSansPro 11
 
+### Startup applications
+
+exec mako
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
