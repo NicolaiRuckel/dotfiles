@@ -18,7 +18,7 @@ font pango:SourceSansPro 11
 
 ### Startup applications
 
-exec mako
+exec rofication-daemon.py
 
 ### Output configuration
 #
@@ -204,26 +204,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Screenshots
+
+bindsym print exec --no-startup-id slurp | grim - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+bindsym Shift+print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
 ### Status Bar
 bar {
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
-
-    colors {
-            ## class            border  backgr. text
-            focused_workspace   #268bd2 #002b36 #eeeeee
-            active_workspace    #002b36 #002b36 #eeeeee
-            inactive_workspace  #002b36 #002b36 #eeeeee
-            urgent_workspace    #ff0000 #002b36 #eeeeee
-
-            background #002b36
-            statusline #eeeeee
-            separator  #002b36
-    }
+        swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
