@@ -199,6 +199,10 @@ input type:keyboard {
     bindsym print exec --no-startup-id slurp | grim - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
     bindsym Shift+print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
+### Window rules
+
+for_window [app_id="pavucontrol"] floating enable
+
 ### Status Bar
 bar {
         swaybar_command waybar
