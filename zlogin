@@ -1,9 +1,8 @@
 case `uname -n` in
         xps)
                 # If running from tty1 start sway
-                set TTY1 (tty)
-                if test -z "$DISPLAY"; and test $TTY1 = "/dev/tty1"
+                if [ "$(tty)" = "/dev/tty1" ]; then
                         exec sway
-                end
+                fi
                 ;;
 esac
