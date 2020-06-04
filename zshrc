@@ -167,6 +167,23 @@ zshcache_time="$(date +%s%N)"
 
 autoload -Uz add-zsh-hook
 
+# Set xterm title
+# https://wiki.archlinux.org/index.php/zsh#xterm_title
+function xterm_title_precmd () {
+        print -Pn -- '\e]2;%n@%m %~\a'
+        [[ "$TERM" == 'screen'* ]] && print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-}\e\\'
+}
+
+function xterm_title_preexec () {
+        print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
+        [[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
+}
+
+if [[ "$TERM" == (alacritty*|gnome*|konsole*|putty*|rxvt*|screen*|tmux*|xterm*) ]]; then
+        add-zsh-hook -Uz precmd xterm_title_precmd
+        add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+
 rehash_precmd() {
   if [[ -a /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
