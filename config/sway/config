@@ -89,8 +89,12 @@ input type:keyboard {
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    # Exit sway
+    bindsym $mod+Shift+e exec swaynag \
+        -t warning -m ''\
+        -B 'Reboot' 'systemctl reboot'\
+        -B 'Hibernate' 'systemctl hibernate'\
+        -B 'Shutdown' 'systemctl poweroff -i'
 
 # Media keys
 
@@ -132,6 +136,7 @@ input type:keyboard {
     bindsym $mod+8 workspace 8
     bindsym $mod+9 workspace 9
     bindsym $mod+0 workspace 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2
