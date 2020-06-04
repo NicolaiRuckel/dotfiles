@@ -1,5 +1,7 @@
 #!/bin/bash
-# I don't even know why this is necessary...
 
+# Don't show anything when there are zero notifications
 OUTPUT=$(rofication-statusi3blocks.py)
-echo "${OUTPUT}"
+if [[ ! $OUTPUT == "0" ]]; then
+    echo "${OUTPUT}"
+fi
