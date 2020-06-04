@@ -50,8 +50,8 @@ input type:touchpad {
 
 input type:keyboard {
         xkb_layout us-german-umlaut
-        xkb_options ctrl:nocaps
         xkb_options compose:rctrl
+        xkb_options caps:ctrl_modifier
         repeat_rate 50
         repeat_delay 350
 }
