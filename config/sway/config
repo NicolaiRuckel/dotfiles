@@ -16,9 +16,10 @@ set $menu rofi -show drun | xargs swaymsg exec --
 
 font pango:SourceSansPro 11
 
-### Startup applications
+### Notifications
 
 exec rofication-daemon.py
+bindsym $mod+n exec rofication-gui.py
 
 ### Output configuration
 #
