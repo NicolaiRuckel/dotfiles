@@ -74,6 +74,9 @@ window#waybar.solo {
     padding: 0 5px;
     /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
 }
+#custom-rofication {
+  color: rgba(238, 56, 36, 1);
+}
 /* #clock {
     margin:     0px 16px 0px 10px;
     min-width:  140px;
