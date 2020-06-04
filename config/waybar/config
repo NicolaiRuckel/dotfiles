@@ -114,7 +114,7 @@
             "format": "{}",
             //"format": "{}",
             "exec": "$HOME/dotfiles/scripts/rofication.sh",
-            "interval": 10,
+            "interval": 1,
             "on-click": "/usr/bin/rofication-gui.py"
     }
 }
