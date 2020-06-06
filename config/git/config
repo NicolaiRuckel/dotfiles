@@ -11,6 +11,6 @@
 [push]
 	followTags = true
 [pull]
-	rebase = true[alias]
+	rebase = true
 [alias]
 	fuckit = reset --hard
