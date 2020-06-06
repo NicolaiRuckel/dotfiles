@@ -204,6 +204,28 @@ input type:keyboard {
 
 for_window [app_id="pavucontrol"] floating enable
 
+### Window style
+
+exec swaymsg border normal 5
+
+set $focused #285577
+set $unfocused #282828
+set $urgent #900000
+set $text #ffffff
+set $border #282828
+
+# class                 border      background  text    indicator   child border
+client.focused          $focused    $focused    $text   $focused    $focused
+client.unfocused        $border     $unfocused  $text   $unfocused  $unfocused
+client.focused_inactive $border     $unfocused  $text   $unfocused  $unfocused
+client.urgent           $border     $urgent     $text   $urgent     $urgent
+
+
+### Misc
+
+# Hide cursor after 5 seconds of inactivity
+seat seat0 hide_cursor 5000
+
 ### Status Bar
 bar {
         swaybar_command waybar
