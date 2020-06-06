@@ -62,6 +62,7 @@ window#waybar.solo {
 #pulseaudio,
 #idle_inhibitor,
 #backlight,
+#clock,
 #clock-date,
 #custom-storage,
 #custom-cpu_speed,
@@ -73,10 +74,11 @@ window#waybar.solo {
 #custom-media {
     margin:     0px 0px 0px 10px;
     padding: 0 5px;
+    min-width: 50px;
     /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
 }
 #custom-rofication {
-  color: rgba(238, 56, 36, 1);
+    color:      rgba(238, 46, 36, 1);
 }
 /* #clock {
     margin:     0px 16px 0px 10px;

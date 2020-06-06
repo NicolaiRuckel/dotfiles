@@ -4,9 +4,9 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/rofication", "idle_inhibitor", "pulseaudio", "network", "cpu",
-    "memory", "temperature", "backlight", "battery", "clock#date", "tray"],
+    "modules-center": ["custom/rofication"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu",
+    "memory", "temperature", "battery", "clock#date", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -45,8 +45,7 @@
     },
     "clock#date": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "format": "{:    %Y-%m-%d }",
+        "format": "{:  %Y-%m-%d}",
         "interval": 60
     },
     "cpu": {
