@@ -276,4 +276,13 @@ bindkey '^I' expand-multiple-dots-then-expand-or-complete
 bindkey '^M' expand-multiple-dots-then-accept-line
 # end expand multiple dots
 
+# start ssh-agent
+# https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
 add-zsh-hook -Uz precmd rehash_precmd
