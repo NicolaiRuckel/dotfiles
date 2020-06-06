@@ -1,0 +1,16 @@
+[user]
+	email = nicolai@ruckel.de
+	name = Nicolai Ruckel
+	signingKey = F7C22550E9CBDF94
+[commit]
+	gpgSign = true
+[gpg]
+	program = gpg2
+[merge]
+	conflictStyle = diff3
+[push]
+	followTags = true
+[pull]
+	rebase = true[alias]
+[alias]
+	fuckit = reset --hard
