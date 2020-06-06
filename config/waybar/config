@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/rofication"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu",
+    "modules-right": ["custom/spotify", "pulseaudio", "network", "cpu",
     "memory", "temperature", "battery", "clock#date", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
@@ -111,9 +111,15 @@
     },
     "custom/rofication": {
             "format": "{}",
-            //"format": "{}",
             "exec": "$HOME/dotfiles/scripts/rofication.sh",
             "interval": 1,
             "on-click": "/usr/bin/rofication-gui.py"
+    },
+    "custom/spotify": {
+            "format": " {}",
+                    "return-type": "json",
+                    "max-length": 40,
+            "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+            "exec-if": "pgrep spotify"
     }
 }
