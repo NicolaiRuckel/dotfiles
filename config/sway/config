@@ -9,8 +9,9 @@ set $right l
 
 set $term alacritty
 
-exec albert
-set $menu albert toggle
+# exec albert
+# set $menu albert toggle
+set $menu rofi -show drun | xargs swaymsg exec
 
 font pango:SourceSansPro 12
 
