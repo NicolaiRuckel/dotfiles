@@ -12,7 +12,7 @@ set $term alacritty
 exec albert
 set $menu albert toggle
 
-font pango:SourceSansPro 11
+font pango:SourceSansPro 12
 
 ### Notifications
 
@@ -22,7 +22,7 @@ bindsym $mod+n exec rofication-gui.py
 ### Output configuration
 
 output eDP-1 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output DP-4 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output DP-3 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
 
 # Clamshell mode
 set $laptop eDP-1
