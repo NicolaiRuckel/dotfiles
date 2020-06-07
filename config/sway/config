@@ -81,6 +81,9 @@ input type:keyboard {
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
+    # Lock screen
+    bindsym $mod+z exec ~/dotfiles/scripts/swaylock.sh
+
     # Exit sway
     bindsym $mod+Shift+e exec swaynag \
         -t warning -m ''\
