@@ -280,6 +280,6 @@ bindkey '^M' expand-multiple-dots-then-accept-line
 # https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-eval $(keychain --eval --gpg2 --agents gpg,ssh id_rsa)
+eval $(keychain --eval --quiet --gpg2 --agents gpg,ssh id_rsa)
 
 add-zsh-hook -Uz precmd rehash_precmd
