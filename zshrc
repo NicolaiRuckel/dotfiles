@@ -130,7 +130,7 @@ export BAT_THEME='GitHub'
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias f="files . &"
 alias l="ls -lh"
-alias o=open
+alias o="open"
 alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip setuptools > /dev/null'
 
 # cd with ranger
@@ -279,5 +279,7 @@ bindkey '^M' expand-multiple-dots-then-accept-line
 # ssh-agent
 # https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+eval $(keychain --eval --gpg2 --agents gpg,ssh id_rsa)
 
 add-zsh-hook -Uz precmd rehash_precmd
