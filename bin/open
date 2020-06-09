@@ -2,4 +2,4 @@
 
 # opens a file from command line and prevents debug output
 
-xdg-open "$@" 2> /dev/null >/dev/null
+xdg-open "$@" 2> /dev/null >/dev/null &
