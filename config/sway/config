@@ -201,8 +201,8 @@ input type:keyboard {
 
 # Screenshots
 
-    bindsym print exec --no-startup-id  grim $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
-    bindsym Shift+print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+    bindsym print exec --no-startup-id  ~/dotfiles/scripts/screenshot-wayland.sh
+    bindsym Shift+print exec --no-startup-id ~/dotfiles/scripts/screenshot-wayland.sh -a
 
 ### Window rules
 
@@ -226,6 +226,9 @@ client.urgent           $border     $urgent     $text   $urgent     $urgent
 
 
 ### Misc
+
+# Startup applications
+exec autotiling
 
 # Hide cursor after 5 seconds of inactivity
 seat seat0 hide_cursor 5000
