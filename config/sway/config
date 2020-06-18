@@ -207,6 +207,7 @@ input type:keyboard {
 ### Window rules
 
 for_window [app_id="pavucontrol"] floating enable
+for_window [instance="keepassxc"] floating enable
 
 ### Window style
 
