@@ -24,28 +24,10 @@ fi
 export ZSH=/usr/share/oh-my-zsh
 
 ZSH_CUSTOM=~/dotfiles/oh-my-zsh-custom
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="nidoranarion/nidoranarion"
 
-# Enable auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   gitfast
   compleat
@@ -57,6 +39,38 @@ source $ZSH/oh-my-zsh.sh
 ##########################
 ### User configuration ###
 ##########################
+
+# execute history expansion immediately
+unsetopt HIST_VERIFY
+
+# share history between sessions
+setopt SHARE_HISTORY
+
+# don't match dotfiles
+setopt noglobdots
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+  alias vim=nvim
+fi
+
+export VISUAL='nvim'
+export TERMINAL=alacritty
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export JAVA_HOME=/usr/lib/jvm/default
+export GIT_EDITOR=nvim
+export NVIM_GTK_NO_HEADERBAR=1
+
+export BAT_THEME='GitHub'
+
+# Don’t suggest dotfiles for correction
+export CORRECT_IGNORE_FILE='.*'
+
+# reduce key timeout from 0.4 seconds to 0.1 seconds
+export KEYTIMEOUT=1
 
 # disable built-in oh-my-zsh aliases
 unalias _
@@ -76,57 +90,6 @@ unalias 9
 unalias md
 unalias rd
 
-# Variables
-# #########
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# ZSH options
-# ###########
-
-# Don’t suggest dotfiles for correction
-export CORRECT_IGNORE_FILE='.*'
-
-bindkey "^R" history-incremental-pattern-search-backward
-
-# reduce key timeout from 0.4 seconds to 0.1 seconds
-export KEYTIMEOUT=1
-
-# execute history expansion immediately
-unsetopt HIST_VERIFY
-
-# share history between sessions
-setopt SHARE_HISTORY
-
-# don't match dotfiles
-setopt noglobdots
-
-# fix delete key behaviour
-bindkey '^[[3~' delete-char
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-  alias vim=nvim
-fi
-
-export VISUAL='nvim'
-
-export TERMINAL=gnome-terminal
-
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export JAVA_HOME=/usr/lib/jvm/default
-export GIT_EDITOR=nvim
-export NVIM_GTK_NO_HEADERBAR=1
-
-export BAT_THEME='GitHub'
-
-# aliases
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias f="files . &"
 alias l="ls -lh"
@@ -135,6 +98,11 @@ alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --
 
 # cd with ranger
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+bindkey "^R" history-incremental-pattern-search-backward
+
+# fix delete key behaviour
+bindkey '^[[3~' delete-char
 
 # open ranger with ctrl o; clear line first
 bindkey -s '^o' '^l\nranger\n'
@@ -148,18 +116,11 @@ fi
 ## FUNCTIONS ##
 ###############
 
-# vim() {
-#     "${VISUAL-vi}" "$@" 2> /dev/null
-# }
-
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # git completion
 autoload -Uz compinit && compinit
-
-# added by travis gem
-[ -f /home/nicolai/.travis/travis.sh ] && source /home/nicolai/.travis/travis.sh
 
 # On demand reshash
 # See https://wiki.archlinux.org/index.php/Zsh#On-demand_rehash
@@ -239,6 +200,17 @@ function fyay() {
         yay -Slq | fzf -m --preview 'yay -Si {1}'| xargs -ro yay -S
 }
 
+# Copy slide template in current directory
+function slides() {
+rsync -av --progress $TEXMFHOME/tex/latex/beamer/issdark-beamer-theme/ .\
+        --include='*.tex' \
+        --include='*.sty' \
+        --include='Makefile' \
+        --include='latexmkrc' \
+        --include='.gitignore' \
+        --exclude='*'
+}
+
 # Expand multiple dots
 # https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
 function expand-multiple-dots() {
@@ -256,17 +228,6 @@ function expand-multiple-dots-then-expand-or-complete() {
 function expand-multiple-dots-then-accept-line() {
     zle expand-multiple-dots
     zle accept-line
-}
-
-# Copy slide template in current directory
-function slides() {
-rsync -av --progress $TEXMFHOME/tex/latex/beamer/issdark-beamer-theme/ .\
-        --include='*.tex' \
-        --include='*.sty' \
-        --include='Makefile' \
-        --include='latexmkrc' \
-        --include='.gitignore' \
-        --exclude='*'
 }
 
 zle -N expand-multiple-dots
