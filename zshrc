@@ -237,6 +237,18 @@ bindkey '^I' expand-multiple-dots-then-expand-or-complete
 bindkey '^M' expand-multiple-dots-then-accept-line
 # end expand multiple dots
 
+function sysupdate() {
+        sudo reflector \
+                --verbose \
+                --country Germany \
+                --age 12 \
+                --protocol https \
+                --sort rate \
+                --save /etc/pacman.d/mirrorlist;\
+                flatpak update;\
+                yay
+}
+
 # ssh-agent
 # https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
