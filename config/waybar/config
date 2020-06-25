@@ -39,13 +39,12 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
         "format": "{:%H:%M}",
         "interval": 60
     },
     "clock#date": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:  %Y-%m-%d}",
+        "format": "{:  %a, %Y-%m-%d}",
         "interval": 60
     },
     "cpu": {
