@@ -224,8 +224,16 @@ let g:terminal_color_15 = '#d7d7d7'
 " Plugins
 " ------------------------------------------------------------------------------
 
-""" Fugitive
+""" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_aggregate_errors = 1
 
+let g:syntastic_tex_checkers = ['chktex', 'lacheck', 'proselint']
+
+""" Fugitive
 nmap <C-s> :Git<CR>
 
 """  DidYouMean
