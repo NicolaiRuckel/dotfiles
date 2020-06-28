@@ -33,6 +33,7 @@ Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/takac/vim-hardtime'
 call plug#end()
 
 " Automatically install plugins
@@ -44,6 +45,9 @@ autocmd VimEnter *
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" https://github.com/takac/vim-hardtime
+let g:hardtime_default_on = 1
 
 set exrc                    " run .exrc files if present
 set secure
