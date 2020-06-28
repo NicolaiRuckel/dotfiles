@@ -232,6 +232,11 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_tex_checkers = ['chktex', 'lacheck', 'proselint']
+let g:syntastic_python_checkers = ['pylint', 'flake8']
+
+" Disable 'Unable to import' errors. Since I never manage my virtual
+" environments manually these are always false positives
+let g:syntastic_python_pylint_args="-d E0401"
 
 """ Fugitive
 nmap <C-s> :Git<CR>
