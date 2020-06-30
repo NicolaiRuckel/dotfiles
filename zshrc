@@ -249,10 +249,6 @@ function sysupdate() {
                 yay
 }
 
-# ssh-agent
-# https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
-eval $(keychain --eval --quiet --agents ssh id_rsa)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 
 add-zsh-hook -Uz precmd rehash_precmd

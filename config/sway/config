@@ -229,6 +229,7 @@ client.urgent           $border     $urgent     $text   $urgent     $urgent
 
 # Startup applications
 exec autotiling
+exec gnome-keyring-daemon --start
 
 # Hide cursor after 5 seconds of inactivity
 seat seat0 hide_cursor 5000
