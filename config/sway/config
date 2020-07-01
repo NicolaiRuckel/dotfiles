@@ -30,6 +30,30 @@ set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
+# Control swaynag with the keyboard
+# https://wiki.archlinux.org/index.php/Sway#Control_swaynag_with_the_keyboard
+set $nag exec swaynagmode
+mode "nag" {
+  bindsym {
+    Ctrl+d    mode "default"
+
+    Ctrl+c    $nag --exit
+    q         $nag --exit
+    Escape    $nag --exit
+
+    Return    $nag --confirm
+
+    Tab       $nag --select prev
+    Shift+Tab $nag --select next
+
+    h         $nag --select next
+    l         $nag --select prev
+
+    k         $nag --select next
+    j         $nag --select prev
+  }
+}
+
 ### Idle configuration
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -84,11 +108,11 @@ input type:keyboard {
     bindsym $mod+z exec ~/dotfiles/scripts/swaylock.sh
 
     # Exit sway
-    bindsym $mod+Shift+e exec swaynag \
+    bindsym $mod+Shift+e exec $nag \
         -t warning -m ''\
+        -B 'Shutdown' 'systemctl poweroff -i'\
         -B 'Reboot' 'systemctl reboot'\
-        -B 'Hibernate' 'systemctl hibernate'\
-        -B 'Shutdown' 'systemctl poweroff -i'
+        -B 'Hibernate' 'systemctl hibernate'
 
 # Media keys
 
