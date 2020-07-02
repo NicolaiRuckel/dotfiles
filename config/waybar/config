@@ -5,8 +5,8 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/rofication"],
-    "modules-right": ["custom/spotify", "pulseaudio", "network", "cpu",
-    "memory", "temperature", "battery", "clock#date", "clock", "tray"],
+    "modules-right": ["tray", "pulseaudio", "network", "cpu",
+    "memory", "temperature#snitsig", "temperature#xps", "battery", "clock#date", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -54,7 +54,15 @@
     "memory": {
         "format": "{}% "
     },
-    "temperature": {
+    "temperature#snitsig": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "temperature#xps": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
