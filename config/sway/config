@@ -232,6 +232,15 @@ input type:keyboard {
 for_window [app_id="pavucontrol"] floating enable
 for_window [instance="keepassxc"] floating enable
 
+assign [class="firefox"] 2
+
+assign [class="Thunderbird"] 3
+
+assign [class="discord"] 4
+assign [class="Riot"] 4
+
+assign [class="Spotify"] 5
+
 ### Window style
 
 exec swaymsg border normal 5
