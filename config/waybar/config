@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/rofication"],
-    "modules-right": ["tray", "pulseaudio", "network", "cpu",
+    "modules-right": ["pulseaudio", "network", "cpu",
     "memory", "temperature#snitsig", "temperature#xps", "battery", "clock#date", "clock"],
     // Modules configuration
     // "sway/workspaces": {
