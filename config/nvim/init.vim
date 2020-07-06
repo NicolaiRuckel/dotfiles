@@ -245,6 +245,10 @@ let g:terminal_color_15 = '#d7d7d7'
 
 """ ALE
 
+let g:ale_linters = {
+\   'tex': ['lacheck', 'proselint'],
+\}
+
 """ Fugitive
 nmap <C-s> :Git<CR>
 
