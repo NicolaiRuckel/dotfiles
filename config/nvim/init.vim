@@ -6,7 +6,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'https://github.com/scrooloose/syntastic'
+" Plug 'https://github.com/scrooloose/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/esneider/YUNOcommit.vim'
 Plug 'https://github.com/mhinz/vim-signify'
@@ -34,6 +34,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/takac/vim-hardtime'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " Automatically install plugins
@@ -228,19 +229,21 @@ let g:terminal_color_15 = '#d7d7d7'
 " Plugins
 " ------------------------------------------------------------------------------
 
-""" Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_aggregate_errors = 1
+" """ Syntastic
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 1
+" let g:syntastic_aggregate_errors = 1
 
-let g:syntastic_tex_checkers = ['chktex', 'lacheck', 'proselint']
-let g:syntastic_python_checkers = ['pylint', 'flake8']
+" let g:syntastic_tex_checkers = ['lacheck', 'proselint']
+" let g:syntastic_python_checkers = ['pylint', 'flake8']
 
-" Disable 'Unable to import' errors. Since I never manage my virtual
-" environments manually these are always false positives
-let g:syntastic_python_pylint_args="-d E0401"
+" " Disable 'Unable to import' errors. Since I never manage my virtual
+" " environments manually these are always false positives
+" let g:syntastic_python_pylint_args="-d E0401"
+
+""" ALE
 
 """ Fugitive
 nmap <C-s> :Git<CR>
