@@ -247,7 +247,10 @@ let g:terminal_color_15 = '#d7d7d7'
 
 let g:ale_linters = {
 \   'tex': ['lacheck', 'proselint'],
+\   'python': ['pylint', 'flake8'],
 \}
+
+let g:ale_fixers = {'python': ['isort', 'black']}
 
 """ Fugitive
 nmap <C-s> :Git<CR>
