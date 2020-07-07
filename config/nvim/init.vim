@@ -482,49 +482,6 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
 " Autogroups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-augroup configgroup
-    autocmd!
-    autocmd BufRead,BufNewFile *.tex set filetype=tex
-    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd FileType make setlocal sw=8 noexpandtab
-    autocmd FileType cmake setlocal sw=2
-    autocmd FileType html setlocal sw=2 tw=0
-    autocmd FileType css setlocal sw=2 tw=0
-    autocmd FileType text setlocal sw=2 sts=2 spell
-    autocmd BufEnter *.txt setlocal sw=2 sts=2 spell
-    autocmd FileType javascript setlocal sw=4
-    autocmd FileType c setlocal sw=4
-    autocmd FileType cpp setlocal sw=2 sts=2
-    autocmd FileType java setlocal sw=4 sts=4 tw=100
-    autocmd FileType ada setlocal sw=3 sts=3
-    autocmd FileType tex setlocal sw=2 spell tw=0
-         \| syntax spell toplevel
-    autocmd FileType python setlocal sw=4 sts=4 tw=79
-    autocmd FileType markdown setlocal sw=4 formatoptions+=t tw=80 spell
-    autocmd FileType rust setlocal sw=4 sts=4 tw=100
-         \| if !exists("g:async_command") | let g:async_command = 'cargo build'
-         \| endif
-         \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
-    autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal sw=4 sts=4
-    autocmd FileType bib setlocal sw=2 sts=2 tw=0
-    autocmd FileType json setlocal sw=2 sts=2
-    autocmd FileType lua setlocal sw=4 sts=4 et
-         \| nnoremap <Leader>. :wa<CR>:!love .<CR>
-    autocmd FileType help setlocal nospell
-    autocmd FileType vim setlocal sw=4 sts=4 et
-    autocmd FileType gtkrc setlocal commentstring=#\ %s
-    autocmd FileType matlab setlocal commentstring=%\ %s
-    autocmd FileType desktop setlocal commentstring=#\ %s
-    autocmd FileType gitcommit setlocal spell tw=72
-    autocmd FileType xml setlocal sw=2 sts=2 tw=0
-    autocmd FileType dosini setlocal commentstring=#\ %s
-    autocmd BufEnter *.gradle setlocal sw=4 sts=4 tw=0
-    autocmd Filetype go setlocal tw=100 " Go style guide does not restrict the
-                                        " line length but 100 seems reasonable.
-    autocmd Filetype dockerfile setlocal tw=0
-augroup END
-
 " fix a problem with the interactive terminal and vim-fugitive
 " see: https://github.com/tpope/vim-fugitive/issues/957
 augroup nvim_term
