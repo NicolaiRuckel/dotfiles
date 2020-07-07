@@ -109,9 +109,10 @@ set background=light        " light background
 syntax enable               " enable syntax processing
 
 """ Spaces and Tabs
-set tabstop=4               " number of visual spaces per TAB
-set softtabstop=4           " number of spaces in tab when editing
-set expandtab               " tabs are spaces
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 """ UI Config
 set number                  " show line numbers
@@ -484,41 +485,41 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
 augroup configgroup
     autocmd!
     autocmd BufRead,BufNewFile *.tex set filetype=tex
-    autocmd FileType make setlocal ts=8 sw=8 noet
-    autocmd FileType cmake setlocal ts=2 sw=2 et
-    autocmd FileType html setlocal ts=2 sw=2 tw=0
-    autocmd FileType css setlocal ts=2 sw=2 tw=0
-    autocmd FileType text setlocal ts=2 sw=2 sts=2 et spell
-    autocmd BufEnter *.txt setlocal ts=2 sw=2 sts=2 spell
-    autocmd FileType javascript setlocal ts=4 sw=4 et
-    autocmd FileType c setlocal ts=4 sw=4 noet
-    autocmd FileType cpp setlocal ts=2 sw=2 sts=2 et
-    autocmd FileType java setlocal ts=4 sw=4 sts=4 et tw=100
-    autocmd FileType ada setlocal ts=3 sw=3 sts=3 et
-    autocmd FileType tex setlocal ts=2 sw=2 et spell tw=0
-         \| syntax spell toplevel
-    autocmd FileType python setlocal ts=4 sw=4 sts=4 et tw=79
-    autocmd FileType markdown setlocal ts=4 sw=4 formatoptions+=t tw=80 spell
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd FileType rust setlocal ts=4 sw=4 sts=4 et tw=100
+    autocmd FileType make setlocal sw=8 noexpandtab
+    autocmd FileType cmake setlocal sw=2
+    autocmd FileType html setlocal sw=2 tw=0
+    autocmd FileType css setlocal sw=2 tw=0
+    autocmd FileType text setlocal sw=2 sts=2 spell
+    autocmd BufEnter *.txt setlocal sw=2 sts=2 spell
+    autocmd FileType javascript setlocal sw=4
+    autocmd FileType c setlocal sw=4
+    autocmd FileType cpp setlocal sw=2 sts=2
+    autocmd FileType java setlocal sw=4 sts=4 tw=100
+    autocmd FileType ada setlocal sw=3 sts=3
+    autocmd FileType tex setlocal sw=2 spell tw=0
+         \| syntax spell toplevel
+    autocmd FileType python setlocal sw=4 sts=4 tw=79
+    autocmd FileType markdown setlocal sw=4 formatoptions+=t tw=80 spell
+    autocmd FileType rust setlocal sw=4 sts=4 tw=100
          \| if !exists("g:async_command") | let g:async_command = 'cargo build'
          \| endif
          \| nnoremap <buffer> <Leader>/ :wa<CR>:RunAsync cargo
     autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal ts=4 sw=4 sts=4
-    autocmd FileType bib setlocal ts=2 sw=2 sts=2 et tw=0
-    autocmd FileType json setlocal ts=2 sw=2 sts=2
-    autocmd FileType lua setlocal ts=4 sw=4 sts=4 et
+    autocmd BufEnter *.sh setlocal sw=4 sts=4
+    autocmd FileType bib setlocal sw=2 sts=2 tw=0
+    autocmd FileType json setlocal sw=2 sts=2
+    autocmd FileType lua setlocal sw=4 sts=4 et
          \| nnoremap <Leader>. :wa<CR>:!love .<CR>
     autocmd FileType help setlocal nospell
-    autocmd FileType vim setlocal ts=4 sw=4 sts=4 et
+    autocmd FileType vim setlocal sw=4 sts=4 et
     autocmd FileType gtkrc setlocal commentstring=#\ %s
     autocmd FileType matlab setlocal commentstring=%\ %s
     autocmd FileType desktop setlocal commentstring=#\ %s
     autocmd FileType gitcommit setlocal spell tw=72
-    autocmd FileType xml setlocal et ts=2 sw=2 sts=2 tw=0
+    autocmd FileType xml setlocal sw=2 sts=2 tw=0
     autocmd FileType dosini setlocal commentstring=#\ %s
-    autocmd BufEnter *.gradle setlocal ts=4 sw=4 sts=4 tw=0
+    autocmd BufEnter *.gradle setlocal sw=4 sts=4 tw=0
     autocmd Filetype go setlocal tw=100 " Go style guide does not restrict the
                                         " line length but 100 seems reasonable.
     autocmd Filetype dockerfile setlocal tw=0
@@ -527,13 +528,13 @@ augroup END
 " fix a problem with the interactive terminal and vim-fugitive
 " see: https://github.com/tpope/vim-fugitive/issues/957
 augroup nvim_term
-    au!
-    au TermOpen * startinsert
-    au TermClose * stopinsert
+    autocmd!
+    autocmd TermOpen * startinsert
+    autocmd TermClose * stopinsert
 augroup END
 
 " i3 config detection
-aug i3config_ft_detection
-    au!
-    au BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
-aug end
+augroup i3config_ft_detection
+    autocmd!
+    autocmd BufNewFile,BufRead ~/dotfiles/config/i3/config set filetype=i3config
+augroup END
