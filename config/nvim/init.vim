@@ -118,7 +118,6 @@ set number                  " show line numbers
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
 set autoindent
-set smartindent
 filetype plugin indent on   " load filetype-specific indent files and plugins
 
 " Bash-like completion in wild menu
@@ -316,6 +315,9 @@ let Tlist_Exit_OnlyWindow=1
 let g:grammarous#default_comments_only_filetypes = {
             \ '*' : 1, 'tex' : 0, 'markdown' : 0,
             \ }
+
+" Use with nvim's spelllang
+" g:grammarous#use_vim_spelllang = 1
 
 """ vimtex
 let g:tex_flavor='latex'
