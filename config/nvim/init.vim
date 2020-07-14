@@ -96,6 +96,7 @@ set termguicolors
 colorscheme lucius
 set background=light        " light background
 syntax enable               " enable syntax processing
+set conceallevel=0          " Just show me the code and don't try to be smart
 
 """ Spaces and Tabs
 set tabstop=8
