@@ -33,6 +33,7 @@ Plug 'https://github.com/jonathanfilip/vim-lucius'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/takac/vim-hardtime'
 Plug 'dense-analysis/ale'
+Plug 'https://github.com/yegappan/taglist'
 call plug#end()
 
 " Automatically install plugins
