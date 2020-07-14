@@ -1,3 +1,7 @@
+if !exists(':ALEInfo')
+    finish
+endif
+
 let g:ale_linters = {
 \   'tex': ['lacheck', 'proselint'],
 \   'python': ['pylint', 'flake8'],

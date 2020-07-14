@@ -11,7 +11,7 @@ function! StatuslineGit()
 endfunction
 
 " AsyncRun
-function! RunAsync(...)
+function! RunAsync(...) abort
     if a:0 == 1
         let g:async_command = a:1
     elseif !exists("g:async_command")
@@ -21,7 +21,10 @@ function! RunAsync(...)
 endfunction
 command! -nargs=? RunAsync :call RunAsync(<f-args>)
 
-function! Get_asyncrun_status()
+function! Get_asyncrun_status() abort
+    if !exists(':AsyncRun')
+        return ''
+    endif
     let async_status = g:asyncrun_status
     if async_status == 'running'
         return g:async_command . ' •'

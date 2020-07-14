@@ -1,3 +1,7 @@
+if !exists(':CocInfo')
+    finish
+endif
+
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " You will have bad experience for diagnostic messages when it's default 4000.
