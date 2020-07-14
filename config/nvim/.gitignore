@@ -1,0 +1,5 @@
+.netrwhist
+plugged
+spell/.gitignore
+spell/.gitattributes
+autoload/plug.vim.old

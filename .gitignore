@@ -1,11 +1,6 @@
 .DS_Store
 vim/.netrwhist
 vim/plugged
-config/nvim/.netrwhist
-config/nvim/plugged
-config/nvim/spell/.gitignore
-config/nvim/spell/.gitattributes
-config/nvim/autoload/plug.vim.old
 backups/*
 *~
 *.swp
