@@ -94,6 +94,8 @@ set t_Co=256                " more colors for more fun!
 set termguicolors
 
 colorscheme lucius
+LuciusWhite
+
 set background=light        " light background
 syntax enable               " enable syntax processing
 set conceallevel=0          " Just show me the code and don't try to be smart
