@@ -8,21 +8,12 @@
     "modules-right": ["pulseaudio", "network", "cpu",
     "memory", "temperature#snitsig", "temperature#xps", "battery", "clock#date", "clock"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "format-icons": { }
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
