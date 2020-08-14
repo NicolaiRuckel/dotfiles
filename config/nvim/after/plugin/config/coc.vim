@@ -48,7 +48,6 @@ let g:coc_global_extensions = [
       \ 'coc-rls',
       \ 'coc-rust-analyzer',
       \ 'coc-vimlsp',
-      \ 'coc-highlight',
       \ 'coc-github',
       \ 'coc-docker',
       \ 'coc-sh',
