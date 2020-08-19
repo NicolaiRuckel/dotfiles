@@ -112,7 +112,7 @@ input type:keyboard {
     bindsym $mod+Shift+e exec $nag \
         -t warning -m ''\
         -B 'Shutdown' 'systemctl poweroff -i'\
-        -B 'Reboot' 'systemctl reboot'\
+        -B 'Reboot' 'systemctl reboot -i'\
         -B 'Hibernate' 'systemctl hibernate'
 
 # Media keys
