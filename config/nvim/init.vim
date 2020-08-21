@@ -50,6 +50,10 @@ set backspace=2             " make backspace working in vim 7.3
 set timeoutlen=500          " set timeoutlen to 500
 set splitright
 set splitbelow
+"
+" virtual line breaks on word boundaries with correct indentation
+set linebreak
+set breakindent
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
