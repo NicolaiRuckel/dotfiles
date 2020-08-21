@@ -42,7 +42,7 @@ let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-python',
       \ 'coc-java',
-      \ 'coc-texlab',
+      \ 'coc-vimtex',
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-rls',
