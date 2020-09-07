@@ -1,7 +1,7 @@
 # [Dotfiles][dotfiles]
 
-These are my dotfiles.  I made them for my machines, but they should work on any
-other Linux or macOS machine.  Feel free to look and copy anything from these
+These are my dotfiles. I made them for my machines, but they should work on any
+other Linux or macOS machine. Feel free to look and copy anything from these
 files.
 
 ## Setup
@@ -19,16 +19,6 @@ should give you all the necessary submodules.
 To create all the necessary symlinks, I copied a bash script from
 [here][christoper-l-dotfiles].
 
-### Neovim plugins
-
-To get all Neovim plugins, start `nvim` and run
-
-    :PlugInstall
-
-### Gnome Terminal Theme
-
-Gnome Terminal does not have a configuration file for its themes so I still have to find a good way to add it here.
-
 ## Dependencies
 
 Software I use, that may need to be present for some configurations to work
@@ -44,7 +34,6 @@ properly. This list is probably incomplete.
 * fast-p
 * pdftotext
 * nvim
-* nvim-qt
 
 ### Neovim
 
