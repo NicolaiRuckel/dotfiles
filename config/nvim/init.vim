@@ -15,7 +15,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/arzg/vim-rust-syntax-ext'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
-Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'https://github.com/rhysd/vim-grammarous'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
