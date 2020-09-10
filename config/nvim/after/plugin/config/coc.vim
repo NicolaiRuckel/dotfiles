@@ -43,6 +43,7 @@ let g:coc_global_extensions = [
       \ 'coc-python',
       \ 'coc-java',
       \ 'coc-vimtex',
+      \ 'coc-highlight',
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-rls',
