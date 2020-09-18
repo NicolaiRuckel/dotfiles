@@ -130,7 +130,6 @@ set showmatch               " highlight matching [{()}]
 
 " Highlight column *after* current textwidth
 set colorcolumn=+1
-set textwidth=80
 set history=10000           " vim has to remember a lot of commands
 set mouse=nv                " allows usage of mouse
 set ruler                   " show ruler
