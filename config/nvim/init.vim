@@ -32,6 +32,7 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'https://github.com/yegappan/taglist'
 Plug 'jmckiern/vim-venter'
+Plug 'https://github.com/fisadev/vim-isort'
 call plug#end()
 
 " Automatically install plugins
