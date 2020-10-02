@@ -263,6 +263,7 @@ client.urgent           $border     $urgent     $text   $urgent     $urgent
 
 # Startup applications
 exec autotiling
+exec udiskie &
 
 # Configuration:
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method
