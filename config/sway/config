@@ -238,9 +238,15 @@ assign [class="firefox"] 2
 assign [class="Thunderbird"] 3
 
 assign [class="discord"] 4
-assign [class="Riot"] 4
+assign [class="Element"] 4
+for_window [class="discord"] move container to workspace 4
+for_window [class="Element"] move container to workspace 4
 
-assign [class="Spotify"] 5
+for_window [class="Spotify"] move container to workspace 5
+
+assign [class="Skype"] 10
+assign [class="Slack"] 10
+assign [class="Mattermost"] 10
 
 ### Window style
 
@@ -264,6 +270,20 @@ client.urgent           $border     $urgent     $text   $urgent     $urgent
 # Startup applications
 exec autotiling
 exec udiskie &
+
+# messengers
+exec com.discordapp.Discord &
+exec im.riot.Riot &
+
+# work stuff
+exec com.skype.Client &
+exec slack &
+exec com.mattermost.Desktop &
+
+# misc
+exec firefox &
+exec thunderbird &
+exec com.spotify.Client &
 
 # Configuration:
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method
