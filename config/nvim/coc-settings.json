@@ -10,7 +10,7 @@
   },
   "highlight.colorNames.enable": false,
   "python.jediPath": "/usr/lib/python3.8/site-packages/",
-  "python.venvFolders": "~/.cache/pypoetry/virtualenvs",
+  "python.venvFolders": ["~/.cache/pypoetry/virtualenvs", ".venv"],
   "python.linting.flake8Enabled": true,
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pylintEnabled": false,
