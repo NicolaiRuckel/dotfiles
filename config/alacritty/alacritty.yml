@@ -32,3 +32,6 @@ colors:
     magenta: '#d6d5d4'
     cyan:    '#cdab53'
     white:   '#f7f7f7'
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1"
