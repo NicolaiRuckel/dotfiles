@@ -277,8 +277,7 @@ exec im.riot.Riot &
 
 # work stuff
 exec com.skype.Client &
-exec com.slack.Slack &
-exec com.mattermost.Desktop &
+exec slack &
 
 # misc
 exec firefox &
