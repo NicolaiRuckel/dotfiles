@@ -23,7 +23,7 @@ bindsym $mod+n exec rofication-gui.py
 ### Output configuration
 
 output eDP-1 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output DP-3 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output 'Dell Inc. DELL U2515H 9X2VY69H0X8L' bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
 output 'Sony SONY TV  *00 0x00000101' disable
 
 # Clamshell mode
