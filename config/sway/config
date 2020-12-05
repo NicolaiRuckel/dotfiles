@@ -236,6 +236,7 @@ for_window [instance="keepassxc"] floating enable
 assign [class="firefox"] 2
 
 assign [class="Thunderbird"] 3
+assign [app_id="evolution"] 3
 
 assign [class="discord"] 4
 assign [class="Element"] 4
@@ -281,7 +282,7 @@ exec slack &
 
 # misc
 exec firefox &
-exec thunderbird &
+exec evolution &
 exec com.spotify.Client &
 
 # Configuration:
