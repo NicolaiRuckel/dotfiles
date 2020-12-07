@@ -282,7 +282,7 @@ exec slack &
 
 # misc
 exec firefox &
-exec evolution &
+exec thunderbird &
 exec com.spotify.Client &
 
 # Configuration:
