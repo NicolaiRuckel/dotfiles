@@ -1,0 +1,8 @@
+# messengers
+exec com.discordapp.Discord &
+exec im.riot.Riot &
+
+# misc
+exec firefox &
+exec thunderbird &
+exec com.spotify.Client &

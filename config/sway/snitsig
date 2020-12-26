@@ -1,0 +1,13 @@
+# messengers
+exec com.discordapp.Discord &
+exec im.riot.Riot &
+
+# work stuff
+exec com.skype.Client &
+exec slack &
+exec com.mattermost.Desktop &
+
+# misc
+exec firefox &
+exec thunderbird &
+exec com.spotify.Client &

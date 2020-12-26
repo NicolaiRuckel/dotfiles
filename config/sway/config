@@ -269,26 +269,11 @@ client.unfocused        $border     $unfocused  $text   $unfocused  $unfocused
 client.focused_inactive $border     $unfocused  $text   $unfocused  $unfocused
 client.urgent           $border     $urgent     $text   $urgent     $urgent
 
-
 ### Misc
 
 # Startup applications
 exec autotiling
 exec udiskie &
-
-# messengers
-exec com.discordapp.Discord &
-exec im.riot.Riot &
-
-# work stuff
-exec com.skype.Client &
-exec slack &
-exec com.mattermost.Desktop &
-
-# misc
-exec firefox &
-exec thunderbird &
-exec com.spotify.Client &
 
 # Configuration:
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method
@@ -306,3 +291,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
+include ~/.config/sway/`hostname`
