@@ -8,6 +8,6 @@ exec slack &
 exec com.mattermost.Desktop &
 
 # misc
-exec firefox &
-exec thunderbird &
+exec MOZ_ENABLE_WAYLAND=1 firefox &
+exec MOZ_ENABLE_WAYLAND=1 thunderbird &
 exec com.spotify.Client &

@@ -284,6 +284,22 @@ client.urgent           $border     $urgent     $text   $urgent     $urgent
 exec autotiling
 exec udiskie &
 
+<<<<<<< HEAD
+||||||| parent of 8feb475 (Sway: Use Wayland backends for Firefox and Thunderbird)
+# messengers
+exec com.discordapp.Discord &
+exec im.riot.Riot &
+
+# work stuff
+exec com.skype.Client &
+exec slack &
+exec com.mattermost.Desktop &
+
+# misc
+exec firefox &
+exec thunderbird &
+exec com.spotify.Client &
+
 # Configuration:
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#Start_SSH_and_Secrets_components_of_keyring_daemon
