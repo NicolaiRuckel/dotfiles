@@ -7,7 +7,8 @@ set $down j
 set $up k
 set $right l
 
-set $term env WINIT_UNIX_BACKEND=x11 alacritty
+# set $term env WINIT_UNIX_BACKEND=x11 alacritty
+set $term alacritty
 
 # exec albert
 # set $menu albert toggle
