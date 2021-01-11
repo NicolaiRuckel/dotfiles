@@ -1,3 +1,10 @@
+output DP-1 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+output DP-1 mode 2560x1440@74.924004Hz
+output DP-2 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+output DP-2 mode 2560x1440@74.924004Hz
+# output DP-2 subpixel none
+output DP-2 transform 270
+
 # messengers
 exec com.discordapp.Discord &
 exec im.riot.Riot &
