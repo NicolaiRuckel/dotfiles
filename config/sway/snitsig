@@ -1,9 +1,25 @@
-output DP-1 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
-output DP-1 mode 2560x1440@74.924004Hz
-output DP-2 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
-output DP-2 mode 2560x1440@74.924004Hz
-# output DP-2 subpixel none
-output DP-2 transform 270
+# outputs
+set $primary DP-1
+set $secondary DP-2
+
+output $primary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output $primary mode 2560x1440@74.924004Hz
+output $secondary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+output $secondary mode 2560x1440@74.924004Hz
+# output $secondary subpixel none
+output $secondary transform 270
+
+# workspaces
+workspace 1 output $secondary
+workspace 2 output $primary
+workspace 3 output $primary
+workspace 4 output $secondary
+workspace 5 output $secondary
+workspace 6 output $primary
+workspace 7 output $primary
+workspace 8 output $primary
+workspace 9 output $primary
+workspace 10 output $secondary
 
 # messengers
 exec com.discordapp.Discord &
@@ -15,6 +31,6 @@ exec slack &
 exec com.mattermost.Desktop &
 
 # misc
-exec MOZ_ENABLE_WAYLAND=1 firefox &
-exec MOZ_ENABLE_WAYLAND=1 thunderbird &
+exec firefox &
+exec thunderbird &
 exec com.spotify.Client &
