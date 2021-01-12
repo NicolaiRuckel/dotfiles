@@ -2,12 +2,17 @@
 set $primary DP-1
 set $secondary DP-2
 
-output $primary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output $primary position 1440 550
+output $secondary position 0 0
+
 output $primary mode 2560x1440@74.924004Hz
-output $secondary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+
 output $secondary mode 2560x1440@74.924004Hz
-# output $secondary subpixel none
+output $secondary subpixel vrgb
 output $secondary transform 270
+
+output $primary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output $secondary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
 
 # workspaces
 workspace 1 output $secondary
