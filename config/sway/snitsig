@@ -1,9 +1,11 @@
 # outputs
 set $primary DP-1
 set $secondary DP-2
+set $third 'Dell Inc. DELL U2515H 9X2VY69H0X8L'
 
 output $primary position 1440 550
 output $secondary position 0 0
+output $third position 4000 70
 
 output $primary mode 2560x1440@74.924004Hz
 
@@ -11,8 +13,13 @@ output $secondary mode 2560x1440@74.924004Hz
 output $secondary subpixel vrgb
 output $secondary transform 270
 
+output $third res 2560x1440
+output $third subpixel vrgb
+output $third transform 90
+
 output $primary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
 output $secondary bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+output $third bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
 
 # workspaces
 workspace 1 output $secondary
@@ -24,7 +31,7 @@ workspace 6 output $primary
 workspace 7 output $primary
 workspace 8 output $primary
 workspace 9 output $primary
-workspace 10 output $secondary
+workspace 10 output $third
 
 # messengers
 exec com.discordapp.Discord &
