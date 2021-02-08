@@ -228,9 +228,9 @@ input type:keyboard {
 for_window [app_id="pavucontrol"] floating enable
 for_window [instance="keepassxc"] floating enable
 
-assign [app_id="firefox"] 2
+assign [class="firefox"] 2
 
-assign [app_id="thunderbird"] 3
+assign [class="Thunderbird"] 3
 assign [app_id="evolution"] 3
 
 assign [class="discord"] 4
