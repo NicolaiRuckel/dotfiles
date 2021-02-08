@@ -39,7 +39,6 @@ exec im.riot.Riot &
 
 # work stuff
 exec com.skype.Client &
-exec slack &
 exec com.mattermost.Desktop &
 
 # misc
