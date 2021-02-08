@@ -31,7 +31,7 @@ workspace 6 output $primary
 workspace 7 output $primary
 workspace 8 output $primary
 workspace 9 output $primary
-workspace 10 output $third
+workspace 10 output $secondary
 
 # messengers
 exec com.discordapp.Discord &
