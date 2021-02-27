@@ -7,3 +7,4 @@ backups/*
 *.swo
 scripts/battery/uevent
 config/gtk-3.0/bookmarks
+config/systemd/user/xdg-desktop-portal-wlr.service
