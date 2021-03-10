@@ -228,21 +228,21 @@ input type:keyboard {
 for_window [app_id="pavucontrol"] floating enable
 for_window [instance="keepassxc"] floating enable
 
-assign [class="firefox"] 2
+assign [class="firefox"] 3
 
-assign [class="Thunderbird"] 3
-assign [app_id="evolution"] 3
+assign [class="Thunderbird"] 2
+assign [app_id="evolution"] 2
 
-assign [class="discord"] 4
-assign [class="Element"] 4
-for_window [class="discord"] move container to workspace 4
-for_window [class="Element"] move container to workspace 4
+assign [class="discord"] 1
+assign [class="Element"] 1
+for_window [class="discord"] move container to workspace 1
+for_window [class="Element"] move container to workspace 1
 
-for_window [class="Spotify"] move container to workspace 5
+# for_window [class="Spotify"] move container to workspace 10
 
-assign [class="Skype"] 10
-assign [class="Slack"] 10
-assign [class="Mattermost"] 10
+# assign [class="Skype"] 10
+# assign [class="Slack"] 10
+# assign [class="Mattermost"] 10
 
 ### Window style
 

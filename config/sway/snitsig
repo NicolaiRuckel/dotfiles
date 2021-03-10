@@ -23,25 +23,20 @@ output $third bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portr
 
 # workspaces
 workspace 1 output $secondary
-workspace 2 output $primary
+workspace 2 output $third
 workspace 3 output $primary
-workspace 4 output $secondary
-workspace 5 output $secondary
+workspace 4 output $primary
+workspace 5 output $primary
 workspace 6 output $primary
 workspace 7 output $primary
 workspace 8 output $primary
 workspace 9 output $primary
-workspace 10 output $secondary
+workspace 10 output $primary
 
 # messengers
 exec com.discordapp.Discord &
 exec im.riot.Riot &
 
-# work stuff
-exec com.skype.Client &
-exec com.mattermost.Desktop &
-
 # misc
 exec firefox &
 exec thunderbird &
-exec com.spotify.Client &
