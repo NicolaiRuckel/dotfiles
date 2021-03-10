@@ -236,6 +236,9 @@ function expand-multiple-dots-then-accept-line() {
     zle accept-line
 }
 
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+
 zle -N expand-multiple-dots
 zle -N expand-multiple-dots-then-expand-or-complete
 zle -N expand-multiple-dots-then-accept-line
