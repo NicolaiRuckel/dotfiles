@@ -1,0 +1,11 @@
+[Unit]
+Description=Create mono microphone out of stereo one by Focusrite Scarlett 2i2
+Requires=pipewire.service
+After=pipewire.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/nicolai/dotfiles/scripts/pipewire-microphone.sh
+
+[Install]
+WantedBy=default.target
