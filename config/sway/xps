@@ -7,10 +7,9 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # messengers
-exec com.discordapp.Discord &
-exec im.riot.Riot &
+# exec com.discordapp.Discord &
+# exec im.riot.Riot &
 
 # misc
-exec firefox &
-exec thunderbird &
-exec com.spotify.Client &
+# exec firefox &
+# exec thunderbird &
