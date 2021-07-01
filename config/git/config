@@ -1,7 +1,7 @@
 [user]
 	email = nicolai@ruckel.de
 	name = Nicolai Ruckel
-	signingKey = F7C22550E9CBDF94
+	signingkey = 44CC71DBD360B294A0EB5CFF634203BE51D2DD50
 [commit]
 	gpgSign = true
 [gpg]
