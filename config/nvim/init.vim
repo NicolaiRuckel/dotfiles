@@ -19,7 +19,7 @@ Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'jmckiern/vim-venter'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'micarmst/vim-spellsync'
-Plug 'https://github.com/rhysd/vim-grammarous'
+Plug 'vigoux/LanguageTool.nvim'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/EinfachToll/DidYouMean'
 Plug 'lervag/vimtex'
@@ -29,6 +29,7 @@ Plug 'https://github.com/arzg/vim-rust-syntax-ext'
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/tpope/vim-dispatch'
 call plug#end()
 
 " Automatically install plugins
