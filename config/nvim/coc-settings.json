@@ -6,7 +6,7 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
-    },
+    }
   },
   "highlight.colorNames.enable": false,
   "python.jediPath": "/usr/lib/python3.8/site-packages/",
@@ -15,5 +15,5 @@
   "python.linting.pydocstyleEnabled": true,
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["-l", "79"]
+  "python.formatting.blackArgs": ["-l", "79"],
 }
