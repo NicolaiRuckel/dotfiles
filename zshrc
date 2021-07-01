@@ -98,7 +98,7 @@ unalias rd
 
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative -n20"
 alias f="files . &"
-alias l="ls -lh"
+alias l="ls -lhp"
 alias o="open"
 alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip setuptools > /dev/null'
 
@@ -258,6 +258,24 @@ function sysupdate() {
                 yay
 }
 
+# from https://superuser.com/a/767491
+if [[ `uname` == Darwin ]]; then
+    MAX_MEMORY_UNITS=KB
+else
+    MAX_MEMORY_UNITS=MB
+fi
+
+TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
+'avg shared (code):         %X KB'$'\n'\
+'avg unshared (data/stack): %D KB'$'\n'\
+'total (sum):               %K KB'$'\n'\
+'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
+'page faults from disk:     %F'$'\n'\
+'other page faults:         %R'
+
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 add-zsh-hook -Uz precmd rehash_precmd
