@@ -28,7 +28,7 @@ workspace 10 output $primary
 
 # messengers
 exec com.discordapp.Discord &
-exec im.riot.Riot &
+exec element-desktop &
 
 # misc
 exec firefox &
