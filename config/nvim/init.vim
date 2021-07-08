@@ -27,7 +27,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'https://github.com/arzg/vim-rust-syntax-ext'
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/cespare/vim-toml'
-Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/tpope/vim-dispatch'
 call plug#end()
 
