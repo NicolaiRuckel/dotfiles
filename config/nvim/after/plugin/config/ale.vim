@@ -7,7 +7,7 @@ endif
 let g:ale_disable_lsp = 1
 
 let g:ale_linters = {
-\   'tex': ['chktex', 'proselint'],
+\   'tex': ['chktex'],
 \   'python': ['pydocstyle', 'pylint', 'flake8'],
 \}
 
