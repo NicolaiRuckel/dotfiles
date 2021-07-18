@@ -11,4 +11,6 @@ let g:ale_linters = {
 \   'python': ['pydocstyle', 'pylint', 'flake8'],
 \}
 
+let g:ale_tex_chktex_options = '--nowarn 1 -I'
+
 let g:ale_fixers = {'python': ['isort', 'black']}
