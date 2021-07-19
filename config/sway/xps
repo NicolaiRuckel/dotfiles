@@ -1,7 +1,7 @@
 # outputs
 set $laptop eDP-1
-set $middle DP-2
-set $left DP-3
+set $middle 'Unknown PA278QV L9LMQS208634'
+set $left 'Unknown PA278QV L9LMQS208641'
 
 output $laptop position 4000 550
 output $middle position 1440 550
