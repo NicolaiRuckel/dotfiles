@@ -1,6 +1,34 @@
 # outputs
+
 set $laptop eDP-1
+set $external_middle DP-3
+set $external_left DP-2
+
+output $laptop position 0 0
+output $external_middle position 3360 550
+output $external_left position 1920 0
+
+output $external_middle mode 2560x1440@74.924004Hz
+
+output $external_left mode 2560x1440@74.924004Hz
+output $external_left subpixel vrgb
+output $external_left transform 270
+
 output $laptop bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output $external_middle bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
+output $external_left bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536_Portrait.png fill
+
+# workspaces
+workspace 1 output $external_left
+workspace 2 output $seconday
+workspace 3 output $external_middle
+workspace 4 output $external_middle
+workspace 5 output $external_middle
+workspace 6 output $external_middle
+workspace 7 output $external_middle
+workspace 8 output $external_middle
+workspace 9 output $external_middle
+workspace 10 output $external_middle
 
 # Clamshell mode
 bindswitch --reload --locked lid:on output $laptop disable
@@ -8,8 +36,8 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 # messengers
 # exec com.discordapp.Discord &
-# exec im.riot.Riot &
+exec element-desktop &
 
 # misc
-# exec firefox &
-# exec thunderbird &
+exec firefox &
+exec thunderbird &
