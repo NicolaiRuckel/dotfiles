@@ -17,5 +17,6 @@
 [core]
 	; pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /home/nicolai/.config/git/gitignore
-[init]
 	defaultBranch = main
+[github]
+	user = NicolaiRuckel

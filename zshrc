@@ -20,14 +20,7 @@ if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
 
-# Path to your oh-my-zsh installation.
-# On WSL it's installed locally, on my other machines it's installed via the OS
-# package manager.
-if uname -r | grep -q 'Microsoft' ; then
-        export ZSH=$HOME/.oh-my-zsh
-else
-        export ZSH=/usr/share/oh-my-zsh
-fi
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=~/dotfiles/oh-my-zsh-custom
 ZSH_THEME="nidoranarion/nidoranarion"
