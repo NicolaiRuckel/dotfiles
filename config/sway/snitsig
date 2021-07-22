@@ -1,6 +1,6 @@
 # outputs
-set $primary DP-1
-set $secondary DP-2
+set $primary 'Unknown PA278QV L9LMQS208634'
+set $secondary 'Unknown PA278QV L9LMQS208641'
 
 output $primary position 1440 550
 output $secondary position 0 0
