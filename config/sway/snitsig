@@ -32,4 +32,4 @@ exec element-desktop &
 
 # misc
 exec firefox &
-exec thunderbird &
+exec evolution &
