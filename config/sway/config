@@ -72,6 +72,11 @@ input type:keyboard {
         repeat_delay 350
 }
 
+input 1149:4128:Kensington______Kensington_Expert_Mouse {
+    accel_profile adaptive
+    pointer_accel 1.0
+}
+
 ### Key bindings
 
 # Basics
