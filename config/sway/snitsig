@@ -32,4 +32,23 @@ exec element-desktop &
 
 # misc
 exec firefox &
-exec evolution &
+exec thunderbird &
+
+### Status Bar
+exec_always 'pkill waybar; waybar -c ~/.config/waybar/config-`hostname`'
+
+# bar {
+#     font pango:Source Sans Pro Semibold, FontAwesome 12, sans-serif
+#         position top
+#         tray_output none
+#         status_command i3status-rs ~/dotfiles/config/i3status-rust/config-snitsig.toml
+#         colors {
+#             separator #222222
+#                 background #222222
+#                 statusline #dddddd
+#                 focused_workspace #0088CC #0088CC #ffffff
+#                 active_workspace #333333 #333333 #ffffff
+#                 inactive_workspace #333333 #333333 #888888
+#                 urgent_workspace #2f343a #900000 #ffffff
+#         }
+# }

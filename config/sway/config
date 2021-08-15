@@ -281,10 +281,6 @@ exec gnome-keyring-daemon --start
 # Hide cursor after 5 seconds of inactivity
 seat seat0 hide_cursor 5000
 
-### Status Bar
-bar {
-        swaybar_command waybar
-}
 
 include /etc/sway/config.d/*
 include ~/dotfiles/config/sway/`hostname`

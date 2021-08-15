@@ -40,3 +40,8 @@ exec element-desktop &
 # misc
 exec firefox &
 exec thunderbird &
+
+### Status Bar
+bar {
+        swaybar_command waybar
+}
