@@ -10,6 +10,11 @@ separator-style:       none;
 hide-scrollbar:        true;
 line-margin:           0;
 font:                  "Source Sans Pro 12";
-theme: "~/dotfiles/config/rofi/rofi-color.rasi";
 steal-focus: true;
+}
+
+/* @theme "~/dotfiles/config/rofi/rofi-color.rasi" */
+@theme "android_notification"
+listview {
+lines: 4;
 }
