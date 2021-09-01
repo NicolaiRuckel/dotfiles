@@ -1,0 +1,15 @@
+configuration {
+show-icons:            true;
+modi:                  "drun,run,window,ssh";
+lines:                 7;
+line-padding:          10;
+matching:              "fuzzy";
+bw:                    0;
+padding:               0;
+separator-style:       none;
+hide-scrollbar:        true;
+line-margin:           0;
+font:                  "Source Sans Pro 12";
+theme: "~/dotfiles/config/rofi/rofi-color.rasi";
+steal-focus: true;
+}
