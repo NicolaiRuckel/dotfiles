@@ -266,7 +266,10 @@ TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+fi
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
