@@ -20,6 +20,7 @@ if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
 
+DISABLE_UPDATE_PROMPT=true
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=~/dotfiles/oh-my-zsh-custom
