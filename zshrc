@@ -96,6 +96,9 @@ alias l="ls -lhp"
 alias o="open"
 alias cvenv='python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip setuptools > /dev/null'
 
+alias rm='echo "This is not the command you are looking for. Prepend it with a backslash if you *really* want to use it."; false'
+alias tp=trash-put
+
 # cd with ranger
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
