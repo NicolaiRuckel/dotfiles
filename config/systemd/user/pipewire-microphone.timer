@@ -1,8 +1,0 @@
-[Unit]
-Description=Create mono microphone out of stereo one by Focusrite Scarlett 2i2
-
-[Timer]
-OnStartupSec=5seconds
-
-[Install]
-WantedBy=timers.target
