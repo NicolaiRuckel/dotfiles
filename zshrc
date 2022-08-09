@@ -275,7 +275,9 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 fi
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if uname -r |grep -q 'Linux' ; then
+	source /usr/share/fzf/key-bindings.zsh
+	source /usr/share/fzf/completion.zsh
+fi
 
 add-zsh-hook -Uz precmd rehash_precmd
