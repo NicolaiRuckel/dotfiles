@@ -280,4 +280,17 @@ if uname -r |grep -q 'Linux' ; then
 	source /usr/share/fzf/completion.zsh
 fi
 
+if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+    # https://github.com/sakai135/wsl-vpnkit
+    wsl.exe -d wsl-vpnkit service wsl-vpnkit start
+
+    GPG_TTY=$(tty)
+    export GPG_TTY
+
+    eval $(keychain --eval --quiet --gpg2 --agents gpg,ssh id_rsa)
+fi
+
 add-zsh-hook -Uz precmd rehash_precmd
+#export DOCKER_HOST=tcp://localhost:2375
+
+export PATH="$HOME/.poetry/bin:$PATH"
