@@ -14,7 +14,11 @@
   "python.venvFolders": ["~/.cache/pypoetry/virtualenvs", ".venv"],
   "python.linting.flake8Enabled": true,
   "python.linting.pydocstyleEnabled": true,
+  "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["-l", "79"]
+  "python.formatting.blackArgs": ["-l", "79"],
+  "pyright.organizeimports.provider": "isort",
+  "python.sortImports.args": "--profile black --line-length=79",
+  "pyright.disableDiagnostics": true
 }
