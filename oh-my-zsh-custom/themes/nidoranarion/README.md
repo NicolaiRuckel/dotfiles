@@ -1,9 +1,11 @@
 # [Nidoranarion Theme](https://github.com/NicolaiRuckel/nidoranarion)
 
-A very good theme for Oh-My-Zsh.
+A very good prompt for ZSH. It also works as a theme for Oh-My-Zsh.
 It is intended for my personal use so the features can feel limited to other
 people. For example, I omit the username on purpose since I rarely have to
 switch back and forth between local and remote terminals.
+
+You can just source it in your `.zshrc` or install it as a theme for Oh-My-Zsh.
 
 ## Features
 
