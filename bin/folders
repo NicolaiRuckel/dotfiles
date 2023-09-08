@@ -1,0 +1,9 @@
+#!/bin/env python3
+
+import os
+import shutil
+
+for subdir, dirs, files in os.walk("."):
+    for file in files:
+        origin = os.path.join(subdir, file)
+        shutil.move(origin, ".")
